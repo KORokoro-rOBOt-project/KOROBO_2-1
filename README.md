@@ -1,4 +1,4 @@
-# ころボ〈第2.1世代〉 / Korobo (2-1 gen)
+# 〈第2.1世代〉ころボ / Korobo (2-1 gen)
 ## 概要 / Overview
 準備中．．．
 ## ファイル構成 / Directory Layout
