@@ -1,13 +1,13 @@
 # モデルデータ / Model Data
 ## STL
-- cover_b_2-1.stl :
-- cover_stopper_2-1.stl :
-- cover_t_2-1.stl.stl :
-- main_frame_2-1.stl :
-- motor_frame_2-1.stl :
-- wheel_b_2-1.stl :
-- wheel_t.stl :
-- wheel_t2.stl :
+- cover_b_2-1.stl :本体カバーの下部．
+- cover_stopper.stl :本体カバーの上部と下部を繋げるアタッチメント．
+- cover_t_2-1.stl.stl :本体カバーの上部．
+- main_frame_2-1.stl :メインフレーム．
+- motor_frame_2-1.stl :ギアボックスを包むカバー．
+- wheel_b_2-1.stl :メインタイヤ．
+- wheel_t.stl :上部滑車．
+- wheel_t2.stl :上部滑車の軸．
 ## 2-1Gen_KOROBO.step
 各種部品の位置関係などが確認できます．
 
