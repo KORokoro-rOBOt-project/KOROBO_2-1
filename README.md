@@ -13,6 +13,7 @@
 ### 0. 部品調達
 #### 0.1 購入 
 [Document](Document)の "[Parts-List_KOROBO_2-1.pdf](/Document/Parts-List_KOROBO_2-1.pdf)" に記載されている各種材料を，添付されているURLの通販サイトや実店舗などにて，調達してください．
+- [ ] 完了！
 #### 0.2 印刷
 > [!TIP]
 > KORokoro.rOBOt projectの[BOOTH](https://korokoro-robot.booth.pm/)にて，**3Dプリンタ製部品**を購入された方は，"[1. 基板](#1-基板)" へ進んでください．
