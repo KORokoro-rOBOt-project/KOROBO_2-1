@@ -42,11 +42,18 @@ b
 #### 1.2 半田付け
 ---
 ### 2. 配線
+> [!TIP]
+> [KORokoro.rOBOt projectのBOOTH](https://korokoro-robot.booth.pm/)にて<ins>配線類</ins>を購入された方は，"**3. 駆動ユニット**" へ進んでください．
+<details open>
+<summary>手順</summary>
+
 #### 2.0 準備
 #### 2.1 ピンヘッダー
 #### 2.2 JST-XH
 #### 2.3 JST-PH
 #### 2.4 PicoBlade
+</details>
+
 ---
 ### 3. 駆動ユニット
 #### 3.0 準備
