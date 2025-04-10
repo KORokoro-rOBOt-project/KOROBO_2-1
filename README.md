@@ -12,7 +12,9 @@
 ## 組み立て / How to Set Up
 ### 0. 部品調達
 #### 0.1 購入 
-[Document](Document)の "[Parts-List_KOROBO_2-1.pdf](/Document/Parts-List_KOROBO_2-1.pdf)" に記載されている各種材料を，添付されているURLの通販サイトや実店舗などにて，調達してください．
+[Document](Document)の "[Parts-List_KOROBO_2-1.pdf](/Document/Parts-List_KOROBO_2-1.pdf)" に記載されている各種材料を，添付されているURLの通販サイトや実店舗などにて，購入してください．
+> [!NOTE]
+> 必要な部品の中には，購入時の**最低個数**が指定されている場合や，1つの商品あたりに**複数個の同じ部品**を含む場合があります．電子工作をされている方なら，一度ご自身が現在所持している部品を確認することで，必要以上の買い物を避けられるかもしれません．（例：ピンソケット，ピンヘッダ，抵抗，コンデンサなど）
 #### 0.2 印刷
 > [!TIP]
 > KORokoro.rOBOt projectの[BOOTH](https://korokoro-robot.booth.pm/)にて，**3Dプリンタ製部品**を購入された方は，"[1. 基板](#1-基板)" へ進んでください．
