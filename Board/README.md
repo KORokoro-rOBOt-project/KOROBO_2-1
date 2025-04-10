@@ -3,7 +3,7 @@
 <p>
   <img src="/Document/Picture/korobo_2-1_bno055_ver3-1_img2.jpg" width="37.5%"><img src="/Document/Picture/korobo_2-1_bno055_ver3-1_img3.jpg" width="37.5%">
 </p>
-<img src="/Document/Picture/korobo_2-1_bno055_ver3-1_img1.jpg" width="75%">
+<img src="/Document/Picture/schematic_korobo_2-1_bno055.jpg" width="75%">
 
 ## 概要 / Overview
 〈第2.1世代〉ころボのプリント基板は，組み立てやすさとメンテナンス性に注力しています．
