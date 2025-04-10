@@ -14,6 +14,6 @@
 各種部品の位置関係などが確認できます．
 
 > [!IMPORTANT]
-> 内部データの一部は，[**GRABCAD COMMUNITY**](https://grabcad.com/library)に参加する有志の方々から借りています[^1][^2]．
+> 内部データの一部は，[**GRABCAD COMMUNITY**](https://grabcad.com/library)に参加する有志の方々からお借りています[^1][^2]．
 [^1]: Raspberry Pi Pico >> https://grabcad.com/library/raspberry-pi-pico-3 
 [^2]: Atmega328 >> https://grabcad.com/library/atmega328-1
