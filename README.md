@@ -6,8 +6,8 @@
 準備中．．．
 ## ファイル構成 / Directory Layout
 - [**Board**](Board): 基板発注に必要なガーバーデータ
-- [**Code**](Code): 
-- [**Document**](Document): 購入リスト
+- [**Code**](Code): ソースコード，ライブラリ
+- [**Document**](Document): 購入リスト，画像など
 - [**Model**](Model): STEPファイルおよびSTLファイル
 ## 組み立て / How to Set Up
 ### 0. 部品調達
