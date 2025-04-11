@@ -1,7 +1,7 @@
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
-#include <Adafruit_Sensor.h>
+//#include <Adafruit_Sensor.h>
 #include <Adafruit_BNO055.h>
 #include <utility/imumaths.h>
 #include <string.h>
@@ -405,17 +405,17 @@ void Eye_wink() {
 
 void Move(){
   int motor_power_l, motor_power_r;
-  
+  /*
   motor_power_l = ;
   motor_power_r = ;
-  
+  */
   Motor(motor_power_l, motor_power_r);
   
 }
 
 void Motor(int motor_power_l, int motor_power_r) {
   unsigned int motor_power_min = 50;
-  \\left motor
+  //left motor
   if (motor_power_l > motor_power_min) {
     analogWrite(MOTOR_IN4_PIN, motor_power_l);
     analogWrite(MOTOR_IN3_PIN, 0);
@@ -428,7 +428,7 @@ void Motor(int motor_power_l, int motor_power_r) {
     analogWrite(MOTOR_IN4_PIN, 0);
     analogWrite(MOTOR_IN3_PIN, -motor_power_l);
   }
-  \\right motor
+  //right motor
   if (motor_power_r > motor_power_min) {
     analogWrite(MOTOR_IN1_PIN, motor_power_r);
     analogWrite(MOTOR_IN2_PIN, 0);
@@ -443,7 +443,6 @@ void Motor(int motor_power_l, int motor_power_r) {
   }
 
   delay(10);
-  return 0;
 }
 
 void inputEvent(sensors_event_t* event) {
@@ -459,6 +458,6 @@ void inputEvent(sensors_event_t* event) {
     gyro_ary[1] = event->gyro.y;
     gyro_ary[2] = event->gyro.z;
   } else {
-    \\Serial.print("Unk:");
+    //Serial.print("Unk:");
   }
 }
