@@ -1,10 +1,11 @@
 # Code
 ## mind_2-1
-〈第2.1世代〉ころボ の基本プログラム．
+〈第2.1世代〉ころボ の基本プログラム
+> [!NOTE]
+> **Arduino IDE**を用いて，書き込みます．
 <details>
 <summary>書き込み手順</summary>
-
-準備中
+準備中．
 </details>
 
 ## Library
