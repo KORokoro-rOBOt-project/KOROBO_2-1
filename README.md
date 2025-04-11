@@ -10,7 +10,7 @@
 - [**Document**](Document): 購入リスト，画像など
 - [**Model**](Model): STEPファイルおよびSTLファイル
 ## 組み立て / How to Set Up
-### 0. 部品調達
+### 0. 部品調達    
 #### 0.1 購入 
 [Document](Document)の "[Parts-List_KOROBO_2-1.pdf](/Document/Parts-List_KOROBO_2-1.pdf)" に記載されている各種材料を，添付されているURLの通販サイトや実店舗などにて，購入してください．
 > [!NOTE]
