@@ -35,6 +35,7 @@
 5. [ソースコード](#5-ソースコード)
 </details>
 
+---
 ### 0. 部品調達    
 #### 0.1 購入 
 [Document](Document)の "[Parts-List_KOROBO_2-1.pdf](/Document/Parts-List_KOROBO_2-1.pdf)" に記載されている各種材料を，添付されているURLの通販サイトや実店舗などにて，購入してください．
