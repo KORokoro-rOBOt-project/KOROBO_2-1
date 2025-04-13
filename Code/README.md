@@ -10,6 +10,17 @@
 
 ## KoroboLib_2_1
 〈第2.1世代〉ころボ を動作させるにあたって必要となるライブラリ．
+### - begin()
+### - Imu_getData()
+### - AmbientLight_getData()
+### - Mic_getData()
+### - Eye(3-pattern)
+- Eye(unsigned int num)
+- Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u)
+- Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u, unsigned int num)
+### - Move() <- 予定
+### - Motor(int motor_power_l, int motor_power_r)
+
 > [!IMPORTANT]
 > 〈第2.1世代〉ころボ のライブラリは，複数の既存ライブラリに依存しています．
 > 事前に，それらのライブラリをインストールしてください[^1][^2][^3][^4]．
