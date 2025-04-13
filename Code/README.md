@@ -20,6 +20,7 @@
 - Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u, unsigned int num)
 ### - Move() <- 予定
 ### - Motor(int motor_power_l, int motor_power_r)
+### - Voice() <- 予定
 
 > [!IMPORTANT]
 > 〈第2.1世代〉ころボ のライブラリは，複数の既存ライブラリに依存しています．
