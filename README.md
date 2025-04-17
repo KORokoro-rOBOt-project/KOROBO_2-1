@@ -67,7 +67,7 @@
 > 必要な部品の中には，購入時の**最低個数**が指定されている場合や，1つの商品あたりに**複数個の同じ部品**を含む場合があります．電子工作をされている方なら，一度ご自身が現在所持している部品を確認することで，必要以上の買い物を避けられるかもしれません．（例：ピンソケット，ピンヘッダ，抵抗，コンデンサなど）
 #### 0.2 印刷
 > [!TIP]
-> KORokoro.rOBOt projectの[BOOTH](https://korokoro-robot.booth.pm/)にて，**3Dプリンタ製部品**を購入された方は，"[1. 基板](#1-基板)" へ進んでください．
+> KORokoro.rOBOt projectの[BOOTH](https://korokoro-robot.booth.pm/items/6812764)にて，**3Dプリンタ製部品**を購入された方は，"[1. 基板](#1-基板)" へ進んでください．
 <details open>
 <summary>手順</summary>
 
@@ -80,7 +80,7 @@
 準備中...
 #### 1.1 発注 or 作成
 > [!TIP]
-> KORokoro.rOBOt projectの[BOOTH](https://korokoro-robot.booth.pm/)にて，**メインボード**を購入された方は，"[1.2 半田付け](#12-半田付け)" へ進んでください．
+> KORokoro.rOBOt projectの[BOOTH](https://korokoro-robot.booth.pm/items/6807081)にて，**メインボード**を購入された方は，"[1.2 半田付け](#12-半田付け)" へ進んでください．
 <details>
 <summary>業者に発注される方</summary>
 
