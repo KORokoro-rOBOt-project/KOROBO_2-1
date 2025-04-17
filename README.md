@@ -71,7 +71,9 @@
 <details open>
 <summary>手順</summary>
 
-準備中...
+##### 0.20 準備
+##### 0.21 PLAフィラメント印刷
+##### 0.22 TPUフィラメント印刷
 </details>
 
 ***
