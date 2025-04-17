@@ -74,7 +74,12 @@
 ##### 0.20 準備
 ##### 0.21 PLAフィラメント印刷
 ##### 0.22 TPUフィラメント印刷
-
+<img src="/Document/Picture/tpu-parts_support-remove_1.jpg" width="75%">
+<img src="/Document/Picture/tpu-parts_support-remove_2.jpg" width="75%">
+<img src="/Document/Picture/tpu-parts_support-remove_3.jpg" width="75%">
+<img src="/Document/Picture/tpu-parts_support-remove_4.jpg" width="75%">
+<img src="/Document/Picture/tpu-parts_support-remove_5.jpg" width="75%">
+<img src="/Document/Picture/tpu-parts_support-remove_6.jpg" width="75%">
 </details>
 
 ***
