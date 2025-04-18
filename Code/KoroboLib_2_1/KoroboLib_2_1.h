@@ -64,7 +64,7 @@ class KoroboLib_2_1 {
     void Eye_sound();
     void Eye_imu();
     void Eye_light();
-    void Eye_wink();
+    void Eye_wink_hoge();
 
     int Eye_agx_array[EYE_AG_FILTER] = { 0 };
     int Eye_agy_array[EYE_AG_FILTER] = { 0 };

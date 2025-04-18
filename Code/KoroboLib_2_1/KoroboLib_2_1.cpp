@@ -159,7 +159,7 @@ void KoroboLib_2_1:: Eye_light() {
 
 }
 
-void KoroboLib_2_1:: Eye_wink() {
+void KoroboLib_2_1:: Eye_wink_hoge() {
 
 }
 
@@ -169,7 +169,7 @@ void KoroboLib_2_1::Eye(unsigned int num) {
   if (num % 2 == 0) Eye_sound();
   if (num % 3 == 0) Eye_imu();
   if (num % 5 == 0) Eye_light();
-  if (num % 7 == 0) Eye_wink();
+  if (num % 7 == 0) Eye_wink_hoge();
 
   oled.clearDisplay();
 
@@ -199,7 +199,7 @@ void KoroboLib_2_1::Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_si
   if (num % 2 == 0) Eye_sound();
   if (num % 3 == 0) Eye_imu();
   if (num % 5 == 0) Eye_light();
-  if (num % 7 == 0) Eye_wink();
+  if (num % 7 == 0) Eye_wink_hoge();
 
   dX_point += dX_point_u;
   dY_point += dY_point_u;
