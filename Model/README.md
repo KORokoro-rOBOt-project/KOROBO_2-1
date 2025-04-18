@@ -17,3 +17,8 @@
 > 内部データの一部は，[**GRABCAD COMMUNITY**](https://grabcad.com/library)に参加する有志の方々からお借りています[^1][^2]．
 [^1]: Raspberry Pi Pico >> https://grabcad.com/library/raspberry-pi-pico-3 
 [^2]: Atmega328 >> https://grabcad.com/library/atmega328-1
+
+## korobo_2-1_PLA.3mf & korobo_2-1_TPU.3mf
+スライサソフト**Bambu Studio**にて編集したプロジェクトファイルです．
+
+Bambu Lab製品をお持ちの方でしたら，お持ちのプリンタ・フィラメントを選択し，スライスしていただけたらと思います．
