@@ -83,13 +83,10 @@ void KoroboLib_2_1::Eye_sound() {
   int sound_amp = SoundAmplitude(Mic_getData());
   eye_sound = abs(sound_amp - sound_amp_temp);
   sound_amp_temp = sound_amp;
-
-  float eye_sound_filter = 0.8;
-  eye_sound = round((1.0 - eye_sound_filter) * (float)eye_sound + eye_sound_filter * (float)eye_sound_temp);
+  //RC-Filter
+  eye_sound = round((1 - RC_FILTER) * eye_sound + RC_FILTER * eye_sound_temp);
   eye_sound_temp = eye_sound;
   eye_sound -= 3;
-
-  Serial.println(eye_sound);
 
   //目の横幅反映
   int eye_sound_x_limit = 12;
@@ -115,14 +112,13 @@ void KoroboLib_2_1::Eye_sound() {
 }
 
 void KoroboLib_2_1::Eye_imu() {
-  //加速度(acc_ary[0], acc_ary[2])＆角速度(gyro_ary[2], gyro_ary[0])を目の上下動作に反映
+  Imu_getData();
   int eye_agx, eye_agy;
   eye_agx = round((korobo_acc.x() - korobo_acc_temp.x()) * 100 + (korobo_gyro.z() - korobo_gyro_temp.z()) * 0.5);
   eye_agy = round((korobo_acc.z() - korobo_acc_temp.z()) * 100 + (korobo_gyro.x() - korobo_gyro_temp.x()) * 1);
-
-  int eye_ag_filter = 0.8;
-  eye_agx = (1 - eye_ag_filter) * eye_agx + eye_ag_filter * eye_agx_temp;
-  eye_agy = (1 - eye_ag_filter) * eye_agy + eye_ag_filter * eye_agy_temp;
+  //RC-Filter
+  eye_agx = round((1 - RC_FILTER) * eye_agx + RC_FILTER * eye_agx_temp);
+  eye_agy = round((1 - RC_FILTER) * eye_agy + RC_FILTER * eye_agy_temp);
   eye_agx_temp = eye_agx;
   eye_agy_temp = eye_agy;
 
@@ -156,12 +152,36 @@ void KoroboLib_2_1::Eye_imu() {
 }
 
 void KoroboLib_2_1:: Eye_light() {
+  int eye_al_val = AmbientLight_getData();
+  int eye_al_val_ave = 0;
+  int eye_al_dx, eye_al_dy;
+  //RC-Filter
+  eye_al_val = (1 - RC_FILTER) * eye_al_val + RC_FILTER * eye_al_val_temp;
+  //Average-Filter
+  for (int i = FILTER_SAMPLE - 1; i > 0; i--) Eye_al_array[i] = Eye_al_array[i - 1];
+  Eye_al_array[0] = eye_al_val;
+  for (int i = 0; i < FILTER_SAMPLE; i++) eye_al_val_ave += Eye_al_array[i];
+  eye_al_val_ave /= FILTER_SAMPLE;
 
+  eye_al_dx = abs(round((eye_al_val - eye_al_val_ave) * 0.03));
+  eye_al_dy = abs(round((eye_al_val_ave - eye_al_val) * 0.05));
+
+  dX_size += eye_al_dx;
+  dX_point -= eye_al_dx / 2;
+  dY_size -= eye_al_dy;
+  dY_point += eye_al_dy / 2;
+/*
+  Serial.print(eye_al_dx);Serial.print(", ");
+  Serial.println(eye_al_dy);
+*/
+  eye_al_val_temp = eye_al_val;
 }
 
+/*
 void KoroboLib_2_1:: Eye_wink_hoge() {
 
 }
+*/
 
 void KoroboLib_2_1::Eye(unsigned int num) {
   Eye_point_size_init();
@@ -169,7 +189,7 @@ void KoroboLib_2_1::Eye(unsigned int num) {
   if (num % 2 == 0) Eye_sound();
   if (num % 3 == 0) Eye_imu();
   if (num % 5 == 0) Eye_light();
-  if (num % 7 == 0) Eye_wink_hoge();
+  //if (num % 7 == 0) Eye_wink_hoge();
 
   oled.clearDisplay();
 
@@ -199,7 +219,7 @@ void KoroboLib_2_1::Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_si
   if (num % 2 == 0) Eye_sound();
   if (num % 3 == 0) Eye_imu();
   if (num % 5 == 0) Eye_light();
-  if (num % 7 == 0) Eye_wink_hoge();
+  //if (num % 7 == 0) Eye_wink_hoge();
 
   dX_point += dX_point_u;
   dY_point += dY_point_u;

@@ -12,6 +12,5 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  korobo.Imu_getData();
-  korobo.Eye(SOUND * IMU);
+  korobo.Eye(ALL);
 }
