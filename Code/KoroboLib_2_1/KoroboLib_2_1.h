@@ -23,13 +23,15 @@
 #define EYE_WIDTH 13
 #define EYE_HEIGHT 44
 #define EYE_AG_FILTER 10
-#define EYE_SOUND_FILTER 50
 //eye_mode
 #define SOUND 2
 #define IMU 3
 #define LIGHT 5
 #define WINK 7
 #define ALL 210
+//other
+#define RC_FILTER 0.8
+#define FILTER_SAMPLE 100
 
 #include "Arduino.h"
 #include "Wire.h"
@@ -64,11 +66,11 @@ class KoroboLib_2_1 {
     void Eye_sound();
     void Eye_imu();
     void Eye_light();
-    void Eye_wink_hoge();
+    //void Eye_wink_hoge();
 
     int Eye_agx_array[EYE_AG_FILTER] = { 0 };
     int Eye_agy_array[EYE_AG_FILTER] = { 0 };
-    int Eye_sound_array[EYE_SOUND_FILTER] = { 0 };
+    int Eye_al_array[FILTER_SAMPLE] = { 0 };
 
     int sound_amp_temp = 0;
     int mic_val_temp = 0;
@@ -77,6 +79,7 @@ class KoroboLib_2_1 {
     int mic_ans = 0;
     int eye_sound_temp = 0;
     int eye_agx_temp = 0, eye_agy_temp = 0;
+    int eye_al_val_temp = 0;
     int dX_point = 0, dY_point = 0, dX_size = 0, dY_size = 0;
 
     bool mic_val_positive = false;
