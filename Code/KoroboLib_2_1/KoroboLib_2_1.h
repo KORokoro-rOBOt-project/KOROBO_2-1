@@ -59,6 +59,8 @@ class KoroboLib_2_1 {
     void Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u); 
     void Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u, unsigned int num);
     void Motor(int motor_power_l, int motor_power_r);
+    void Move();
+    void Voice();
 
   private:
     int SoundAmplitude(int data);
@@ -81,6 +83,7 @@ class KoroboLib_2_1 {
     int eye_agx_temp = 0, eye_agy_temp = 0;
     int eye_al_val_temp = 0;
     int dX_point = 0, dY_point = 0, dX_size = 0, dY_size = 0;
+    int voice_mic_temp = 0, voice_light_temp = 0, voice_d_sum_temp = 0;
 
     bool mic_val_positive = false;
 
