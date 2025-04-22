@@ -170,10 +170,7 @@ void KoroboLib_2_1:: Eye_light() {
   dX_point -= eye_al_dx / 2;
   dY_size -= eye_al_dy;
   dY_point += eye_al_dy / 2;
-/*
-  Serial.print(eye_al_dx);Serial.print(", ");
-  Serial.println(eye_al_dy);
-*/
+  
   eye_al_val_temp = eye_al_val;
 }
 
