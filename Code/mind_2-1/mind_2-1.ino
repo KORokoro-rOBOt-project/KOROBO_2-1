@@ -12,5 +12,5 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  korobo.Eye(ALL);
+  korobo.Voice();
 }

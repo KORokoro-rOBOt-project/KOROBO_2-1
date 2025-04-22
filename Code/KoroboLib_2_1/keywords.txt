@@ -12,6 +12,8 @@ AmbientLight_getData	KEYWORD2
 Mic_getData KEYWORD2
 Eye	KEYWORD2
 Motor	KEYWORD2
+Move	KEYWORD2
+Voice	KEYWORD2
 
 ################################
 #LITERAL1

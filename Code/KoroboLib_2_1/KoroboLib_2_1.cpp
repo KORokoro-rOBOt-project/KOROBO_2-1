@@ -170,7 +170,7 @@ void KoroboLib_2_1:: Eye_light() {
   dX_point -= eye_al_dx / 2;
   dY_size -= eye_al_dy;
   dY_point += eye_al_dy / 2;
-  
+
   eye_al_val_temp = eye_al_val;
 }
 
@@ -260,4 +260,58 @@ void KoroboLib_2_1::Motor(int motor_power_l, int motor_power_r) {
   }
 
   delay(10);
+}
+
+void KoroboLib_2_1::Move(){
+
+}
+
+void KoroboLib_2_1::Voice(){
+  int voice_mic, voice_imu, voice_light;
+  voice_mic = Mic_getData();
+  Imu_getData();
+  voice_imu = round((abs(korobo_acc.x()) + abs(korobo_acc.y()) + abs(korobo_acc.z())) / 3 + (abs(korobo_gyro.x()) + abs(korobo_gyro.y()) + abs(korobo_gyro.z())) / 3);
+  voice_light = AmbientLight_getData();
+
+  int voice_mic_d, voice_imu_d, voice_light_d, voice_d_sum, voice_d_sum_temp;
+  voice_mic_d = abs(voice_mic - voice_mic_temp);
+  voice_light_d = abs(voice_light - voice_light_temp);
+  voice_d_sum = voice_mic_d + voice_imu + voice_light_d;
+  voice_d_sum = round((1 - RC_FILTER) * voice_d_sum + RC_FILTER * voice_d_sum_temp);
+  voice_d_sum *= 10;
+
+  /*10(DEC) -> 2(BIN)*/
+  
+  String voice_code, voice = "";
+  voice_code = String(voice_d_sum, BIN);
+
+  int voice_code_len = voice_code.length();
+  if (voice_code_len <= 16){
+    for (int i = 0; i < 16 - voice_code_len; i++)  voice_code.concat("0");
+  }
+  else  voice_code = voice_code.substring(0, 16);
+
+  //00:n, 01:ko, 10:ro, 11:bo
+  for (int i = 2; i < voice_code.length() / 2; i++){
+    String voice_code_2words = voice_code.substring(i * 2, (i * 2) + 2);
+    if (voice.length() > 0 && voice_code_2words == "00"){
+      voice.concat("n");
+      break;
+    }
+    else if (voice_code_2words == "01") voice.concat("ko");
+    else if (voice_code_2words == "10") voice.concat("ro");
+    else if (voice_code_2words == "11") voice.concat("bo");
+  }
+
+  voice_mic_temp = voice_mic;
+  voice_light_temp = voice_light;
+  voice_d_sum_temp = voice_d_sum;
+
+  if (voice.length() > 4){
+    //*
+    Serial.print(voice);Serial.print(", \t\t");
+    Serial.print(voice_code);Serial.print(", \t");
+    Serial.println(voice_d_sum);
+    //*/
+  }
 }
