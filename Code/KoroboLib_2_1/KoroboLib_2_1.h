@@ -11,7 +11,6 @@
 #define MOTOR_EN_PIN 22
 //mic
 #define MIC_PIN 26
-#define MIC_PP_DATA_NUM 1000
 //ambient light
 #define AMBIENT_LIGHT_PIN 27
 //eye_info
@@ -29,6 +28,10 @@
 #define LIGHT 5
 #define WINK 7
 #define ALL 210
+//voice
+#define I2C_ADDR_PICO 0x2E  // PicoのデフォルトのI2Cアドレス
+#define VOICE_EN_PIN 6
+#define VOICE_STATE_PIN 11
 //other
 #define RC_FILTER 0.8
 #define FILTER_SAMPLE 100
@@ -68,11 +71,14 @@ class KoroboLib_2_1 {
     void Eye_sound();
     void Eye_imu();
     void Eye_light();
+    void Pico_Synthe(char Talk[20]);
+    boolean isReady_Pico();
     //void Eye_wink_hoge();
 
     int Eye_agx_array[EYE_AG_FILTER] = { 0 };
     int Eye_agy_array[EYE_AG_FILTER] = { 0 };
     int Eye_al_array[FILTER_SAMPLE] = { 0 };
+    int Voice_d_array[FILTER_SAMPLE] = { 0 };
 
     int sound_amp_temp = 0;
     int mic_val_temp = 0;
