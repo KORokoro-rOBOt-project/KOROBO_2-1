@@ -116,7 +116,8 @@ void KoroboLib_2_1::Eye_sound() {
     if (eye_sound > eye_sound_y_limit) {
       dY_point += eye_sound_y_limit / 2;
       dY_size -= eye_sound_y_limit;
-    } else {
+    }
+    else {
       dY_point += eye_sound / 2;
       dY_size -= eye_sound;
     }
@@ -186,19 +187,12 @@ void KoroboLib_2_1:: Eye_light() {
   eye_al_val_temp = eye_al_val;
 }
 
-/*
-void KoroboLib_2_1:: Eye_wink_hoge() {
-
-}
-*/
-
 void KoroboLib_2_1::Eye(unsigned int num) {
   Eye_point_size_init();
 
-  if (num % 2 == 0) Eye_sound();
-  if (num % 3 == 0) Eye_imu();
-  if (num % 5 == 0) Eye_light();
-  //if (num % 7 == 0) Eye_wink_hoge();
+  if (num % SOUND == 0) Eye_sound();
+  if (num % IMU == 0) Eye_imu();
+  if (num % LIGHT == 0) Eye_light();
 
   oled.clearDisplay();
 
@@ -228,7 +222,6 @@ void KoroboLib_2_1::Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_si
   if (num % 2 == 0) Eye_sound();
   if (num % 3 == 0) Eye_imu();
   if (num % 5 == 0) Eye_light();
-  //if (num % 7 == 0) Eye_wink_hoge();
 
   dX_point += dX_point_u;
   dY_point += dY_point_u;
@@ -278,73 +271,76 @@ void KoroboLib_2_1::Move(){
 
 }
 
-//
-// Picoにローマ字音声記号列(コマンド)を送信
-//
-void KoroboLib_2_1::Pico_Synthe(char Talk[20]) {
-  Serial.println("Pico_Synthe --->");
+void KoroboLib_2_1::Voice_send(char Talk[20]) {
   myi2c.beginTransmission(I2C_ADDR_PICO);
-  if (sizeof(Talk) < 32) {                             // myi2cの制約で、一度に送れるのは32byteまで（未確認）
-    myi2c.write(Talk);
-  } else {
-    Serial.println("ERROR : sizeof(talk) over 32");  // talk に設定する文字数を32未満にして下さい
-  }
-  myi2c.endTransmission();  // Picoへ送信
-  Serial.println("<--- Pico_Synthe");
+  if (sizeof(Talk) < 32) myi2c.write(Talk);
+  myi2c.endTransmission();
 }
 
-//
-// PicoがRedyになるのを待つ
-//
-boolean KoroboLib_2_1::isReady_Pico() {
-  Serial.println("isReady_Pico --->");
+boolean KoroboLib_2_1::Voice_state() {
   char buff[20];
   for (;;) {
     myi2c.requestFrom(I2C_ADDR_PICO, 1);
     if (myi2c.available() > 0) {
       byte c = myi2c.read();
-      if (c == '>') {
-        break;                             // 正常ならここからループアウト
-      } else if (c == '*' || c == 0xFF) {  // pico が処理中の時はここに来る
-        sprintf(buff, "WAIT : %.2X", c);
-        Serial.println(buff);
+      if (c == '>') break;
+      else if (c == '*' || c == 0xFF) {
+        Serial.println("wait...");
         delay(10);  // Busy応答は10msec以上待つ必要がある
-      } else {
-        sprintf(buff, "ERROR : read value = %.2X", c);  // 返値が予想外
-        Serial.println(buff);
+      }
+      else {
+        Serial.print("error: ");
+        Serial.println(c);
         delay(1000);
       }
-    } else {                                           // NOACK または応答がなかった時
-      Serial.println("ERROR : myi2c.available()<=0");  // Picoが動いていない可能性が高い
-      return false;                                    // ERROR
+    } 
+    else {
+      Serial.println("error: i2c");
+      return false;
     }
   }
-  Serial.println("<--- isReady_Pico");
   return true;  // OK
 }
 
-void KoroboLib_2_1::Voice(){
+void KoroboLib_2_1::Voice(unsigned int num){
   int voice_mic, voice_imu, voice_light;
-  voice_mic = Mic_getData();
-  Imu_getData();
-  voice_imu = round((abs(korobo_acc.x()) + abs(korobo_acc.y()) + abs(korobo_acc.z())) / 3 + (abs(korobo_gyro.x()) + abs(korobo_gyro.y()) + abs(korobo_gyro.z())) / 3);
-  voice_light = AmbientLight_getData();
+  int voice_mic_d, voice_light_d;
+  int voice_d_sum = 0;
+  
+  if (num % SOUND == 0){
+    voice_mic = Mic_getData();
+    voice_mic_d = abs(voice_mic - voice_mic_temp);
+    voice_mic_temp = voice_mic;
 
-  int voice_mic_d, voice_imu_d, voice_light_d, voice_d_sum, voice_d_sum_temp;
-  voice_mic_d = abs(voice_mic - voice_mic_temp);
-  voice_light_d = abs(voice_light - voice_light_temp);
-  voice_d_sum = voice_mic_d + voice_imu + voice_light_d;
+    voice_d_sum += voice_mic_d;
+  }
+  if (num % IMU == 0){
+    Imu_getData();
+    voice_imu = round(abs(korobo_acc.x()) + abs(korobo_acc.y()) + abs(korobo_acc.z()) / 3);
+    voice_imu += round(abs(korobo_gyro.x()) + abs(korobo_gyro.y()) + abs(korobo_gyro.z()) / 3);
+
+    voice_d_sum += voice_imu;
+  }
+  if (num % LIGHT == 0){
+    voice_light = AmbientLight_getData();
+    voice_light_d = abs(voice_light - voice_light_temp);
+    voice_light_temp = voice_light;
+
+    voice_d_sum += voice_light_d;
+  }
+
   voice_d_sum = round((1 - RC_FILTER) * voice_d_sum + RC_FILTER * voice_d_sum_temp);
-  voice_d_sum *= 5;
+  voice_d_sum_temp = voice_d_sum;
+  voice_d_sum *= 1;
 
-  int voice_d_sum_ave = 0;
   //Average-Filter
+  int voice_d_sum_ave = 0;
   for (int i = FILTER_SAMPLE - 1; i > 0; i--) Voice_d_array[i] = Voice_d_array[i - 1];
   Voice_d_array[0] = voice_d_sum;
   for (int i = 0; i < FILTER_SAMPLE; i++) voice_d_sum_ave += Voice_d_array[i];
   voice_d_sum_ave /= FILTER_SAMPLE;
 
-  voice_d_sum -= voice_d_sum_ave;
+  voice_d_sum -= voice_d_sum_ave * 1.5;
 
   if (digitalRead(VOICE_STATE_PIN) != 1 || voice_d_sum < 0) {
     voice_d_sum = 0;
@@ -373,25 +369,24 @@ void KoroboLib_2_1::Voice(){
     else if (voice_code_2words == "11") voice.concat("bo");
   }
 
-  voice_mic_temp = voice_mic;
-  voice_light_temp = voice_light;
-  voice_d_sum_temp = voice_d_sum;
-
   if (voice.length() > 4){
-    voice.concat("\r");
+    //voice-ic ON
+    digitalWrite(VOICE_EN_PIN, HIGH);
+
+    voice.concat("'\r");
     char talk[20];
     voice.toCharArray(talk, voice.length() + 1);  
 
-    //*
+    if (Voice_state()) Voice_send(talk);
+
+    /*
     Serial.print(talk);Serial.print(", \t\t");
     Serial.print(voice_code);Serial.print(", \t");
     Serial.println(voice_d_sum);
     //*/
-    digitalWrite(VOICE_EN_PIN, HIGH);
-
-    if (isReady_Pico()) {     // Ready待ち
-      Pico_Synthe(talk);          // 発声コマンド送出
-    }
-    Serial.println("");
   }
+}
+
+void KoroboLib_2_1::Sleep(){
+  
 }

@@ -26,8 +26,7 @@
 #define SOUND 2
 #define IMU 3
 #define LIGHT 5
-#define WINK 7
-#define ALL 210
+#define ALL 30
 //voice
 #define I2C_ADDR_PICO 0x2E  // PicoのデフォルトのI2Cアドレス
 #define VOICE_EN_PIN 6
@@ -63,7 +62,8 @@ class KoroboLib_2_1 {
     void Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u, unsigned int num);
     void Motor(int motor_power_l, int motor_power_r);
     void Move();
-    void Voice();
+    void Voice(unsigned int num);
+    void Sleep();
 
   private:
     int SoundAmplitude(int data);
@@ -71,9 +71,8 @@ class KoroboLib_2_1 {
     void Eye_sound();
     void Eye_imu();
     void Eye_light();
-    void Pico_Synthe(char Talk[20]);
-    boolean isReady_Pico();
-    //void Eye_wink_hoge();
+    void Voice_send(char Talk[20]);
+    boolean Voice_state();
 
     int Eye_agx_array[EYE_AG_FILTER] = { 0 };
     int Eye_agy_array[EYE_AG_FILTER] = { 0 };
