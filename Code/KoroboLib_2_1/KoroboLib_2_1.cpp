@@ -275,7 +275,28 @@ void KoroboLib_2_1::Motor(int motor_power_l, int motor_power_r) {
 }
 
 void KoroboLib_2_1::Move(){
+  Imu_getData();
 
+  int motor_power_l, motor_power_r;
+  int k = 30;
+  motor_power_l = (korobo_acc.x() - korobo_acc.y()) * k + (float)motor_l_i;
+  motor_power_r = (-korobo_acc.x() - korobo_acc.y()) * k + (float)motor_r_i;
+
+  if (korobo_acc.x() - korobo_acc.y() > 0.1) motor_l_i--;
+  else if (korobo_acc.x() - korobo_acc.y() < -0.1) motor_l_i--;
+  if (-korobo_acc.x() - korobo_acc.y() > 0.1) motor_r_i++;
+  else if (-korobo_acc.x() - korobo_acc.y() < -0.1) motor_r_i--;
+
+  if ((abs(motor_power_l - motor_l_i) + abs(motor_power_r - motor_r_i)) / 2 >= 60) digitalWrite(MOTOR_EN_PIN, HIGH);
+  else {
+    digitalWrite(MOTOR_EN_PIN, LOW);
+    motor_l_i = 0;
+    motor_r_i = 0;
+  }
+
+  Motor(motor_power_l, motor_power_r);
+
+  Serial.println(korobo_acc.y());
 }
 
 boolean KoroboLib_2_1::Voice_state() {
@@ -438,8 +459,12 @@ boolean KoroboLib_2_1::Sleep(unsigned int num){
   Serial.print(", ..._diff_max:");Serial.println(sleep_sum_ave_diff_max);
   Serial.print(", ...sleep_flag:");Serial.println(sleep_flag);
   //*/
-  if (EYE_HEIGHT + dY_size < 0) sleep_flag = true;
-  else if (sleep_sum_ave_diff <= -sleep_sum_ave_diff_max / 3) {
+  if (EYE_HEIGHT + dY_size < 0) {
+    sleep_flag = true;
+    digitalWrite(MOTOR_EN_PIN, LOW);
+    digitalWrite(VOICE_EN_PIN, LOW);
+  }
+  else if (sleep_sum_ave_diff <= -sleep_sum_ave_diff_max / 2) {
     sleep_flag = false;
     sleep_sum_ave_diff_max = 0;
   }

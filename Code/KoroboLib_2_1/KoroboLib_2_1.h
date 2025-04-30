@@ -94,6 +94,7 @@ class KoroboLib_2_1 {
     int eye_agx_temp = 0, eye_agy_temp = 0;
     int eye_al_val_temp = 0;
     int dX_point = 0, dY_point = 0, dX_size = 0, dY_size = 0;
+    int motor_l_i = 0, motor_r_i = 0;
     int voice_mic_temp = 0, voice_light_temp = 0, voice_d_sum_temp = 0;
     int sleep_sum_ave_diff_max = 0;
 
