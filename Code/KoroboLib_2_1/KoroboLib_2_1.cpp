@@ -282,12 +282,12 @@ void KoroboLib_2_1::Move(){
   motor_power_l = (korobo_acc.x() - korobo_acc.y()) * k + (float)motor_l_i;
   motor_power_r = (-korobo_acc.x() - korobo_acc.y()) * k + (float)motor_r_i;
 
-  if (korobo_acc.x() - korobo_acc.y() > 0.1) motor_l_i--;
+  if (korobo_acc.x() - korobo_acc.y() > 0.1) motor_l_i++;
   else if (korobo_acc.x() - korobo_acc.y() < -0.1) motor_l_i--;
   if (-korobo_acc.x() - korobo_acc.y() > 0.1) motor_r_i++;
   else if (-korobo_acc.x() - korobo_acc.y() < -0.1) motor_r_i--;
 
-  if ((abs(motor_power_l - motor_l_i) + abs(motor_power_r - motor_r_i)) / 2 >= 60) digitalWrite(MOTOR_EN_PIN, HIGH);
+  if ((abs(motor_power_l - motor_l_i) + abs(motor_power_r - motor_r_i)) / 2 >= 90) digitalWrite(MOTOR_EN_PIN, HIGH);
   else {
     digitalWrite(MOTOR_EN_PIN, LOW);
     motor_l_i = 0;
