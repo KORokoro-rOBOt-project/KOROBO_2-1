@@ -11,7 +11,6 @@
 #define MOTOR_EN_PIN 22
 //mic
 #define MIC_PIN 26
-#define MIC_PP_DATA_NUM 1000
 //ambient light
 #define AMBIENT_LIGHT_PIN 27
 //eye_info
@@ -23,13 +22,20 @@
 #define EYE_WIDTH 13
 #define EYE_HEIGHT 44
 #define EYE_AG_FILTER 10
-#define EYE_SOUND_FILTER 50
 //eye_mode
 #define SOUND 2
 #define IMU 3
 #define LIGHT 5
-#define WINK 7
-#define ALL 210
+#define ALL 30
+//voice
+#define I2C_ADDR_PICO 0x2E  // PicoのデフォルトのI2Cアドレス
+#define VOICE_EN_PIN 6
+#define VOICE_STATE_PIN 11
+//sleep
+#define SLEEP_AG_FILTER 1000
+//other
+#define RC_FILTER 0.8
+#define FILTER_SAMPLE 100
 
 #include "Arduino.h"
 #include "Wire.h"
@@ -50,6 +56,7 @@ class KoroboLib_2_1 {
     imu::Vector<3> korobo_mag;
 
     void begin();
+    void init();
     void Imu_getData();
     int AmbientLight_getData();
     int Mic_getData();
@@ -57,6 +64,12 @@ class KoroboLib_2_1 {
     void Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u); 
     void Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u, unsigned int num);
     void Motor(int motor_power_l, int motor_power_r);
+    void Move();
+    void Voice(unsigned int num);
+    void Voice_send(char Talk[20]);
+    
+    boolean Voice_state();
+    boolean Sleep(unsigned int num);
 
   private:
     int SoundAmplitude(int data);
@@ -64,11 +77,13 @@ class KoroboLib_2_1 {
     void Eye_sound();
     void Eye_imu();
     void Eye_light();
-    void Eye_wink();
 
     int Eye_agx_array[EYE_AG_FILTER] = { 0 };
     int Eye_agy_array[EYE_AG_FILTER] = { 0 };
-    int Eye_sound_array[EYE_SOUND_FILTER] = { 0 };
+    int Eye_al_array[FILTER_SAMPLE] = { 0 };
+    int Voice_d_array[FILTER_SAMPLE] = { 0 };
+    int Sleep_array_1[SLEEP_AG_FILTER] = { 1200 };
+    int Sleep_array_2[FILTER_SAMPLE] = { 0 };
 
     int sound_amp_temp = 0;
     int mic_val_temp = 0;
@@ -77,9 +92,15 @@ class KoroboLib_2_1 {
     int mic_ans = 0;
     int eye_sound_temp = 0;
     int eye_agx_temp = 0, eye_agy_temp = 0;
+    int eye_al_val_temp = 0;
     int dX_point = 0, dY_point = 0, dX_size = 0, dY_size = 0;
+    int motor_l_i = 0, motor_r_i = 0;
+    int voice_mic_temp = 0, voice_light_temp = 0, voice_d_sum_temp = 0;
+    int sleep_sum_ave_diff_max = 0;
 
     bool mic_val_positive = false;
+    bool imu_flag = false;
+    bool sleep_flag = false;
 
     imu::Vector<3> korobo_acc_temp;
     imu::Vector<3> korobo_gyro_temp;
