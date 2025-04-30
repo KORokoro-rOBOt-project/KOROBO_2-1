@@ -10,17 +10,20 @@
 
 ## KoroboLib_2_1
 〈第2.1世代〉ころボ を動作させるにあたって必要となるライブラリ．
-### - begin()
-### - Imu_getData()
-### - AmbientLight_getData()
-### - Mic_getData()
-### - Eye(3-pattern)
+### - void begin()
+### - void Imu_getData()
+### - int AmbientLight_getData()
+### - int Mic_getData()
+### - void Eye(3-pattern)
 - Eye(unsigned int num)
 - Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u)
 - Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u, unsigned int num)
-### - Move() <- 予定
-### - Motor(int motor_power_l, int motor_power_r)
-### - Voice() <- 予定
+### - void Motor(int motor_power_l, int motor_power_r)
+### - void Move()
+### - boolean Voice_state()
+### - void Voice_send(char Talk[100])
+### - void Voice(unsigned int num)
+### - boolean Sleep(unsigned int num)
 
 > [!IMPORTANT]
 > 〈第2.1世代〉ころボ のライブラリは，複数の既存ライブラリに依存しています．
