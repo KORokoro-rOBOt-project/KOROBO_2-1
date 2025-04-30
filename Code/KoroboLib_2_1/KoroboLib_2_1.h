@@ -65,8 +65,8 @@ class KoroboLib_2_1 {
     void Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u, unsigned int num);
     void Motor(int motor_power_l, int motor_power_r);
     void Move();
+    void Voice_send(char Talk[100]);
     void Voice(unsigned int num);
-    void Voice_send(char Talk[20]);
     
     boolean Voice_state();
     boolean Sleep(unsigned int num);
