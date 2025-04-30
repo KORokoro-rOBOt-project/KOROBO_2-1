@@ -35,7 +35,7 @@
 ころボ 開発当初から大切にしてきた**シンプルな構造**と，**はめ込みによる組み立て方式**[^1]はそのままに，**耐久性**や**拡張性**が向上しました！
 > 机から落ちても，間違えて蹴っ飛ばしても致命傷になることはありません．\
 > マイコンボードとアクセス可能なスペースがあり，思い思いに進化させられます．
-[^1]: 既製品のギアボックスキットは除く．
+[^1]: 既製品のギヤボックスキットは除く．
 
 マイコンボードに，Raspberry Pi Foundation（ラズベリーパイ財団）が提供する[**Raspberry Pi Pico（ラズベリーパイピコ）**](https://www.raspberrypi.com/products/raspberry-pi-pico/)を採用しています！
 > 安価で入手性に優れ，様々な制作事例が存在します．\
@@ -73,6 +73,15 @@
 
 ##### 0.20 準備
 ##### 0.21 PLAフィラメント印刷
+<img src="/Document/Picture/pla-parts_2.jpg" width="75%">
+<p>
+<img src="/Document/Picture/pla-parts_support-remove_1.jpg" width="37.5%"><img src="/Document/Picture/pla-parts_support-remove_2.jpg" width="37.5%">
+</p>
+<p>
+<img src="/Document/Picture/pla-parts_support-remove_3.jpg" width="37.5%"><img src="/Document/Picture/pla-parts_support-remove_4.jpg" width="37.5%">
+</p>
+<img src="/Document/Picture/pla-parts_support-remove_5.jpg" width="75%">
+
 ##### 0.22 TPUフィラメント印刷
 <p>
 <img src="/Document/Picture/tpu-parts_support-remove_1.jpg" width="37.5%"><img src="/Document/Picture/tpu-parts_support-remove_2.jpg" width="37.5%">
@@ -163,9 +172,23 @@
     2. 準備中...
 </details>
 
-#### 4.6 カバー
+#### 4.6 上部滑車
+<p>
+<img src="/Document/Picture/top-wheel_1.jpg" width="37.5%"><img src="/Document/Picture/top-wheel_2.jpg" width="37.5%">
+</p>
+<p>
+<img src="/Document/Picture/top-wheel_3.jpg" width="37.5%"><img src="/Document/Picture/top-wheel_4.jpg" width="37.5%">
+</p>
+<p>
+<img src="/Document/Picture/top-wheel_set_1.jpg" width="37.5%"><img src="/Document/Picture/top-wheel_set_2.jpg" width="37.5%">
+</p>
+<p>
+<img src="/Document/Picture/top-wheel_set_3.jpg" width="37.5%"><img src="/Document/Picture/top-wheel_set_4.jpg" width="37.5%">
+</p>
+
+#### 4.7 カバー
 準備中...
-#### 4.7 カプセル
+#### 4.8 カプセル
 準備中...
 
 ---
