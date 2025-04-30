@@ -39,13 +39,21 @@ void KoroboLib_2_1::begin(){
   pinMode(VOICE_STATE_PIN, INPUT);
 }
 
+void KoroboLib_2_1::init(){
+  imu_flag = false;
+  Eye_point_size_init();
+}
+
 void KoroboLib_2_1::Imu_getData(){
-  korobo_acc_temp = korobo_acc;
-  korobo_gyro_temp = korobo_gyro;
-  korobo_mag_temp = korobo_mag;
-  korobo_acc = bno.getVector(Adafruit_BNO055::VECTOR_ACCELEROMETER);
-  korobo_gyro = bno.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
-  korobo_mag = bno.getVector(Adafruit_BNO055::VECTOR_MAGNETOMETER);
+  if (imu_flag != true){
+    korobo_acc_temp = korobo_acc;
+    korobo_gyro_temp = korobo_gyro;
+    korobo_mag_temp = korobo_mag;
+    korobo_acc = bno.getVector(Adafruit_BNO055::VECTOR_ACCELEROMETER);
+    korobo_gyro = bno.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
+    korobo_mag = bno.getVector(Adafruit_BNO055::VECTOR_MAGNETOMETER);
+  }
+  imu_flag = true;
 }
 
 int KoroboLib_2_1::AmbientLight_getData(){
@@ -105,7 +113,8 @@ void KoroboLib_2_1::Eye_sound() {
   if (eye_sound > eye_sound_x_limit) {
     dX_point -= eye_sound_x_limit / 2;
     dX_size += eye_sound_x_limit;
-  } else {
+  }
+  else {
     dX_point -= eye_sound / 2;
     dX_size += eye_sound;
   }
@@ -164,7 +173,7 @@ void KoroboLib_2_1::Eye_imu() {
   else dY_point += eye_agy;
 }
 
-void KoroboLib_2_1:: Eye_light() {
+void KoroboLib_2_1::Eye_light() {
   int eye_al_val = AmbientLight_getData();
   int eye_al_val_ave = 0;
   int eye_al_dx, eye_al_dy;
@@ -188,8 +197,7 @@ void KoroboLib_2_1:: Eye_light() {
 }
 
 void KoroboLib_2_1::Eye(unsigned int num) {
-  Eye_point_size_init();
-
+  //mode select
   if (num % SOUND == 0) Eye_sound();
   if (num % IMU == 0) Eye_imu();
   if (num % LIGHT == 0) Eye_light();
@@ -217,8 +225,7 @@ void KoroboLib_2_1::Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_si
 }
 
 void KoroboLib_2_1::Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u, unsigned int num) {
-  Eye_point_size_init();
-
+  //mode select
   if (num % 2 == 0) Eye_sound();
   if (num % 3 == 0) Eye_imu();
   if (num % 5 == 0) Eye_light();
@@ -271,14 +278,7 @@ void KoroboLib_2_1::Move(){
 
 }
 
-void KoroboLib_2_1::Voice_send(char Talk[20]) {
-  myi2c.beginTransmission(I2C_ADDR_PICO);
-  if (sizeof(Talk) < 32) myi2c.write(Talk);
-  myi2c.endTransmission();
-}
-
 boolean KoroboLib_2_1::Voice_state() {
-  char buff[20];
   for (;;) {
     myi2c.requestFrom(I2C_ADDR_PICO, 1);
     if (myi2c.available() > 0) {
@@ -286,11 +286,10 @@ boolean KoroboLib_2_1::Voice_state() {
       if (c == '>') break;
       else if (c == '*' || c == 0xFF) {
         Serial.println("wait...");
-        delay(10);  // Busy応答は10msec以上待つ必要がある
+        delay(10);
       }
       else {
-        Serial.print("error: ");
-        Serial.println(c);
+        Serial.print("error: "); Serial.println(c);
         delay(1000);
       }
     } 
@@ -299,36 +298,39 @@ boolean KoroboLib_2_1::Voice_state() {
       return false;
     }
   }
-  return true;  // OK
+  return true;
+}
+
+void KoroboLib_2_1::Voice_send(char Talk[20]) {
+  if (Voice_state()) {
+    myi2c.beginTransmission(I2C_ADDR_PICO);
+    if (sizeof(Talk) < 32) myi2c.write(Talk);
+    myi2c.endTransmission();
+  }
 }
 
 void KoroboLib_2_1::Voice(unsigned int num){
   int voice_mic, voice_imu, voice_light;
-  int voice_mic_d, voice_light_d;
-  int voice_d_sum = 0;
+  int voice_mic_d = 0, voice_light_d = 0, voice_d_sum = 0;
   
+  //mode select
   if (num % SOUND == 0){
     voice_mic = Mic_getData();
     voice_mic_d = abs(voice_mic - voice_mic_temp);
     voice_mic_temp = voice_mic;
-
-    voice_d_sum += voice_mic_d;
   }
   if (num % IMU == 0){
     Imu_getData();
     voice_imu = round(abs(korobo_acc.x()) + abs(korobo_acc.y()) + abs(korobo_acc.z()) / 3);
     voice_imu += round(abs(korobo_gyro.x()) + abs(korobo_gyro.y()) + abs(korobo_gyro.z()) / 3);
-
-    voice_d_sum += voice_imu;
   }
   if (num % LIGHT == 0){
     voice_light = AmbientLight_getData();
     voice_light_d = abs(voice_light - voice_light_temp);
     voice_light_temp = voice_light;
-
-    voice_d_sum += voice_light_d;
   }
 
+  voice_d_sum = voice_mic_d + voice_imu + voice_light_d;
   voice_d_sum = round((1 - RC_FILTER) * voice_d_sum + RC_FILTER * voice_d_sum_temp);
   voice_d_sum_temp = voice_d_sum;
   voice_d_sum *= 1;
@@ -344,6 +346,7 @@ void KoroboLib_2_1::Voice(unsigned int num){
 
   if (digitalRead(VOICE_STATE_PIN) != 1 || voice_d_sum < 0) {
     voice_d_sum = 0;
+    //voice-ic off
     digitalWrite(VOICE_EN_PIN, LOW);
   }
 
@@ -377,7 +380,7 @@ void KoroboLib_2_1::Voice(unsigned int num){
     char talk[20];
     voice.toCharArray(talk, voice.length() + 1);  
 
-    if (Voice_state()) Voice_send(talk);
+    Voice_send(talk);
 
     /*
     Serial.print(talk);Serial.print(", \t\t");
@@ -387,6 +390,59 @@ void KoroboLib_2_1::Voice(unsigned int num){
   }
 }
 
-void KoroboLib_2_1::Sleep(){
+boolean KoroboLib_2_1::Sleep(unsigned int num){
+  int sleep_mic = 0, sleep_imu = 0, sleep_light = 0;
+  int sleep_sum = 0;
+
+  //mode select
+  if (num % SOUND == 0) sleep_mic = Mic_getData();
+  if (num % IMU == 0) {
+    Imu_getData();
+    sleep_imu = round(abs(korobo_acc.x()) + abs(korobo_acc.y()) + abs(korobo_acc.z()) / 3);
+    sleep_imu += round(abs(korobo_gyro.x()) + abs(korobo_gyro.y()) + abs(korobo_gyro.z()) / 3);
+  }
+  if (num % LIGHT == 0) sleep_light = AmbientLight_getData();
+
+  sleep_sum = sleep_mic + sleep_imu + sleep_light;
+  //Serial.print("sleep_sum: "); Serial.println(sleep_sum);
+
+  //AG-filter sample: 1000
+  int sleep_sum_ave_1000 = 0;
+  for (int i = SLEEP_AG_FILTER - 1; i > 0; i--) Sleep_array_1[i] = Sleep_array_1[i - 1];
+  Sleep_array_1[0] = sleep_sum;
+  for (int i = 0; i < SLEEP_AG_FILTER; i++) sleep_sum_ave_1000 += Sleep_array_1[i];
+  sleep_sum_ave_1000 /= SLEEP_AG_FILTER;
+  //Serial.print("sleep_sum_ave_1000: "); Serial.println(sleep_sum_ave_1000);
   
+  //AG-filter sample: 100
+  int sleep_sum_ave_100 = 0;
+  for (int i = FILTER_SAMPLE - 1; i > 0; i--) Sleep_array_2[i] = Sleep_array_2[i - 1];
+  Sleep_array_2[0] = sleep_sum;
+  for (int i = 0; i < FILTER_SAMPLE; i++) sleep_sum_ave_100 += Sleep_array_2[i];
+  sleep_sum_ave_100 /= FILTER_SAMPLE;
+  //Serial.print(",sleep_sum_ave_100: "); Serial.println(sleep_sum_ave_100);
+
+  int sleep_sum_ave_diff;
+  sleep_sum_ave_diff = (sleep_sum_ave_1000 - sleep_sum_ave_100) / 8;
+
+  if (sleep_sum_ave_diff > sleep_sum_ave_diff_max) sleep_sum_ave_diff_max = sleep_sum_ave_diff;
+
+  if (sleep_sum_ave_diff >= 0) {
+    dX_size += sleep_sum_ave_diff;
+    dX_point -= sleep_sum_ave_diff / 2;
+    dY_size -= sleep_sum_ave_diff;
+    dY_point += sleep_sum_ave_diff / 2;
+  }
+  /*
+  Serial.print("..._diff:");Serial.println(sleep_sum_ave_diff);
+  Serial.print(", ..._diff_max:");Serial.println(sleep_sum_ave_diff_max);
+  Serial.print(", ...sleep_flag:");Serial.println(sleep_flag);
+  //*/
+  if (EYE_HEIGHT + dY_size < 0) sleep_flag = true;
+  else if (sleep_sum_ave_diff <= -sleep_sum_ave_diff_max / 3) {
+    sleep_flag = false;
+    sleep_sum_ave_diff_max = 0;
+  }
+  
+  return !sleep_flag;
 }

@@ -7,6 +7,7 @@ KoroboLib_2_1	KEYWORD1
 #KEYWORD2
 ################################
 begin	KEYWORD2
+init	KEYWORD2
 Imu_getData KEYWORD2
 AmbientLight_getData	KEYWORD2
 Mic_getData KEYWORD2
@@ -14,6 +15,9 @@ Eye	KEYWORD2
 Motor	KEYWORD2
 Move	KEYWORD2
 Voice	KEYWORD2
+Sleep	KEYWORD2
+Voice_send	KEYWORD2
+Voice_state	KEYWORD2
 
 ################################
 #LITERAL1
