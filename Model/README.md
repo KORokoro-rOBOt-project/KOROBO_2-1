@@ -9,7 +9,7 @@
 | [**motor_frame_2-1.stl**](STL/motor_frame_2-1.stl) | ギアボックスを包むカバー              | 2      | TPU  |
 | [**wheel_b_2-1.stl**](STL/wheel_b_2-1.stl)     | メインタイヤ                              | 2      | TPU  |
 | [**wheel_t.stl**](STL/wheel_t.stl)             | 上部滑車                                  | 4      | TPU  |
-| [**wheel_t2.stl**](STL/wheel_t2.stl)           | 上部滑車の軸                              | 4      | PLA  |
+| [**wheel_t_shaft.stl**](STL/wheel_t_shaft.stl)           | 上部滑車の軸                              | 4      | PLA  |
 ## 2-1Gen_KOROBO.step
 各種部品の位置関係などが確認できます．
 
