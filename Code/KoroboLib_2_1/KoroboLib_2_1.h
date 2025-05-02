@@ -36,6 +36,7 @@
 //other
 #define RC_FILTER 0.8
 #define FILTER_SAMPLE 100
+#define USB_POWER_PIN 24
 
 #include "Arduino.h"
 #include "Wire.h"
