@@ -113,6 +113,7 @@
 </details>
 
 #### 1.2 半田付け
+<img src="/Document/Picture/main-board_parts.jpg" width="75%">
 準備中...
 
 ---
