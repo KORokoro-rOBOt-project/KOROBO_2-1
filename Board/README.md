@@ -32,3 +32,5 @@
 | U5     | JST XH 4pin                 | 1    | OLEDへ接続                   |
 | U6     | DIP-28 W7.62mm              | 1    | ボイスICへ接続               |
 | U7     | PinSocket 2.54mm 8pin       | 2    | モータドライバへ接続         |
+
+<img src="/Document/Picture/main-board_parts.jpg" width="75%">
