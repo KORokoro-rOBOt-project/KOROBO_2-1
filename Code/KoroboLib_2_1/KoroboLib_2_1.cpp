@@ -29,6 +29,8 @@ void KoroboLib_2_1::begin(){
   pinMode(MIC_PIN, INPUT);
   pinMode(AMBIENT_LIGHT_PIN, INPUT);
 
+  pinMode(USB_POWER_PIN, INPUT);
+
   pinMode(MOTOR_IN4_PIN, OUTPUT);
   pinMode(MOTOR_IN3_PIN, OUTPUT);
   pinMode(MOTOR_IN1_PIN, OUTPUT);
@@ -244,33 +246,35 @@ void KoroboLib_2_1::Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_si
 }
 
 void KoroboLib_2_1::Motor(int motor_power_l, int motor_power_r) {
-  //left motor
-  if (motor_power_l > MOTOR_POWER_MIN) {
-    analogWrite(MOTOR_IN4_PIN, motor_power_l);
-    analogWrite(MOTOR_IN3_PIN, 0);
+  if (!digitalRead(USB_POWER_PIN)){
+    //left motor
+    if (motor_power_l > MOTOR_POWER_MIN) {
+      analogWrite(MOTOR_IN4_PIN, motor_power_l);
+      analogWrite(MOTOR_IN3_PIN, 0);
+    }
+    else if (abs(motor_power_l) <= MOTOR_POWER_MIN) {
+      analogWrite(MOTOR_IN4_PIN, 0);
+      analogWrite(MOTOR_IN3_PIN, 0);
+    }
+    else {
+      analogWrite(MOTOR_IN4_PIN, 0);
+      analogWrite(MOTOR_IN3_PIN, -motor_power_l);
+    }
+    //right motor
+    if (motor_power_r > MOTOR_POWER_MIN) {
+      analogWrite(MOTOR_IN1_PIN, motor_power_r);
+      analogWrite(MOTOR_IN2_PIN, 0);
+    }
+    else if (abs(motor_power_r) <= MOTOR_POWER_MIN) {
+      analogWrite(MOTOR_IN1_PIN, 0);
+      analogWrite(MOTOR_IN2_PIN, 0);
+    }
+    else {
+      analogWrite(MOTOR_IN1_PIN, 0);
+      analogWrite(MOTOR_IN2_PIN, -motor_power_r);
+    }
   }
-  else if (abs(motor_power_l) <= MOTOR_POWER_MIN) {
-    analogWrite(MOTOR_IN4_PIN, 0);
-    analogWrite(MOTOR_IN3_PIN, 0);
-  }
-  else {
-    analogWrite(MOTOR_IN4_PIN, 0);
-    analogWrite(MOTOR_IN3_PIN, -motor_power_l);
-  }
-  //right motor
-  if (motor_power_r > MOTOR_POWER_MIN) {
-    analogWrite(MOTOR_IN1_PIN, motor_power_r);
-    analogWrite(MOTOR_IN2_PIN, 0);
-  }
-  else if (abs(motor_power_r) <= MOTOR_POWER_MIN) {
-    analogWrite(MOTOR_IN1_PIN, 0);
-    analogWrite(MOTOR_IN2_PIN, 0);
-  }
-  else {
-    analogWrite(MOTOR_IN1_PIN, 0);
-    analogWrite(MOTOR_IN2_PIN, -motor_power_r);
-  }
-
+  else digitalWrite(MOTOR_EN_PIN, LOW);
   delay(10);
 }
 
