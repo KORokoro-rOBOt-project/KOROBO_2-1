@@ -6,14 +6,14 @@
 <summary>表示 / Preview</summary>
 <table>
   <tr>
-    <td>No.</td>
-    <td>品名</td>
-    <td>単価</td>
-    <td>個数</td>
-    <td>小計<br>※候補1</td>
-    <td>購入先<br>（候補1）</td>
-    <td>購入先<br>（候補2）</td>
-    <td>備考</td>
+    <th style="text-align:center;">No.</th>
+    <th style="text-align:center;">品名</th>
+    <th style="text-align:center;">単価</th>
+    <th style="text-align:center;">個数</th>
+    <th style="text-align:center;">小計<br>※候補1</th>
+    <th style="text-align:center;">購入先<br>(候補1)</th>
+    <th style="text-align:center;">購入先<br>(候補2)</th>
+    <th style="text-align:center;">備考</th>
   </tr>
   <tr>
     <td>1</td>
