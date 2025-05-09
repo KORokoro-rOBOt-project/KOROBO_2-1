@@ -16,14 +16,48 @@
 ### - int AmbientLight_getData()
 ### - int Mic_getData()
 ### - void Eye(3-pattern)
-- Eye(unsigned int num)\
-unsigned int num << "SOUND", "IMU", "LIGHT" or "ALL"
-  > SOUND(=2): <br>
-  > IMU(=3): <br>
-  > LIGHT(=5): <br>
-  > ALL(=30): 
-- Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u)
-- Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u, unsigned int num)
+- **Eye(unsigned int num) :**
+  - `unsigned int num` = "SOUND", "IMU", "LIGHT" or "ALL"
+    > SOUND(=2): 音情報を瞳の挙動に利用する．<br>
+    > IMU(=3): 加速度・角速度情報を瞳の挙動に利用する．<br>
+    > LIGHT(=5): 光情報を瞳の挙動に利用する．<br>
+    > ALL(=30): すべての情報を瞳の挙動に利用する．
+- **Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u) :**
+    <table>
+    <thead>
+      <tr>
+        <th align="center">変数名</th>
+        <th align="center">説明</th>
+        <th align="center">値の範囲</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>int dX_point_u</code></td>
+        <td>瞳のX座標</td>
+        <td align="center">?~?</td>
+      </tr>
+      <tr>
+        <td><code>int dY_point_u</code></td>
+        <td>瞳のY座標</td>
+        <td align="center">?~?</td>
+      </tr>
+      <tr>
+        <td><code>int dX_size_u</code></td>
+        <td>瞳の幅</td>
+        <td align="center">?~?</td>
+      </tr>
+      <tr>
+        <td><code>int dY_size_u</code></td>
+        <td>瞳の高さ</td>
+        <td align="center">?~?</td>
+      </tr>
+    </tbody>
+  </table>
+
+- **Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u, unsigned int num) :** 上2つの組み合わせ版．
+> [!NOTE]
+> 現状，左右の瞳の間隔や左右個別の操作は，行えません．
 ### - void Motor(int motor_power_l, int motor_power_r)
 ### - void Move()
 ### - boolean Voice_state()
