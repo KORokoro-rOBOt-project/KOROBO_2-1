@@ -132,6 +132,7 @@
 ### 3. 配線（[0](#01-購入)/[1](#10-準備)/[2](#20-準備)/3/[4](#40-準備)/[5](#50-準備)）
 > [!TIP]
 > KORokoro.rOBOt projectの[BOOTH](https://korokoro-robot.booth.pm/)にて，**配線類**を購入された方は，"[3. 駆動ユニット](#30-準備)" へ進んでください．
+<img src="/Document/Picture/wire_parts.jpg" width="75%">
 <details open>
 <summary>手順</summary>
 
