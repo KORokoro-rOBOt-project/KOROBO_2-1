@@ -16,14 +16,40 @@
 ### - int AmbientLight_getData()
 ### - int Mic_getData()
 ### - void Eye(3-pattern)
-- **Eye(unsigned int num) :**
-  - `unsigned int num` = "SOUND", "IMU", "LIGHT" or "ALL"
-    > SOUND(=2): 音情報を瞳の挙動に利用する．<br>
-    > IMU(=3): 加速度・角速度情報を瞳の挙動に利用する．<br>
-    > LIGHT(=5): 光情報を瞳の挙動に利用する．<br>
-    > ALL(=30): すべての情報を瞳の挙動に利用する．
-- **Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u) :**
-    <table>
+```C++
+void Eye(unsigned int num)
+```
+  <table>
+    <thead>
+      <tr>
+        <th align="center">unsigned int num = </th>
+        <th align="center">内容</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td align="center"><code>SOUND</code></td>
+        <td>音情報を瞳の挙動に利用する．(=2)</td>
+      </tr>
+      <tr>
+        <td align="center"><code>IMU</code></td>
+        <td>加速度・角速度情報を瞳の挙動に利用する．(=3)</td>
+      </tr>
+      <tr>
+        <td align="center"><code>LIGHT</code></td>
+        <td>光情報を瞳の挙動に利用する．(=5)</td>
+      </tr>
+      <tr>
+        <td align="center"><code>ALL</code></td>
+        <td>すべての情報を瞳の挙動に利用する．(=30)</td>
+      </tr>
+    </tbody>
+  </table>
+  
+```C++
+void Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u)
+```
+  <table>
     <thead>
       <tr>
         <th align="center">変数名</th>
@@ -33,31 +59,34 @@
     </thead>
     <tbody>
       <tr>
-        <td><code>int dX_point_u</code></td>
+        <td align="center"><code>int dX_point_u</code></td>
         <td>瞳のX座標</td>
         <td align="center">?~?</td>
       </tr>
       <tr>
-        <td><code>int dY_point_u</code></td>
+        <td align="center"><code>int dY_point_u</code></td>
         <td>瞳のY座標</td>
         <td align="center">?~?</td>
       </tr>
       <tr>
-        <td><code>int dX_size_u</code></td>
+        <td align="center"><code>int dX_size_u</code></td>
         <td>瞳の幅</td>
         <td align="center">?~?</td>
       </tr>
       <tr>
-        <td><code>int dY_size_u</code></td>
+        <td align="center"><code>int dY_size_u</code></td>
         <td>瞳の高さ</td>
         <td align="center">?~?</td>
       </tr>
     </tbody>
   </table>
 
-- **Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u, unsigned int num) :** 上2つの組み合わせ版．
+```C++
+void Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u, unsigned int num) //上2つの組み合わせ版
+```
+
 > [!NOTE]
-> 現状，左右の瞳の間隔や左右個別の操作は，行えません．
+> 現状，左右の瞳の間隔や左右個別の操作は行えません．
 ### - void Motor(int motor_power_l, int motor_power_r)
 ### - void Move()
 ### - boolean Voice_state()
