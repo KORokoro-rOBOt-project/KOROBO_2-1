@@ -29,19 +29,19 @@ void Eye(unsigned int num)
     <tbody>
       <tr>
         <td align="center"><code>SOUND</code></td>
-        <td>音情報を瞳の挙動に利用する．(=2)</td>
+        <td>音情報を瞳の挙動に利用する．(= 2)</td>
       </tr>
       <tr>
         <td align="center"><code>IMU</code></td>
-        <td>加速度・角速度情報を瞳の挙動に利用する．(=3)</td>
+        <td>加速度・角速度情報を瞳の挙動に利用する．(= 3)</td>
       </tr>
       <tr>
         <td align="center"><code>LIGHT</code></td>
-        <td>光情報を瞳の挙動に利用する．(=5)</td>
+        <td>光情報を瞳の挙動に利用する．(= 5)</td>
       </tr>
       <tr>
         <td align="center"><code>ALL</code></td>
-        <td>すべての情報を瞳の挙動に利用する．(=30)</td>
+        <td>すべての情報を瞳の挙動に利用する．(= 30)</td>
       </tr>
     </tbody>
   </table>
