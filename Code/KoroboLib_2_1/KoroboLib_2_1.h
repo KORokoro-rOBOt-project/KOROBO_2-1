@@ -9,6 +9,8 @@
 #define MOTOR_IN1_PIN 19
 #define MOTOR_IN2_PIN 18
 #define MOTOR_EN_PIN 22
+#define TC_ 1
+#define DRV_ 2
 //mic
 #define MIC_PIN 26
 //ambient light
@@ -28,7 +30,7 @@
 #define LIGHT 5
 #define ALL 30
 //voice
-#define I2C_ADDR_PICO 0x2E  // PicoのデフォルトのI2Cアドレス
+#define I2C_ADDR_PICO 0x2E
 #define VOICE_EN_PIN 6
 #define VOICE_STATE_PIN 11
 //sleep
@@ -36,7 +38,12 @@
 //other
 #define RC_FILTER 0.8
 #define FILTER_SAMPLE 100
-#define USB_POWER_PIN 24
+//USB接続検出をするGPIOがRaspberry Pi Pico / Raspberry Pi Pico Wとで異なる
+#if defined(ARDUINO_RASPBERRY_PI_PICO_W)
+  #define USB_POWER_PIN  66
+#else
+  #define USB_POWER_PIN 24
+#endif
 
 #include "Arduino.h"
 #include "Wire.h"
@@ -95,9 +102,10 @@ class KoroboLib_2_1 {
     int eye_agx_temp = 0, eye_agy_temp = 0;
     int eye_al_val_temp = 0;
     int dX_point = 0, dY_point = 0, dX_size = 0, dY_size = 0;
-    int motor_l_i = 0, motor_r_i = 0;
     int voice_mic_temp = 0, voice_light_temp = 0, voice_d_sum_temp = 0;
     int sleep_sum_ave_diff_max = 0;
+
+    float error_sum_x = 0, error_sum_y = 0;
 
     bool mic_val_positive = false;
     bool imu_flag = false;

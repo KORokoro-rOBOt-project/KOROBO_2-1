@@ -1,11 +1,11 @@
 #include "KoroboLib_2_1.h"
 
 // I2C SDA:GP4, SCL:GP5
-MbedI2C myi2c(p4, p5); 
+//MbedI2C myi2c(p4, p5); 
 // 9-axis sensor
-Adafruit_BNO055 bno = Adafruit_BNO055(-1, 0x28, &myi2c);
+Adafruit_BNO055 bno = Adafruit_BNO055(-1, 0x28, &Wire);
 // OLED
-Adafruit_SSD1306 oled(128, 64, &myi2c, -1);
+Adafruit_SSD1306 oled(128, 64, &Wire, -1);
 
 KoroboLib_2_1::KoroboLib_2_1() {
 
@@ -16,15 +16,18 @@ KoroboLib_2_1::~KoroboLib_2_1() {
 }
 
 void KoroboLib_2_1::begin(){
+  Wire.begin();
+  delay(10);
+
   bno.begin();
-  delay(100);
+  delay(10);
 
   oled.begin(SSD1306_SWITCHCAPVCC, 0x3C);
-  delay(100);
+  delay(10);
   oled.setTextColor(SSD1306_WHITE);
   oled.clearDisplay();
   oled.display();
-  delay(100);
+  delay(10);
 
   pinMode(MIC_PIN, INPUT);
   pinMode(AMBIENT_LIGHT_PIN, INPUT);
@@ -282,32 +285,31 @@ void KoroboLib_2_1::Move(){
   Imu_getData();
 
   int motor_power_l, motor_power_r;
-  int k = 30;
-  motor_power_l = (korobo_acc.x() - korobo_acc.y()) * k + (float)motor_l_i;
-  motor_power_r = (-korobo_acc.x() - korobo_acc.y()) * k + (float)motor_r_i;
+  float kp = 30, ki = 2;
+  error_sum_x += korobo_acc.x();
+  error_sum_y += -korobo_acc.y(); //目標値が0なため，加速度センサの値がそのまま偏差
+  /*left motor*/
+  motor_power_l = korobo_acc.x() * kp + error_sum_x * ki;     //x-axis PI-Control
+  motor_power_l += -korobo_acc.y() * kp + error_sum_y * ki;   //y-axis PI-COntorl
+  /*right motor*/
+  motor_power_r = -korobo_acc.x() * kp + (-error_sum_x) * ki; //x-axis PI-Contorl
+  motor_power_r += -korobo_acc.y() * kp + error_sum_y * ki;   //y-axis PI-Contorl
 
-  if (korobo_acc.x() - korobo_acc.y() > 0.1) motor_l_i++;
-  else if (korobo_acc.x() - korobo_acc.y() < -0.1) motor_l_i--;
-  if (-korobo_acc.x() - korobo_acc.y() > 0.1) motor_r_i++;
-  else if (-korobo_acc.x() - korobo_acc.y() < -0.1) motor_r_i--;
-
-  if ((abs(motor_power_l - motor_l_i) + abs(motor_power_r - motor_r_i)) / 2 >= 90) digitalWrite(MOTOR_EN_PIN, HIGH);
+  if (abs(korobo_acc.x()) + abs(korobo_acc.y()) > 3.5) digitalWrite(MOTOR_EN_PIN, HIGH);
   else {
     digitalWrite(MOTOR_EN_PIN, LOW);
-    motor_l_i = 0;
-    motor_r_i = 0;
+    error_sum_x = 0;
+    error_sum_y = 0;
   }
 
   Motor(motor_power_l, motor_power_r);
-
-  Serial.println(korobo_acc.y());
 }
 
 boolean KoroboLib_2_1::Voice_state() {
   for (;;) {
-    myi2c.requestFrom(I2C_ADDR_PICO, 1);
-    if (myi2c.available() > 0) {
-      byte c = myi2c.read();
+    Wire.requestFrom(I2C_ADDR_PICO, 1);
+    if (Wire.available() > 0) {
+      byte c = Wire.read();
       if (c == '>') break;
       else if (c == '*' || c == 0xFF) {
         Serial.println("wait...");
@@ -328,9 +330,9 @@ boolean KoroboLib_2_1::Voice_state() {
 
 void KoroboLib_2_1::Voice_send(char Talk[20]) {
   if (Voice_state()) {
-    myi2c.beginTransmission(I2C_ADDR_PICO);
-    if (sizeof(Talk) < 32) myi2c.write(Talk);
-    myi2c.endTransmission();
+    Wire.beginTransmission(I2C_ADDR_PICO);
+    Wire.write(Talk);
+    Wire.endTransmission();
   }
 }
 
@@ -397,7 +399,7 @@ void KoroboLib_2_1::Voice(unsigned int num){
     else if (voice_code_2words == "11") voice.concat("bo");
   }
 
-  if (voice.length() > 4){
+  if (voice.length() < 15 && voice.length() > 4){
     //voice-ic ON
     digitalWrite(VOICE_EN_PIN, HIGH);
 
