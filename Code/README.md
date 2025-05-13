@@ -1,15 +1,76 @@
 # Code
-## mind_2-1
-〈第2.1世代〉ころボ の基本プログラム
 > [!NOTE]
-> **Arduino IDE**を用いて，書き込みます．
+> **Arduino IDE**を用いて，書き込みます．ボードマネージャーは，[**arduino-pico**](https://github.com/earlephilhower/arduino-pico)を利用します．
+
 <details>
-<summary>書き込み手順</summary>
+<summary>書き込み手順（準備中）</summary>
 準備中．
 </details>
 
+## mind_2-1
+〈第2.1世代〉ころボ の基本プログラム
+
+<details>
+<summary>プログラム全体</summary>
+  
+```cpp
+#include "KoroboLib_2_1.h"
+
+KoroboLib_2_1 korobo;
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  korobo.begin();
+  delay(10);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  korobo.init();
+  if (korobo.Sleep(ALL)) {
+    korobo.Eye(ALL);
+    korobo.Voice(ALL);
+    korobo.Move();
+  }
+}
+```
+
+</details>
+
+1. **ライブラリの読み込み**\
+    `KoroboLib_2_1 korobo;`の`korobo`の部分は，任意の単語を指定可能．ただ，それ以降の`korobo.begin()`のような関数呼び出し時は，指定した単語に変更する必要がある．
+    ```cpp
+    #include "KoroboLib_2_1.h"
+    
+    KoroboLib_2_1 korobo;
+    ```  
+2. **初回処理**\
+    `korobo.begin()`は，必須．
+    ```cpp
+    void setup() {
+      // put your setup code here, to run once:
+      Serial.begin(9600);
+      korobo.begin();
+      delay(10);
+    }
+    ```
+3. **ループ処理**\
+    `korobo.init()`を一番上に記述．
+    ```cpp
+    void loop() {
+      // put your main code here, to run repeatedly:
+      korobo.init();
+      if (korobo.Sleep(ALL)) {
+        korobo.Eye(ALL);
+        korobo.Voice(ALL);
+        korobo.Move();
+      }
+    }
+    ```
+
 ## KoroboLib_2_1
-〈第2.1世代〉ころボ を動作させるにあたって必要となるライブラリ．
+〈第2.1世代〉ころボ を動作させるにあたって必要となるライブラリ
 ### - void begin()
 ### - void init()
 ### - void Imu_getData()
@@ -41,7 +102,7 @@ void Eye(unsigned int num)
       </tr>
       <tr>
         <td align="center"><code>ALL</code></td>
-        <td>すべての情報を瞳の挙動に利用する．(= 30)</td>
+        <td>すべての情報を瞳の挙動に利用する．(= 30) <b>※推奨</b></td>
       </tr>
     </tbody>
   </table>
