@@ -39,7 +39,7 @@ void loop() {
 </details>
 
 1. **ライブラリの読み込み**\
-    `KoroboLib_2_1 korobo;`の`korobo`の部分は，任意の単語を指定可能．ただ，それ以降の`korobo.begin()`のような関数呼び出し時は，指定した単語に変更する必要がある．
+    `KoroboLib_2_1 korobo;`の`korobo`の部分は，任意の単語を指定可能．ただし，それ以降の`korobo.begin()`のような関数呼び出し時は，指定した単語に変更する必要がある．
     ```cpp
     #include "KoroboLib_2_1.h"
     
