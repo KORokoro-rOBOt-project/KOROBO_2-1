@@ -78,7 +78,55 @@ void loop() {
 各モジュールのセットアップ処理関数（[**mind_2-1** / 2. 初回処理](#begin)を参照）．
 - **`void init()`**\
 ループ処理毎の初期化処理関数（[**mind_2-1** / 3. ループ処理](#init)を参照）．
-- **`void Imu_getData()`**
+- **`void Imu_getData()`**\
+記述した時点の9軸センサ（加速度・角速度・磁気）の値を取得する関数．
+    <table>
+      <thead>
+        <tr>
+          <th>変数</th>
+          <th>内容</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>korobo_acc.x()</code></td>
+          <td>加速度（x軸）</td>
+        </tr>
+        <tr>
+          <td><code>korobo_acc.y()</code></td>
+          <td>加速度（y軸）</td>
+        </tr>
+        <tr>
+          <td><code>korobo_acc.z()</code></td>
+          <td>加速度（z軸）</td>
+        </tr>
+        <tr>
+          <td><code>korobo_gyro.x()</code></td>
+          <td>角速度（x軸）</td>
+        </tr>
+        <tr>
+          <td><code>korobo_gyro.y()</code></td>
+          <td>角速度（y軸）</td>
+        </tr>
+        <tr>
+          <td><code>korobo_gyro.z()</code></td>
+          <td>角速度（z軸）</td>
+        </tr>
+        <tr>
+          <td><code>korobo_mag.x()</code></td>
+          <td>磁気（x軸）</td>
+        </tr>
+        <tr>
+          <td><code>korobo_mag.y()</code></td>
+          <td>磁気（y軸）</td>
+        </tr>
+        <tr>
+          <td><code>korobo_mag.z()</code></td>
+          <td>磁気（z軸）</td>
+        </tr>
+      </tbody>
+    </table>
+
 - **`int AmbientLight_getData()`**
 - **`int Mic_getData()`**
 - **`void Eye(3-pattern)`**
@@ -161,7 +209,7 @@ void loop() {
 - **`boolean Sleep(unsigned int num)`**
 
 > [!IMPORTANT]
-> 〈第2.1世代〉ころボ のライブラリは，複数の既存ライブラリに依存しています．
+> <b>KoroboLib_2_1</b>は，複数の既存ライブラリに依存しています．
 > 事前に，それらのライブラリをインストールしてください[^1][^2][^3][^4]．
 > また，各ライブラリには**異なるライセンス**が付与されています．
 > これらのライブラリを独自に改変，または ころボ のライブラリへ組み込むといった場合は，十分にご確認ください．
