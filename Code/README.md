@@ -39,13 +39,14 @@ void loop() {
 </details>
 
 1. **ライブラリの読み込み**\
-    `KoroboLib_2_1 korobo;`の`korobo`の部分は，任意の単語を指定可能．ただし，それ以降の`korobo.begin()`のような関数呼び出し時は，指定した単語に変更する必要がある．
+    `KoroboLib_2_1 korobo;`の`korobo`の部分は，任意の単語を指定可能．
+   ただし，それ以降の`korobo.begin()`のような関数呼び出し時は，指定した単語に変更する必要がある．
     ```cpp
     #include "KoroboLib_2_1.h"
     
     KoroboLib_2_1 korobo;
     ```  
-2. **初回処理**\
+3. **初回処理**\
     `korobo.begin()`は，必須．
     ```cpp
     void setup() {
@@ -55,7 +56,7 @@ void loop() {
       delay(10);
     }
     ```
-3. **ループ処理**\
+4. **ループ処理**\
     `korobo.init()`を一番上に記述．
     ```cpp
     void loop() {
@@ -71,15 +72,16 @@ void loop() {
 
 ## KoroboLib_2_1
 〈第2.1世代〉ころボ を動作させるにあたって必要となるライブラリ
-### - void begin()
-### - void init()
-### - void Imu_getData()
-### - int AmbientLight_getData()
-### - int Mic_getData()
-### - void Eye(3-pattern)
-```C++
-void Eye(unsigned int num)
-```
+- **`void begin()`**\
+各モジュールのセットアップ処理関数．
+- **`void init()`**
+- **`void Imu_getData()`**
+- **`int AmbientLight_getData()`**
+- **`int Mic_getData()`**
+- **`void Eye(3-pattern)`**
+    ```C++
+    void Eye(unsigned int num)
+    ```
   <table>
     <thead>
       <tr>
@@ -90,26 +92,26 @@ void Eye(unsigned int num)
     <tbody>
       <tr>
         <td align="center"><code>SOUND</code></td>
-        <td>音情報を瞳の挙動に利用する．(= 2)</td>
+        <td>音情報を瞳の挙動に利用する (= 2)</td>
       </tr>
       <tr>
         <td align="center"><code>IMU</code></td>
-        <td>加速度・角速度情報を瞳の挙動に利用する．(= 3)</td>
+        <td>加速度・角速度情報を瞳の挙動に利用する (= 3)</td>
       </tr>
       <tr>
         <td align="center"><code>LIGHT</code></td>
-        <td>光情報を瞳の挙動に利用する．(= 5)</td>
+        <td>光情報を瞳の挙動に利用する (= 5)</td>
       </tr>
       <tr>
         <td align="center"><code>ALL</code></td>
-        <td>すべての情報を瞳の挙動に利用する．(= 30) <b>※推奨</b></td>
+        <td>すべての情報を瞳の挙動に利用する (= 30) <b>※推奨</b></td>
       </tr>
     </tbody>
   </table>
   
-```C++
-void Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u)
-```
+    ```C++
+    void Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u)
+    ```
   <table>
     <thead>
       <tr>
@@ -142,18 +144,18 @@ void Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u)
     </tbody>
   </table>
 
-```C++
-void Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u, unsigned int num) //上2つの組み合わせ版
-```
+    ```C++
+    void Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u, unsigned int num) //上2つの組み合わせ版
+    ```
 
 > [!NOTE]
 > 現状，左右の瞳の間隔や左右個別の操作は行えません．
-### - void Motor(int motor_power_l, int motor_power_r)
-### - void Move()
-### - boolean Voice_state()
-### - void Voice_send(char Talk[100])
-### - void Voice(unsigned int num)
-### - boolean Sleep(unsigned int num)
+- **`void Motor(int motor_power_l, int motor_power_r)`**
+- **`void Move()`**
+- **`boolean Voice_state()`**
+- **`void Voice_send(char Talk[100])`**
+- **`void Voice(unsigned int num)`**
+- **`boolean Sleep(unsigned int num)`**
 
 > [!IMPORTANT]
 > 〈第2.1世代〉ころボ のライブラリは，複数の既存ライブラリに依存しています．
