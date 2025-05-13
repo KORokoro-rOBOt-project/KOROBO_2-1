@@ -46,7 +46,8 @@ void loop() {
     
     KoroboLib_2_1 korobo;
     ```  
-3. **初回処理**\
+2. **初回処理**\
+    <a name="begin"></a>
     `korobo.begin()`は，必須．
     ```cpp
     void setup() {
@@ -56,7 +57,7 @@ void loop() {
       delay(10);
     }
     ```
-4. **ループ処理**\
+3. **ループ処理**\
     `korobo.init()`を一番上に記述．
     ```cpp
     void loop() {
@@ -73,7 +74,7 @@ void loop() {
 ## KoroboLib_2_1
 〈第2.1世代〉ころボ を動作させるにあたって必要となるライブラリ
 - **`void begin()`**\
-各モジュールのセットアップ処理関数．
+各モジュールのセットアップ処理関数．[**mind_2-1** / 2. 初回処理](#begin)を参照．
 - **`void init()`**
 - **`void Imu_getData()`**
 - **`int AmbientLight_getData()`**
