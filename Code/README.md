@@ -138,9 +138,9 @@ void loop() {
 
       float acc_x, acc_y, acc_z;
       korobo.Imu_getData();
-      acc_x = korobo_acc.x();
-      acc_y = korobo_acc.y();
-      acc_z = korobo_acc.z();
+      acc_x = korobo.korobo_acc.x();
+      acc_y = korobo.korobo_acc.y();
+      acc_z = korobo.korobo_acc.z();
     }
     ```
     </details>
