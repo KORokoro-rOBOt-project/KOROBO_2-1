@@ -79,7 +79,7 @@ void loop() {
 - **`void init()`** : 
 ループ処理毎の初期化処理関数（[**mind_2-1** / 3. ループ処理](#init)を参照）．
 - **`void Imu_getData()`** : 
-記述した時点の9軸センサ（加速度・角速度・磁気）の値を取得する関数．
+記述した時点の9軸センサ（加速度・角速度・磁気）の値を取得できる．
   <table>
     <thead>
       <tr>
@@ -127,9 +127,10 @@ void loop() {
     </tbody>
   </table>
 
-
-- **`int AmbientLight_getData()`**
-- **`int Mic_getData()`**
+- **`int AmbientLight_getData()`** :
+上部光センサの値（0~1023）を取得できる．
+- **`int Mic_getData()`** :
+マイクセンサの値（0~1023）を取得できる．
 - **`void Eye(3-pattern)`**
     ```C++
     void Eye(unsigned int num)
@@ -205,7 +206,8 @@ void loop() {
 
 > [!NOTE]
 > 現状，左右の瞳の間隔や左右個別の操作は行えません．
-- **`void Motor(int motor_power_l, int motor_power_r)`**
+- **`void Motor(int motor_power_l, int motor_power_r)`** :
+左右のモータに任意の操作量を加えられる．
   <table>
     <thead>
       <tr>
@@ -236,6 +238,7 @@ x, y軸の加速度を利用し，姿勢を水平な状態へ維持するよう�
 ころボが発話可能な状態か確認できる．
 - **`void Voice_send(char Talk[20])`** : 
 任意の文字列を発話できる．
+  > <code>Voice_state()</code>を内部に組み込んでいる．
 - **`void Voice(unsigned int num)`** : 
 デフォルトの発話関数．
 発話で表現する情報を選択できる．
@@ -265,7 +268,51 @@ x, y軸の加速度を利用し，姿勢を水平な状態へ維持するよう�
       </tr>
     </tbody>
   </table>
-- **`boolean Sleep(unsigned int num)`**
+
+- **`boolean Sleep(unsigned int num)`** :
+スリープ機能関数．
+スリープへ移行する条件の情報を選択できる．
+  <table>
+    <thead>
+      <tr>
+        <th align="center">unsigned int num = </th>
+        <th align="center">内容</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td align="center"><code>SOUND</code></td>
+        <td>音情報を利用する (= 2)</td>
+      </tr>
+      <tr>
+        <td align="center"><code>IMU</code></td>
+        <td>加速度・角速度情報を利用する (= 3)</td>
+      </tr>
+      <tr>
+        <td align="center"><code>LIGHT</code></td>
+        <td>光情報を利用する (= 5)</td>
+      </tr>
+      <tr>
+        <td align="center"><code>ALL</code></td>
+        <td>すべての情報を利用する (= 30) <b>※推奨</b></td>
+      </tr>
+    </tbody>
+  </table>
+  
+    <details>
+    <summary>使用例</summary>
+
+    ```cpp
+    void loop() {
+      // put your main code here, to run repeatedly:
+      korobo.init();
+      if (korobo.Sleep(ALL)) {
+        //スリープ中に行わない処理...
+      }
+      //スリープ中にも行う処理...
+    }
+    ```
+    </details>
 
 > [!IMPORTANT]
 > <b>KoroboLib_2_1</b>は，複数の既存ライブラリに依存しています．
