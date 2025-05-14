@@ -74,11 +74,11 @@ void loop() {
 
 ## KoroboLib_2_1
 〈第2.1世代〉ころボ を動作させるにあたって必要となるライブラリ
-- **`void begin()`**\
+- **`void begin()`** : 
 各モジュールのセットアップ処理関数（[**mind_2-1** / 2. 初回処理](#begin)を参照）．
-- **`void init()`**\
+- **`void init()`** : 
 ループ処理毎の初期化処理関数（[**mind_2-1** / 3. ループ処理](#init)を参照）．
-- **`void Imu_getData()`**\
+- **`void Imu_getData()`** : 
 記述した時点の9軸センサ（加速度・角速度・磁気）の値を取得する関数．
   <table>
     <thead>
@@ -145,19 +145,19 @@ void loop() {
     <tbody>
       <tr>
         <td align="center"><code>SOUND</code></td>
-        <td>音情報を瞳の挙動に利用する (= 2)</td>
+        <td>音情報を利用する (= 2)</td>
       </tr>
       <tr>
         <td align="center"><code>IMU</code></td>
-        <td>加速度・角速度情報を瞳の挙動に利用する (= 3)</td>
+        <td>加速度・角速度情報を利用する (= 3)</td>
       </tr>
       <tr>
         <td align="center"><code>LIGHT</code></td>
-        <td>光情報を瞳の挙動に利用する (= 5)</td>
+        <td>光情報を利用する (= 5)</td>
       </tr>
       <tr>
         <td align="center"><code>ALL</code></td>
-        <td>すべての情報を瞳の挙動に利用する (= 30) <b>※推奨</b></td>
+        <td>すべての情報を利用する (= 30) <b>※推奨</b></td>
       </tr>
     </tbody>
   </table>
@@ -228,12 +228,43 @@ void loop() {
     </tbody>
   </table>
 
-- **`void Move()`**\
+- **`void Move()`** : 
+デフォルトの行動関数．
 x, y軸の加速度を利用し，姿勢を水平な状態へ維持するようタイヤが動く．
   > この挙動とユーザーによる任意の操作を，同時行えるようにする予定．
-- **`boolean Voice_state()`**
-- **`void Voice_send(char Talk[100])`**
-- **`void Voice(unsigned int num)`**
+- **`boolean Voice_state()`** : 
+ころボが発話可能な状態か確認できる．
+- **`void Voice_send(char Talk[20])`** : 
+任意の文字列を発話できる．
+- **`void Voice(unsigned int num)`** : 
+デフォルトの発話関数．
+発話で表現する情報を選択できる．
+  <table>
+    <thead>
+      <tr>
+        <th align="center">unsigned int num = </th>
+        <th align="center">内容</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td align="center"><code>SOUND</code></td>
+        <td>音情報を利用する (= 2)</td>
+      </tr>
+      <tr>
+        <td align="center"><code>IMU</code></td>
+        <td>加速度・角速度情報を利用する (= 3)</td>
+      </tr>
+      <tr>
+        <td align="center"><code>LIGHT</code></td>
+        <td>光情報を利用する (= 5)</td>
+      </tr>
+      <tr>
+        <td align="center"><code>ALL</code></td>
+        <td>すべての情報を利用する (= 30) <b>※推奨</b></td>
+      </tr>
+    </tbody>
+  </table>
 - **`boolean Sleep(unsigned int num)`**
 
 > [!IMPORTANT]
