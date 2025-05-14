@@ -256,10 +256,11 @@ x, y軸の加速度を利用し，姿勢を水平な状態へ維持するよう�
 ころボが発話可能な状態か確認できる．
 - **`void Voice_send(char Talk[20])`** : 
 任意の文字列を発話できる．
+文字列の文法は，[AquesTalk pico LSI](https://www.a-quest.com/products/aquestalkpicolsi.html)のデータシートを参照．
   > <code>Voice_state()</code>を内部に組み込んでいる．
 - **`void Voice(unsigned int num)`** : 
 デフォルトの発話関数．
-発話で表現する情報を選択できる．
+発話が表現する情報を選択できる．
   <table>
     <thead>
       <tr>
