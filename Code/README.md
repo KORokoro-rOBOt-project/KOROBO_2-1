@@ -80,6 +80,7 @@ void loop() {
 ループ処理毎の初期化処理関数（[**mind_2-1** / 3. ループ処理](#init)を参照）．
 - **`void Imu_getData()`** : 
 記述した時点の9軸センサ（加速度・角速度・磁気）の値を取得できる．
+  > 1回のループ処理中に複数実行しても，初めに実行した際の値が出力される．
   <table>
     <thead>
       <tr>
@@ -126,6 +127,23 @@ void loop() {
       </tr>
     </tbody>
   </table>
+
+    <details>
+    <summary>使用例</summary>
+
+    ```cpp
+    void loop() {
+      // put your main code here, to run repeatedly:
+      korobo.init();
+
+      float acc_x, acc_y, acc_z;
+      korobo.Imu_getData();
+      acc_x = korobo_acc.x();
+      acc_y = korobo_acc.y();
+      acc_z = korobo_acc.z();
+    }
+    ```
+    </details>
 
 - **`int AmbientLight_getData()`** :
 上部光センサの値（0~1023）を取得できる．
