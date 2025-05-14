@@ -80,52 +80,53 @@ void loop() {
 ループ処理毎の初期化処理関数（[**mind_2-1** / 3. ループ処理](#init)を参照）．
 - **`void Imu_getData()`**\
 記述した時点の9軸センサ（加速度・角速度・磁気）の値を取得する関数．
-    <table>
-      <thead>
-        <tr>
-          <th>変数</th>
-          <th>内容</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>korobo_acc.x()</code></td>
-          <td>加速度（x軸）</td>
-        </tr>
-        <tr>
-          <td><code>korobo_acc.y()</code></td>
-          <td>加速度（y軸）</td>
-        </tr>
-        <tr>
-          <td><code>korobo_acc.z()</code></td>
-          <td>加速度（z軸）</td>
-        </tr>
-        <tr>
-          <td><code>korobo_gyro.x()</code></td>
-          <td>角速度（x軸）</td>
-        </tr>
-        <tr>
-          <td><code>korobo_gyro.y()</code></td>
-          <td>角速度（y軸）</td>
-        </tr>
-        <tr>
-          <td><code>korobo_gyro.z()</code></td>
-          <td>角速度（z軸）</td>
-        </tr>
-        <tr>
-          <td><code>korobo_mag.x()</code></td>
-          <td>磁気（x軸）</td>
-        </tr>
-        <tr>
-          <td><code>korobo_mag.y()</code></td>
-          <td>磁気（y軸）</td>
-        </tr>
-        <tr>
-          <td><code>korobo_mag.z()</code></td>
-          <td>磁気（z軸）</td>
-        </tr>
-      </tbody>
-    </table>
+  <table>
+    <thead>
+      <tr>
+        <th align="center"><strong>変数</strong></th>
+        <th align="center"><strong>内容</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>korobo_acc.x()</code></td>
+        <td>加速度（x軸）</td>
+      </tr>
+      <tr>
+        <td><code>korobo_acc.y()</code></td>
+        <td>加速度（y軸）</td>
+      </tr>
+      <tr>
+        <td><code>korobo_acc.z()</code></td>
+        <td>加速度（z軸）</td>
+      </tr>
+      <tr>
+        <td><code>korobo_gyro.x()</code></td>
+        <td>角速度（x軸）</td>
+      </tr>
+      <tr>
+        <td><code>korobo_gyro.y()</code></td>
+        <td>角速度（y軸）</td>
+      </tr>
+      <tr>
+        <td><code>korobo_gyro.z()</code></td>
+        <td>角速度（z軸）</td>
+      </tr>
+      <tr>
+        <td><code>korobo_mag.x()</code></td>
+        <td>磁気（x軸）</td>
+      </tr>
+      <tr>
+        <td><code>korobo_mag.y()</code></td>
+        <td>磁気（y軸）</td>
+      </tr>
+      <tr>
+        <td><code>korobo_mag.z()</code></td>
+        <td>磁気（z軸）</td>
+      </tr>
+    </tbody>
+  </table>
+
 
 - **`int AmbientLight_getData()`**
 - **`int Mic_getData()`**
@@ -133,6 +134,7 @@ void loop() {
     ```C++
     void Eye(unsigned int num)
     ```
+  > 瞳の表示および，瞳が表現する情報を選択できる．
   <table>
     <thead>
       <tr>
@@ -163,11 +165,12 @@ void loop() {
     ```C++
     void Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u)
     ```
+  > 瞳の表示および，瞳の各種パラメータのデフォルト値へ任意の操作を加えられる．
   <table>
     <thead>
       <tr>
         <th align="center">変数名</th>
-        <th align="center">説明</th>
+        <th align="center">内容</th>
         <th align="center">値の範囲</th>
       </tr>
     </thead>
@@ -196,13 +199,38 @@ void loop() {
   </table>
 
     ```C++
-    void Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u, unsigned int num) //上2つの組み合わせ版
+    void Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u, unsigned int num)
     ```
+  > 上記，2項目の組み合わせ．
 
 > [!NOTE]
 > 現状，左右の瞳の間隔や左右個別の操作は行えません．
 - **`void Motor(int motor_power_l, int motor_power_r)`**
-- **`void Move()`**
+  <table>
+    <thead>
+      <tr>
+        <th align="center">変数</th>
+        <th align="center">内容</th>
+        <th align="center">値の範囲</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td align="center"><code>int motor_power_l</code></td>
+        <td>左モータの操作量</td>
+        <td align="center">0 ~ 255</td>
+      </tr>
+      <tr>
+        <td align="center"><code>int motor_power_r</code></td>
+        <td>右モータの操作量</td>
+        <td align="center">0 ~ 255</td>
+      </tr>
+    </tbody>
+  </table>
+
+- **`void Move()`**\
+x, y軸の加速度を利用し，姿勢を水平な状態へ維持するようタイヤが動く．
+  > この挙動とユーザーによる任意の操作を，同時行えるようにする予定．
 - **`boolean Voice_state()`**
 - **`void Voice_send(char Talk[100])`**
 - **`void Voice(unsigned int num)`**
