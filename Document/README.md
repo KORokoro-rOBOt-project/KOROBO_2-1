@@ -157,6 +157,16 @@
   </tr>
   <tr>
     <td>15</td>
+    <td>コネクター用ハウジング 2P</td>
+    <td>¥10</td>
+    <td>1</td>
+    <td>¥10</td>
+    <td><a href="https://akizukidenshi.com/catalog/g/g112151">秋月電子</a></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>16</td>
     <td>コネクター用ハウジング 4P</td>
     <td>&yen;10</td>
     <td>1</td>
@@ -170,7 +180,7 @@
     </td>
   </tr>
   <tr>
-    <td>16</td>
+    <td>17</td>
     <td>ケーブル用コネクター 10個</td>
     <td>&yen;50</td>
     <td>1</td>
@@ -180,7 +190,7 @@
     <!-- 備考セルは上の行と結合しているため省略 -->
   </tr>
   <tr>
-    <td>17</td>
+    <td>18</td>
     <td>ICソケット (28P) スリム300milタイプ</td>
     <td>&yen;280</td>
     <td>1</td>
@@ -190,7 +200,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>18</td>
+    <td>19</td>
     <td>PHコネクター ベース付ポスト<br>トップ型 2P B2B-PH-K-S</td>
     <td>&yen;10</td>
     <td>1</td>
@@ -200,7 +210,7 @@
     <td rowspan="6">候補2のAmazonから購入したほうが，部品を紛失してもある程度予備を確保しつつ，専用ケースで保管できるため，扱いやすいかもです．</td>
   </tr>
   <tr>
-    <td>19</td>
+    <td>20</td>
     <td>XHコネクター ベース付ポスト<br>トップ型 2P B2B-XH-A(LF)(SN)</td>
     <td>&yen;10</td>
     <td>3</td>
@@ -209,7 +219,7 @@
     <td rowspan="5"><a href="https://www.amazon.co.jp/">Amazon</a></td>
   </tr>
   <tr>
-    <td>20</td>
+    <td>21</td>
     <td>XHコネクター ベース付ポスト<br>トップ型 4P B4B-XH-A(LF)(SN)</td>
     <td>&yen;10</td>
     <td>1</td>
@@ -217,7 +227,7 @@
     <td><a href="https://akizukidenshi.com/catalog/g/g112249/">秋月電子</a></td>
   </tr>
   <tr>
-    <td>21</td>
+    <td>22</td>
     <td>XHコネクター ハウジング用コンタクト<br>SXH-001T-P0.6</td>
     <td>&yen;200</td>
     <td>1</td>
@@ -225,7 +235,7 @@
     <td><a href="https://akizukidenshi.com/catalog/g/g112265/">秋月電子</a></td>
   </tr>
   <tr>
-    <td>22</td>
+    <td>23</td>
     <td>XHコネクター ハウジング 4P XHP-4</td>
     <td>&yen;5</td>
     <td>1</td>
@@ -233,7 +243,7 @@
     <td><a href="https://akizukidenshi.com/catalog/g/g112257/">秋月電子</a></td>
   </tr>
   <tr>
-    <td>23</td>
+    <td>24</td>
     <td>XHコネクター ハウジング 2P XHP-2</td>
     <td>&yen;5</td>
     <td>3</td>
@@ -241,7 +251,7 @@
     <td><a href="https://akizukidenshi.com/catalog/g/g112255/">秋月電子</a></td>
   </tr>
   <tr>
-    <td>24</td>
+    <td>25</td>
     <td>コネクタハウジング<br>(2極、ピッチ：1.25mm、1列)</td>
     <td>¥41</td>
     <td>10</td>
@@ -256,7 +266,7 @@
     </td>
   </tr>
   <tr>
-    <td>25</td>
+    <td>26</td>
     <td>1.25mmピッチターミナル【500588000】</td>
     <td>¥9</td>
     <td>4</td>
@@ -266,7 +276,7 @@
     <!-- 備考セルは結合しているため省略 -->
   </tr>
   <tr>
-    <td>26</td>
+    <td>27</td>
     <td>BATT CHARGER OPEN FRAME 5V 2A<br>【DFR1026】</td>
     <td>&yen;662</td>
     <td>1</td>
@@ -276,7 +286,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>27</td>
+    <td>28</td>
     <td>リチウムイオンポリマー電池<br>(3.7V、1200mAh)【DTP673450(PHR)】</td>
     <td>&yen;2,363</td>
     <td>1</td>
@@ -286,7 +296,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>28</td>
+    <td>29</td>
     <td>ミニモーター低速ギヤボックス(4速)<br>【ITEM70189】</td>
     <td>&yen;946</td>
     <td>2</td>
@@ -296,7 +306,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>29</td>
+    <td>30</td>
     <td>ショートワイヤ付き<br>ミニ楕円形スピーカー（8Ω 1W）</td>
     <td>&yen;486</td>
     <td>1</td>
@@ -306,7 +316,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>30</td>
+    <td>31</td>
     <td>収縮チューブ SCG1.0-1B</td>
     <td>&yen;67</td>
     <td>1</td>
@@ -316,7 +326,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>31</td>
+    <td>32</td>
     <td>UL1571耐熱架橋ビニル絶縁電線<br>UL1571 AWG30 2m &lt;6&gt;</td>
     <td>&yen;967</td>
     <td>1</td>
@@ -326,7 +336,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>32</td>
+    <td>33</td>
     <td>100mm空カプセル　10個入り<br>（クリアタイプ）</td>
     <td>&yen;1,155</td>
     <td>1</td>
@@ -336,7 +346,7 @@
     <td>1体あたり1個です．．．あと9体</td>
   </tr>
   <tr>
-    <td>33</td>
+    <td>34</td>
     <td>〈第2.1世代〉ころボ<br>メインボード</td>
     <td>&yen;3,583</td>
     <td>1</td>
@@ -350,7 +360,7 @@
     </td>
   </tr>
   <tr>
-    <td>34</td>
+    <td>35</td>
     <td>PolyTerra PLA 1.75mm径 1000g<br>Sunrise Orange</td>
     <td>&yen;3,278</td>
     <td>1</td>
@@ -364,7 +374,7 @@
     </td>
   </tr>
   <tr>
-    <td>35</td>
+    <td>36</td>
     <td>eSUN Flexible TPU 白</td>
     <td>&yen;3,999</td>
     <td>1</td>
