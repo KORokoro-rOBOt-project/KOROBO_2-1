@@ -180,7 +180,21 @@ void loop() {
       </tr>
     </tbody>
   </table>
-  
+    <details>
+    <summary>使用例</summary>
+
+    ```cpp
+    void loop() {
+      // put your main code here, to run repeatedly:
+      korobo.init();
+
+      korobo.Eye(SOUND);        // 音情報のみ利用する．（1つの場合）
+      korobo.Eye(IMU * LIGHT);  // 加速度・角速度および光情報を利用する．（複数の場合）
+      korobo.Eye(ALL);          // すべての情報を利用する．
+    }
+    ```
+    </details>
+    
     ```C++
     void Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u)
     ```
@@ -221,11 +235,10 @@ void loop() {
     void Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u, unsigned int num)
     ```
   > 上記，2項目の組み合わせ．
-
-> [!NOTE]
-> 現状，左右の瞳の間隔や左右個別の操作は行えません．
 - **`void Motor(int motor_power_l, int motor_power_r)`** :
 左右のモータに任意の操作量を加えられる．
+  > 操作量が50以下のとき，ギヤボックスは出力が小さくカプセル内で止まってしまう．<br>
+  > そのため，操作量が0~50のきとは，0と同じ扱いとしている．
   <table>
     <thead>
       <tr>
@@ -287,7 +300,21 @@ x, y軸の加速度を利用し，姿勢を水平な状態へ維持するよう�
       </tr>
     </tbody>
   </table>
+    <details>
+    <summary>使用例</summary>
 
+    ```cpp
+    void loop() {
+      // put your main code here, to run repeatedly:
+      korobo.init();
+
+      korobo.Voice(SOUND);        // 音情報のみ利用する．（1つの場合）
+      korobo.Voice(IMU * LIGHT);  // 加速度・角速度および光情報を利用する．（複数の場合）
+      korobo.Voice(ALL);          // すべての情報を利用する．
+    }
+    ```
+    </details>
+    
 - **`boolean Sleep(unsigned int num)`** :
 スリープ機能関数．
 スリープへ移行する条件の情報を選択できる．
@@ -325,10 +352,12 @@ x, y軸の加速度を利用し，姿勢を水平な状態へ維持するよう�
     void loop() {
       // put your main code here, to run repeatedly:
       korobo.init();
+
+      // 例：Sleep(SOUND), Sleep(IMU * LIGHT)...
       if (korobo.Sleep(ALL)) {
-        //スリープ中に行わない処理...
+        /* スリープ中に行わない処理... */
       }
-      //スリープ中にも行う処理...
+      /* スリープ中にも行う処理... */
     }
     ```
     </details>
