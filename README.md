@@ -27,7 +27,7 @@
     > 安価で入手性に優れ，様々な制作事例が存在します．\
     > 多くの互換ボードが存在し，USB端子や用途に合わせて自由に選べます．\
     > <a href="https://www.raspberrypi.com/products/raspberry-pi-pico-2/" >Raspberry Pi Pico 2</a>のように，世代が上がっても互換性があります．
-
+ 
 ## フォルダ構成 / Directory Layout
 - [**Board**](Board): 基板発注に必要なガーバーデータ
 - [**Code**](Code): ソースコード，ライブラリ
@@ -202,4 +202,6 @@
 
 > [!CAUTION]
 > 極端に**気温**が高かったり低かったりする環境では，バッテリや各種モジュールに負荷を与えるため，注意が必要です．
+
+<a name="license"></a>
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/KORokoro-rOBOt-project/KOROBO_2-1">〈第2.1世代〉ころボ</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://community.camp-fire.jp/projects/view/764851">KORokoro.rOBOt project</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution-ShareAlike 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
