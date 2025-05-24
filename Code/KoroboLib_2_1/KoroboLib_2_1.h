@@ -72,6 +72,7 @@ class KoroboLib_2_1 {
     void Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u); 
     void Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u, unsigned int num);
     void Motor(int motor_power_l, int motor_power_r);
+    void Motor(int motor_power_l, int motor_power_r, bool flug);
     void Move();
     void Voice_send(char Talk[20]);
     void Voice(unsigned int num);
@@ -80,11 +81,12 @@ class KoroboLib_2_1 {
     boolean Sleep(unsigned int num);
 
   private:
-    int SoundAmplitude(int data);
-    void Eye_point_size_init();
-    void Eye_sound();
-    void Eye_imu();
-    void Eye_light();
+    int _SoundAmplitude(int data);
+    void _Eye_point_size_init();
+    void _Eye_sound();
+    void _Eye_imu();
+    void _Eye_light();
+    void _Motor(int motor_power_l, int motor_power_r);
 
     int Eye_agx_array[EYE_AG_FILTER] = { 0 };
     int Eye_agy_array[EYE_AG_FILTER] = { 0 };

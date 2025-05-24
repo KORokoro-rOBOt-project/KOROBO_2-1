@@ -46,7 +46,7 @@ void KoroboLib_2_1::begin(){
 
 void KoroboLib_2_1::init(){
   imu_flag = false;
-  Eye_point_size_init();
+  _Eye_point_size_init();
 }
 
 void KoroboLib_2_1::Imu_getData(){
@@ -69,7 +69,7 @@ int KoroboLib_2_1::Mic_getData(){
   return abs(analogRead(MIC_PIN));
 }
 
-int KoroboLib_2_1::SoundAmplitude(int data) {
+int KoroboLib_2_1::_SoundAmplitude(int data) {
   if (mic_val_temp != 0) {
     if (data - mic_val_temp >= 0) {
       if (mic_val_positive != true) {
@@ -96,16 +96,16 @@ int KoroboLib_2_1::SoundAmplitude(int data) {
   return mic_ans;
 }
 
-void KoroboLib_2_1::Eye_point_size_init(){
+void KoroboLib_2_1::_Eye_point_size_init(){
   dX_point = 0;
   dY_point = 0;
   dX_size = 0;
   dY_size = 0;
 }
 
-void KoroboLib_2_1::Eye_sound() {
+void KoroboLib_2_1::_Eye_sound() {
   int eye_sound;
-  int sound_amp = SoundAmplitude(Mic_getData());
+  int sound_amp = _SoundAmplitude(Mic_getData());
   eye_sound = abs(sound_amp - sound_amp_temp);
   sound_amp_temp = sound_amp;
   //RC-Filter
@@ -138,7 +138,7 @@ void KoroboLib_2_1::Eye_sound() {
   }
 }
 
-void KoroboLib_2_1::Eye_imu() {
+void KoroboLib_2_1::_Eye_imu() {
   Imu_getData();
   int eye_agx, eye_agy;
   eye_agx = round((korobo_acc.x() - korobo_acc_temp.x()) * 100 + (korobo_gyro.z() - korobo_gyro_temp.z()) * 0.5);
@@ -178,7 +178,7 @@ void KoroboLib_2_1::Eye_imu() {
   else dY_point += eye_agy;
 }
 
-void KoroboLib_2_1::Eye_light() {
+void KoroboLib_2_1::_Eye_light() {
   int eye_al_val = AmbientLight_getData();
   int eye_al_val_ave = 0;
   int eye_al_dx, eye_al_dy;
@@ -203,9 +203,9 @@ void KoroboLib_2_1::Eye_light() {
 
 void KoroboLib_2_1::Eye(unsigned int num) {
   //mode select
-  if (num % SOUND == 0) Eye_sound();
-  if (num % IMU == 0) Eye_imu();
-  if (num % LIGHT == 0) Eye_light();
+  if (num % SOUND == 0) _Eye_sound();
+  if (num % IMU == 0) _Eye_imu();
+  if (num % LIGHT == 0) _Eye_light();
 
   oled.clearDisplay();
 
@@ -231,9 +231,9 @@ void KoroboLib_2_1::Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_si
 
 void KoroboLib_2_1::Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u, unsigned int num) {
   //mode select
-  if (num % 2 == 0) Eye_sound();
-  if (num % 3 == 0) Eye_imu();
-  if (num % 5 == 0) Eye_light();
+  if (num % 2 == 0) _Eye_sound();
+  if (num % 3 == 0) _Eye_imu();
+  if (num % 5 == 0) _Eye_light();
 
   dX_point += dX_point_u;
   dY_point += dY_point_u;
@@ -248,37 +248,45 @@ void KoroboLib_2_1::Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_si
   oled.display();
 }
 
-void KoroboLib_2_1::Motor(int motor_power_l, int motor_power_r) {
-  if (!digitalRead(USB_POWER_PIN)){
-    //left motor
-    if (motor_power_l > MOTOR_POWER_MIN) {
-      analogWrite(MOTOR_IN4_PIN, motor_power_l);
-      analogWrite(MOTOR_IN3_PIN, 0);
-    }
-    else if (abs(motor_power_l) <= MOTOR_POWER_MIN) {
-      analogWrite(MOTOR_IN4_PIN, 0);
-      analogWrite(MOTOR_IN3_PIN, 0);
-    }
-    else {
-      analogWrite(MOTOR_IN4_PIN, 0);
-      analogWrite(MOTOR_IN3_PIN, -motor_power_l);
-    }
-    //right motor
-    if (motor_power_r > MOTOR_POWER_MIN) {
-      analogWrite(MOTOR_IN1_PIN, motor_power_r);
-      analogWrite(MOTOR_IN2_PIN, 0);
-    }
-    else if (abs(motor_power_r) <= MOTOR_POWER_MIN) {
-      analogWrite(MOTOR_IN1_PIN, 0);
-      analogWrite(MOTOR_IN2_PIN, 0);
-    }
-    else {
-      analogWrite(MOTOR_IN1_PIN, 0);
-      analogWrite(MOTOR_IN2_PIN, -motor_power_r);
-    }
+void KoroboLib_2_1::_Motor(int motor_power_l, int motor_power_r){
+  /*left motor*/
+  if (motor_power_l > MOTOR_POWER_MIN) {
+    analogWrite(MOTOR_IN4_PIN, motor_power_l);
+    analogWrite(MOTOR_IN3_PIN, 0);
   }
-  else digitalWrite(MOTOR_EN_PIN, LOW);
+  else if (abs(motor_power_l) <= MOTOR_POWER_MIN) {
+    analogWrite(MOTOR_IN4_PIN, 0);
+    analogWrite(MOTOR_IN3_PIN, 0);
+  }
+  else {
+    analogWrite(MOTOR_IN4_PIN, 0);
+    analogWrite(MOTOR_IN3_PIN, -motor_power_l);
+  }
+  /*right motor*/
+  if (motor_power_r > MOTOR_POWER_MIN) {
+    analogWrite(MOTOR_IN1_PIN, motor_power_r);
+    analogWrite(MOTOR_IN2_PIN, 0);
+  }
+  else if (abs(motor_power_r) <= MOTOR_POWER_MIN) {
+    analogWrite(MOTOR_IN1_PIN, 0);
+    analogWrite(MOTOR_IN2_PIN, 0);
+  }
+  else {
+    analogWrite(MOTOR_IN1_PIN, 0);
+    analogWrite(MOTOR_IN2_PIN, -motor_power_r);
+  }
+
   delay(10);
+}
+
+void KoroboLib_2_1::Motor(int motor_power_l, int motor_power_r) {
+  digitalWrite(MOTOR_EN_PIN, !digitalRead(USB_POWER_PIN)); //USB接続時は，モーター停止
+  _Motor(motor_power_l, motor_power_r);
+}
+
+void KoroboLib_2_1::Motor(int motor_power_l, int motor_power_r, bool flug){
+  if (flug) digitalWrite(MOTOR_EN_PIN, !digitalRead(USB_POWER_PIN)); //USB接続時は，モーター停止
+  _Motor(motor_power_l, motor_power_r);
 }
 
 void KoroboLib_2_1::Move(){
@@ -295,14 +303,12 @@ void KoroboLib_2_1::Move(){
   motor_power_r = -korobo_acc.x() * kp + (-error_sum_x) * ki; //x-axis PI-Contorl
   motor_power_r += -korobo_acc.y() * kp + error_sum_y * ki;   //y-axis PI-Contorl
 
-  if (abs(korobo_acc.x()) + abs(korobo_acc.y()) > 3.5) digitalWrite(MOTOR_EN_PIN, HIGH);
+  if (abs(korobo_acc.x()) + abs(korobo_acc.y()) > 3.5) Motor(motor_power_l, motor_power_r);
   else {
     digitalWrite(MOTOR_EN_PIN, LOW);
     error_sum_x = 0;
     error_sum_y = 0;
   }
-
-  Motor(motor_power_l, motor_power_r);
 }
 
 boolean KoroboLib_2_1::Voice_state() {
