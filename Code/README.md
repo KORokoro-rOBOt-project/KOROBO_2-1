@@ -150,7 +150,7 @@ void loop() {
 - **`int Mic_getData()`** :
 マイクセンサの値（0~1023）を取得できる．
 - **`void Eye(3-pattern)`**
-    ```C++
+    ```cpp
     void Eye(unsigned int num)
     ```
   > 瞳の表示および，瞳が表現する情報を選択できる．
@@ -195,7 +195,7 @@ void loop() {
     ```
     </details>
     
-    ```C++
+    ```cpp
     void Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u)
     ```
   > 瞳の表示および，瞳の各種パラメータのデフォルト値へ任意の操作を加えられる．
@@ -231,12 +231,16 @@ void loop() {
     </tbody>
   </table>
 
-    ```C++
+    ```cpp
     void Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u, unsigned int num)
     ```
   > 上記，2項目の組み合わせ．
-- **`void Motor(int motor_power_l, int motor_power_r)`** :
+- **`void Motor(2-pattern)`** :
 左右のモータに任意の操作量を加えられる．
+  ```cpp
+  void Motor(int motor_power_l, int motor_power_r)
+  ```
+  > マイコンボードにUSB接続時は，モータ停止とする．<br>
   > 操作量が50以下のとき，ギヤボックスは出力が小さくカプセル内で止まってしまう．<br>
   > そのため，操作量が0~50のきとは，0と同じ扱いとしている．
   <table>
@@ -260,7 +264,11 @@ void loop() {
       </tr>
     </tbody>
   </table>
-
+  
+  ```cpp
+  void Motor(int motor_power_l, int motor_power_r, bool flug)
+  ```
+  > `void Motor(int motor_power_l, int motor_power_r)`における，USB接続時のモータ停止を無効（`flug = false`）とする．
 - **`void Move()`** : 
 デフォルトの行動関数．
 x, y軸の加速度を利用し，姿勢を水平な状態へ維持するようタイヤが動く．
