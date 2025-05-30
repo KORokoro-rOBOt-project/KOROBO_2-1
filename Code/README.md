@@ -12,7 +12,7 @@
 〈第2.1世代〉ころボ の基本プログラム
 
   <details>
-  <summary>プログラム全体</summary>
+  <summary><ins>ソースコード</ins></summary>
     
   ```cpp
   #include "KoroboLib_2_1.h"
@@ -122,7 +122,7 @@
   </table>
 
     <details>
-    <summary>使用例</summary>
+    <summary><ins>使用例</ins></summary>
 
     ```cpp
     void loop() {
@@ -176,7 +176,7 @@
     </table>
     
     <details>
-    <summary>使用例</summary>
+    <summary><ins>使用例</ins></summary>
 
     ```cpp
     void loop() {
@@ -310,8 +310,9 @@ x, y軸の加速度を利用し，姿勢を水平な状態へ維持するよう�
       </tr>
     </tbody>
   </table>
+  
     <details>
-    <summary>使用例</summary>
+    <summary><ins>使用例</ins></summary>
 
     ```cpp
     void loop() {
@@ -354,7 +355,7 @@ x, y軸の加速度を利用し，姿勢を水平な状態へ維持するよう�
   </table>
   
     <details>
-    <summary>使用例</summary>
+    <summary><ins>使用例</ins></summary>
 
     ```cpp
     void loop() {
