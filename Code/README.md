@@ -58,12 +58,9 @@ void loop() {
     }
     ```
 3. **ループ処理**\
-    <a name="init"></a>
-    `korobo.init()`を一番上に記述．
     ```cpp
     void loop() {
       // put your main code here, to run repeatedly:
-      korobo.init();
       if (korobo.Sleep(ALL)) {
         korobo.Eye(ALL);
         korobo.Voice(ALL);
@@ -76,8 +73,6 @@ void loop() {
 〈第2.1世代〉ころボ を動作させるにあたって必要となるライブラリ
 - **`void begin()`** : 
 各モジュールのセットアップ処理関数（[**mind_2-1** / 2. 初回処理](#begin)を参照）．
-- **`void init()`** : 
-ループ処理毎の初期化処理関数（[**mind_2-1** / 3. ループ処理](#init)を参照）．
 - **`void Imu_getData()`** : 
 記述した時点の9軸センサ（加速度・角速度・磁気）の値を取得できる．
   > 1回のループ処理中に複数実行しても，初めに実行した際の値が出力される．
