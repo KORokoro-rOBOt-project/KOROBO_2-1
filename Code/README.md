@@ -27,7 +27,6 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  korobo.init();
   if (korobo.Sleep(ALL)) {
     korobo.Eye(ALL);
     korobo.Voice(ALL);
@@ -129,8 +128,6 @@ void loop() {
     ```cpp
     void loop() {
       // put your main code here, to run repeatedly:
-      korobo.init();
-
       float acc_x, acc_y, acc_z;
       korobo.Imu_getData();
       acc_x = korobo.korobo_acc.x();
@@ -181,8 +178,6 @@ void loop() {
     ```cpp
     void loop() {
       // put your main code here, to run repeatedly:
-      korobo.init();
-
       korobo.Eye(SOUND);        // 音情報のみ利用する．（1つの場合）
       korobo.Eye(IMU * LIGHT);  // 加速度・角速度および光情報を利用する．（複数の場合）
       korobo.Eye(ALL);          // すべての情報を利用する．
@@ -309,8 +304,6 @@ x, y軸の加速度を利用し，姿勢を水平な状態へ維持するよう�
     ```cpp
     void loop() {
       // put your main code here, to run repeatedly:
-      korobo.init();
-
       korobo.Voice(SOUND);        // 音情報のみ利用する．（1つの場合）
       korobo.Voice(IMU * LIGHT);  // 加速度・角速度および光情報を利用する．（複数の場合）
       korobo.Voice(ALL);          // すべての情報を利用する．
@@ -354,8 +347,6 @@ x, y軸の加速度を利用し，姿勢を水平な状態へ維持するよう�
     ```cpp
     void loop() {
       // put your main code here, to run repeatedly:
-      korobo.init();
-
       // 例：Sleep(SOUND), Sleep(IMU * LIGHT)...
       if (korobo.Sleep(ALL)) {
         /* スリープ中に行わない処理... */
