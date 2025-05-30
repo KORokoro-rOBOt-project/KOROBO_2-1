@@ -7,34 +7,35 @@
 準備中．
 </details>
 
-## mind_2-1
+## examples
+### mind_2-1
 〈第2.1世代〉ころボ の基本プログラム
 
-<details>
-<summary>プログラム全体</summary>
+  <details>
+  <summary>プログラム全体</summary>
+    
+  ```cpp
+  #include "KoroboLib_2_1.h"
   
-```cpp
-#include "KoroboLib_2_1.h"
-
-KoroboLib_2_1 korobo;
-
-void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  korobo.begin();
-}
-
-void loop() {
-  // put your main code here, to run repeatedly:
-  if (korobo.Sleep(ALL)) {
-    korobo.Eye(ALL);
-    korobo.Voice(ALL);
-    korobo.Move();
+  KoroboLib_2_1 korobo;
+  
+  void setup() {
+    // put your setup code here, to run once:
+    Serial.begin(9600);
+    korobo.begin();
   }
-}
-```
-
-</details>
+  
+  void loop() {
+    // put your main code here, to run repeatedly:
+    if (korobo.Sleep(ALL)) {
+      korobo.Eye(ALL);
+      korobo.Voice(ALL);
+      korobo.Move();
+    }
+  }
+  ```
+  
+  </details>
 
 1. **ライブラリの読み込み**\
     `KoroboLib_2_1 korobo;`の`korobo`の部分は，任意の単語を指定可能．
