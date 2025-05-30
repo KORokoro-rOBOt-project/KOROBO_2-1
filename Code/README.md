@@ -57,7 +57,7 @@ void loop() {
       delay(10);
     }
     ```
-3. **ループ処理**\
+3. **ループ処理**
     ```cpp
     void loop() {
       // put your main code here, to run repeatedly:
