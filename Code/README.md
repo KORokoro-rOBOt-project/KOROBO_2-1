@@ -22,7 +22,6 @@ void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
   korobo.begin();
-  delay(10);
 }
 
 void loop() {
@@ -53,7 +52,6 @@ void loop() {
       // put your setup code here, to run once:
       Serial.begin(9600);
       korobo.begin();
-      delay(10);
     }
     ```
 3. **ループ処理**
