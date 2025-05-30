@@ -11,7 +11,6 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  korobo.init();
   if (korobo.Sleep(ALL)) {
     korobo.Eye(ALL);
     korobo.Voice(ALL);

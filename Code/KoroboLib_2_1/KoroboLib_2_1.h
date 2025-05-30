@@ -9,8 +9,6 @@
 #define MOTOR_IN1_PIN 19
 #define MOTOR_IN2_PIN 18
 #define MOTOR_EN_PIN 22
-#define TC_ 1
-#define DRV_ 2
 //mic
 #define MIC_PIN 26
 //ambient light
@@ -64,7 +62,6 @@ class KoroboLib_2_1 {
     imu::Vector<3> korobo_mag;
 
     void begin();
-    void init();
     void Imu_getData();
     int AmbientLight_getData();
     int Mic_getData();
@@ -86,6 +83,7 @@ class KoroboLib_2_1 {
     void _Eye_sound();
     void _Eye_imu();
     void _Eye_light();
+    void _Eye();
     void _Motor(int motor_power_l, int motor_power_r);
 
     int Eye_agx_array[EYE_AG_FILTER] = { 0 };
@@ -110,7 +108,6 @@ class KoroboLib_2_1 {
     float error_sum_x = 0, error_sum_y = 0;
 
     bool mic_val_positive = false;
-    bool imu_flag = false;
     bool sleep_flag = false;
 
     imu::Vector<3> korobo_acc_temp;

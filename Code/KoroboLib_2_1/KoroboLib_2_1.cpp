@@ -1,7 +1,5 @@
 #include "KoroboLib_2_1.h"
 
-// I2C SDA:GP4, SCL:GP5
-//MbedI2C myi2c(p4, p5); 
 // 9-axis sensor
 Adafruit_BNO055 bno = Adafruit_BNO055(-1, 0x28, &Wire);
 // OLED
@@ -28,10 +26,7 @@ void KoroboLib_2_1::begin(){
   oled.clearDisplay();
   oled.display();
   delay(10);
-
-  pinMode(MIC_PIN, INPUT);
-  pinMode(AMBIENT_LIGHT_PIN, INPUT);
-
+  
   pinMode(USB_POWER_PIN, INPUT);
 
   pinMode(MOTOR_IN4_PIN, OUTPUT);
@@ -42,23 +37,17 @@ void KoroboLib_2_1::begin(){
 
   pinMode(VOICE_EN_PIN, OUTPUT);
   pinMode(VOICE_STATE_PIN, INPUT);
-}
 
-void KoroboLib_2_1::init(){
-  imu_flag = false;
-  _Eye_point_size_init();
+  delay(10);
 }
 
 void KoroboLib_2_1::Imu_getData(){
-  if (imu_flag != true){
-    korobo_acc_temp = korobo_acc;
-    korobo_gyro_temp = korobo_gyro;
-    korobo_mag_temp = korobo_mag;
-    korobo_acc = bno.getVector(Adafruit_BNO055::VECTOR_ACCELEROMETER);
-    korobo_gyro = bno.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
-    korobo_mag = bno.getVector(Adafruit_BNO055::VECTOR_MAGNETOMETER);
-  }
-  imu_flag = true;
+  korobo_acc_temp = korobo_acc;
+  korobo_gyro_temp = korobo_gyro;
+  korobo_mag_temp = korobo_mag;
+  korobo_acc = bno.getVector(Adafruit_BNO055::VECTOR_ACCELEROMETER);
+  korobo_gyro = bno.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
+  korobo_mag = bno.getVector(Adafruit_BNO055::VECTOR_MAGNETOMETER);
 }
 
 int KoroboLib_2_1::AmbientLight_getData(){
@@ -201,18 +190,23 @@ void KoroboLib_2_1::_Eye_light() {
   eye_al_val_temp = eye_al_val;
 }
 
-void KoroboLib_2_1::Eye(unsigned int num) {
-  //mode select
-  if (num % SOUND == 0) _Eye_sound();
-  if (num % IMU == 0) _Eye_imu();
-  if (num % LIGHT == 0) _Eye_light();
-
+void KoroboLib_2_1::_Eye(){
   oled.clearDisplay();
 
   oled.fillRect(X_EYE_L + dX_point, Y_EYE + dY_point, EYE_WIDTH + dX_size, EYE_HEIGHT + dY_size, WHITE);
   oled.fillRect(X_EYE_R + dX_point, Y_EYE + dY_point, EYE_WIDTH + dX_size, EYE_HEIGHT + dY_size, WHITE);
 
   oled.display();
+}
+
+void KoroboLib_2_1::Eye(unsigned int num) {
+  _Eye_point_size_init();
+  //mode select
+  if (num % SOUND == 0) _Eye_sound();
+  if (num % IMU == 0) _Eye_imu();
+  if (num % LIGHT == 0) _Eye_light();
+
+  _Eye();
 }
 
 void KoroboLib_2_1::Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u) {
@@ -221,15 +215,11 @@ void KoroboLib_2_1::Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_si
   dX_size = dX_size_u;
   dY_size = dY_size_u;
 
-  oled.clearDisplay();
-
-  oled.fillRect(X_EYE_L + dX_point, Y_EYE + dY_point, EYE_WIDTH + dX_size, EYE_HEIGHT + dY_size, WHITE);
-  oled.fillRect(X_EYE_R + dX_point, Y_EYE + dY_point, EYE_WIDTH + dX_size, EYE_HEIGHT + dY_size, WHITE);
-
-  oled.display();
+  _Eye();
 }
 
 void KoroboLib_2_1::Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u, unsigned int num) {
+  _Eye_point_size_init();
   //mode select
   if (num % 2 == 0) _Eye_sound();
   if (num % 3 == 0) _Eye_imu();
@@ -240,12 +230,7 @@ void KoroboLib_2_1::Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_si
   dX_size += dX_size_u;
   dY_size += dY_size_u;
 
-  oled.clearDisplay();
-
-  oled.fillRect(X_EYE_L + dX_point, Y_EYE + dY_point, EYE_WIDTH + dX_size, EYE_HEIGHT + dY_size, WHITE);
-  oled.fillRect(X_EYE_R + dX_point, Y_EYE + dY_point, EYE_WIDTH + dX_size, EYE_HEIGHT + dY_size, WHITE);
-
-  oled.display();
+  _Eye();
 }
 
 void KoroboLib_2_1::_Motor(int motor_power_l, int motor_power_r){
@@ -286,6 +271,7 @@ void KoroboLib_2_1::Motor(int motor_power_l, int motor_power_r) {
 
 void KoroboLib_2_1::Motor(int motor_power_l, int motor_power_r, bool flug){
   if (flug) digitalWrite(MOTOR_EN_PIN, !digitalRead(USB_POWER_PIN)); //USB接続時は，モーター停止
+  else digitalWrite(MOTOR_EN_PIN, HIGH);
   _Motor(motor_power_l, motor_power_r);
 }
 
