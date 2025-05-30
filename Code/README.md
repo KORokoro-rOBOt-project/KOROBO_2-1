@@ -142,36 +142,40 @@ void loop() {
 - **`int Mic_getData()`** :
 マイクセンサの値（0~1023）を取得できる．
 - **`void Eye(3-pattern)`**
+  
+  - 
     ```cpp
     void Eye(unsigned int num)
-    ```
-  > 瞳の表示および，瞳が表現する情報を選択できる．
-  <table>
-    <thead>
-      <tr>
-        <th align="center">unsigned int num = </th>
-        <th align="center">内容</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td align="center"><code>SOUND</code></td>
-        <td>音情報を利用する (= 2)</td>
-      </tr>
-      <tr>
-        <td align="center"><code>IMU</code></td>
-        <td>加速度・角速度情報を利用する (= 3)</td>
-      </tr>
-      <tr>
-        <td align="center"><code>LIGHT</code></td>
-        <td>光情報を利用する (= 5)</td>
-      </tr>
-      <tr>
-        <td align="center"><code>ALL</code></td>
-        <td>すべての情報を利用する (= 30) <b>※推奨</b></td>
-      </tr>
-    </tbody>
-  </table>
+    ```  
+    > 瞳の表示および，瞳が表現する情報を選択できる．
+  
+    <table>
+      <thead>
+        <tr>
+          <th align="center">unsigned int num = </th>
+          <th align="center">内容</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>SOUND</code></td>
+          <td>音情報を利用する (= 2)</td>
+        </tr>
+        <tr>
+          <td align="center"><code>IMU</code></td>
+          <td>加速度・角速度情報を利用する (= 3)</td>
+        </tr>
+        <tr>
+          <td align="center"><code>LIGHT</code></td>
+          <td>光情報を利用する (= 5)</td>
+        </tr>
+        <tr>
+          <td align="center"><code>ALL</code></td>
+          <td>すべての情報を利用する (= 30) <b>※推奨</b></td>
+        </tr>
+      </tbody>
+    </table>
+    
     <details>
     <summary>使用例</summary>
 
@@ -185,80 +189,89 @@ void loop() {
     ```
     </details>
     
+  - 
     ```cpp
     void Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u)
     ```
-  > 瞳の表示および，瞳の各種パラメータのデフォルト値へ任意の操作を加えられる．
-  <table>
-    <thead>
-      <tr>
-        <th align="center">変数名</th>
-        <th align="center">内容</th>
-        <th align="center">値の範囲</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td align="center"><code>int dX_point_u</code></td>
-        <td>瞳のX座標</td>
-        <td align="center">?~?</td>
-      </tr>
-      <tr>
-        <td align="center"><code>int dY_point_u</code></td>
-        <td>瞳のY座標</td>
-        <td align="center">?~?</td>
-      </tr>
-      <tr>
-        <td align="center"><code>int dX_size_u</code></td>
-        <td>瞳の幅</td>
-        <td align="center">?~?</td>
-      </tr>
-      <tr>
-        <td align="center"><code>int dY_size_u</code></td>
-        <td>瞳の高さ</td>
-        <td align="center">?~?</td>
-      </tr>
-    </tbody>
-  </table>
-
+    > 瞳の表示および，瞳の各種パラメータのデフォルト値へ任意の操作を加えられる．
+  
+    <table>
+      <thead>
+        <tr>
+          <th align="center">変数名</th>
+          <th align="center">内容</th>
+          <th align="center">値の範囲</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>int dX_point_u</code></td>
+          <td>瞳のX座標</td>
+          <td align="center">?~?</td>
+        </tr>
+        <tr>
+          <td align="center"><code>int dY_point_u</code></td>
+          <td>瞳のY座標</td>
+          <td align="center">?~?</td>
+        </tr>
+        <tr>
+          <td align="center"><code>int dX_size_u</code></td>
+          <td>瞳の幅</td>
+          <td align="center">?~?</td>
+        </tr>
+        <tr>
+          <td align="center"><code>int dY_size_u</code></td>
+          <td>瞳の高さ</td>
+          <td align="center">?~?</td>
+        </tr>
+      </tbody>
+    </table>
+    
+  -
     ```cpp
     void Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_size_u, unsigned int num)
     ```
-  > 上記，2項目の組み合わせ．
+    > 上記，2項目の組み合わせ．
+
 - **`void Motor(2-pattern)`** :
 左右のモータに任意の操作量を加えられる．
-  ```cpp
-  void Motor(int motor_power_l, int motor_power_r)
-  ```
-  > マイコンボードにUSB接続時は，モータ停止とする．<br>
-  > 操作量が50以下のとき，ギヤボックスは出力が小さくカプセル内で止まってしまう．<br>
-  > そのため，操作量が0~50のきとは，0と同じ扱いとしている．
-  <table>
-    <thead>
-      <tr>
-        <th align="center">変数</th>
-        <th align="center">内容</th>
-        <th align="center">値の範囲</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td align="center"><code>int motor_power_l</code></td>
-        <td>左モータの操作量</td>
-        <td align="center">0 ~ 255</td>
-      </tr>
-      <tr>
-        <td align="center"><code>int motor_power_r</code></td>
-        <td>右モータの操作量</td>
-        <td align="center">0 ~ 255</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  ```cpp
-  void Motor(int motor_power_l, int motor_power_r, bool flug)
-  ```
-  > `void Motor(int motor_power_l, int motor_power_r)`における，USB接続時のモータ停止を無効（`flug = false`）とする．
+
+  -
+    ```cpp
+    void Motor(int motor_power_l, int motor_power_r)
+    ```
+    > マイコンボードにUSB接続時は，モータ停止とする．<br>
+    > 操作量が50以下のとき，ギヤボックスは出力が小さくカプセル内で止まってしまう．<br>
+    > そのため，操作量が0~50のきとは，0と同じ扱いとしている．
+    
+    <table>
+      <thead>
+        <tr>
+          <th align="center">変数</th>
+          <th align="center">内容</th>
+          <th align="center">値の範囲</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>int motor_power_l</code></td>
+          <td>左モータの操作量</td>
+          <td align="center">0 ~ 255</td>
+        </tr>
+        <tr>
+          <td align="center"><code>int motor_power_r</code></td>
+          <td>右モータの操作量</td>
+          <td align="center">0 ~ 255</td>
+        </tr>
+      </tbody>
+    </table>
+
+  -
+    ```cpp
+    void Motor(int motor_power_l, int motor_power_r, bool flug)
+    ```
+    > `void Motor(int motor_power_l, int motor_power_r)`における，USB接続時のモータ停止を無効（`flug = false`）とする．
+
 - **`void Move()`** : 
 デフォルトの行動関数．
 x, y軸の加速度を利用し，姿勢を水平な状態へ維持するようタイヤが動く．
