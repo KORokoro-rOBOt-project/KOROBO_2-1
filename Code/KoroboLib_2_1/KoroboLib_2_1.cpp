@@ -26,7 +26,7 @@ void KoroboLib_2_1::begin(){
   oled.clearDisplay();
   oled.display();
   delay(10);
-  
+
   pinMode(USB_POWER_PIN, INPUT);
 
   pinMode(MOTOR_IN4_PIN, OUTPUT);

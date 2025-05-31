@@ -57,10 +57,6 @@ class KoroboLib_2_1 {
     KoroboLib_2_1();
     ~KoroboLib_2_1();
 
-    imu::Vector<3> korobo_acc;
-    imu::Vector<3> korobo_gyro;
-    imu::Vector<3> korobo_mag;
-
     void begin();
     void Imu_getData();
     int AmbientLight_getData();
@@ -76,6 +72,10 @@ class KoroboLib_2_1 {
     
     boolean Voice_state();
     boolean Sleep(unsigned int num);
+
+    imu::Vector<3> korobo_acc;
+    imu::Vector<3> korobo_gyro;
+    imu::Vector<3> korobo_mag;
 
   private:
     int _SoundAmplitude(int data);
