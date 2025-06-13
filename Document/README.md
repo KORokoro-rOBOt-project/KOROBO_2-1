@@ -313,7 +313,7 @@
     <td>&yen;280</td>
     <td><a href="https://www.amazon.co.jp/%E3%82%BF%E3%83%9F%E3%83%A4-%E6%A5%BD%E3%81%97%E3%81%84%E5%B7%A5%E4%BD%9C%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-No-252-3mm%E5%85%AD%E8%A7%92%E3%82%B7%E3%83%A3%E3%83%95%E3%83%88%E3%82%BB%E3%83%83%E3%83%88-70252/dp/B0BTS99X3S/ref=pd_sim_d_sccl_3_5/356-3568001-7199139?pd_rd_w=wJ5Yp&content-id=amzn1.sym.d686209d-8edb-4501-90de-4e255f5b32cf&pf_rd_p=d686209d-8edb-4501-90de-4e255f5b32cf&pf_rd_r=8CYN04G4VC2R6D3KAX71&pd_rd_wg=pZLPA&pd_rd_r=4b423c32-2349-4196-a37c-98c7c704a185&pd_rd_i=B0BTS99X3S&psc=1">Amazon</a></td>
     <td></td>
-    <td></td>
+    <td>38 [mm] 2本を，ギヤボックス付属のシャフトの代わりに使用します．</td>
   </tr>
   <tr>
     <td>31</td>
