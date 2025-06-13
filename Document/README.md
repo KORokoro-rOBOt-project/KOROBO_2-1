@@ -302,11 +302,21 @@
     <td>2</td>
     <td>&yen;1,892</td>
     <td><a href="https://www.marutsu.co.jp/pc/i/159903/">marutsu</a></td>
-    <td><a href="https://www.amazon.co.jp/.../dp/B002R0DQCU/">Amazon</a></td>
+    <td><a href="https://www.amazon.co.jp/%E3%82%BF%E3%83%9F%E3%83%A4-%E6%A5%BD%E3%81%97%E3%81%84%E5%B7%A5%E4%BD%9C%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-No-189-%E3%83%9F%E3%83%8B%E3%83%A2%E3%83%BC%E3%82%BF%E3%83%BC%E4%BD%8E%E9%80%9F%E3%82%AE%E3%83%A4%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9-70189/dp/B002R0DQCU/ref=pd_vtp_h_pd_vtp_h_d_sccl_3/356-3568001-7199139?pd_rd_w=v85PE&content-id=amzn1.sym.aa2b64e9-bbda-48af-869b-bd011156b91d&pf_rd_p=aa2b64e9-bbda-48af-869b-bd011156b91d&pf_rd_r=Q1AR9PCE0WR974R1QER1&pd_rd_wg=Pq8TJ&pd_rd_r=5d47c3e7-2eb9-4dff-b083-cf0f43c0ef89&pd_rd_i=B002R0DQCU&psc=1">Amazon</a></td>
     <td></td>
   </tr>
   <tr>
     <td>30</td>
+    <td>3mm六角シャフトセット<br>【ITEM70252】</td>
+    <td>&yen;280</td>
+    <td>280</td>
+    <td>&yen;280</td>
+    <td><a href="https://www.amazon.co.jp/%E3%82%BF%E3%83%9F%E3%83%A4-%E6%A5%BD%E3%81%97%E3%81%84%E5%B7%A5%E4%BD%9C%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-No-252-3mm%E5%85%AD%E8%A7%92%E3%82%B7%E3%83%A3%E3%83%95%E3%83%88%E3%82%BB%E3%83%83%E3%83%88-70252/dp/B0BTS99X3S/ref=pd_sim_d_sccl_3_5/356-3568001-7199139?pd_rd_w=wJ5Yp&content-id=amzn1.sym.d686209d-8edb-4501-90de-4e255f5b32cf&pf_rd_p=d686209d-8edb-4501-90de-4e255f5b32cf&pf_rd_r=8CYN04G4VC2R6D3KAX71&pd_rd_wg=pZLPA&pd_rd_r=4b423c32-2349-4196-a37c-98c7c704a185&pd_rd_i=B0BTS99X3S&psc=1">Amazon</a></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>31</td>
     <td>ショートワイヤ付き<br>ミニ楕円形スピーカー（8Ω 1W）</td>
     <td>&yen;486</td>
     <td>1</td>
@@ -316,7 +326,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>31</td>
+    <td>32</td>
     <td>収縮チューブ SCG1.0-1B</td>
     <td>&yen;67</td>
     <td>1</td>
@@ -326,7 +336,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>32</td>
+    <td>33</td>
     <td>UL1571耐熱架橋ビニル絶縁電線<br>UL1571 AWG30 2m &lt;6&gt;</td>
     <td>&yen;967</td>
     <td>1</td>
@@ -336,7 +346,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>33</td>
+    <td>34</td>
     <td>100mm空カプセル　10個入り<br>（クリアタイプ）</td>
     <td>&yen;1,155</td>
     <td>1</td>
@@ -346,7 +356,7 @@
     <td>1体あたり1個です．．．あと9体</td>
   </tr>
   <tr>
-    <td>34</td>
+    <td>35</td>
     <td>〈第2.1世代〉ころボ<br>メインボード</td>
     <td>&yen;3,583</td>
     <td>1</td>
@@ -360,7 +370,7 @@
     </td>
   </tr>
   <tr>
-    <td>35</td>
+    <td>36</td>
     <td>PolyTerra PLA 1.75mm径 1000g<br>Sunrise Orange</td>
     <td>&yen;3,278</td>
     <td>1</td>
@@ -374,7 +384,7 @@
     </td>
   </tr>
   <tr>
-    <td>36</td>
+    <td>37</td>
     <td>eSUN Flexible TPU 白</td>
     <td>&yen;3,999</td>
     <td>1</td>
