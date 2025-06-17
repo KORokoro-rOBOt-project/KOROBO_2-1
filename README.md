@@ -1,5 +1,5 @@
 # 〈第2.1世代〉ころボ / KOROBO (2-1 gen)
-> [!CAUTION]
+> [!IMPORTANT]
 > 組み立て説明を除き，他のデータは最低限完成しました！\
 > 学生個人の活動であるため，ご了承ください．
 
@@ -55,12 +55,12 @@
 
 #### 0.2 印刷
 > [!TIP]
-> KORokoro.rOBOt projectの[BOOTH](https://korokoro-robot.booth.pm/items/6812764)にて，**3Dプリンタ製部品**を購入された方は，"[1. 駆動ユニット](#10-準備)" へ進んでください．
+> KORokoro.rOBOt projectの[BOOTH](https://korokoro-robot.booth.pm/items/6812764)にて，**3Dプリンタ製部品**を購入された方は，"[0.3 基板発注 or 作成](#03-基板発注-or-作成)" へ進んでください．
 <details open>
 <summary>手順</summary>
 
 ##### 0.20 準備
-##### 0.21 PLAフィラメント印刷
+##### 0.21 PLA
 <img src="/Document/Picture/pla-parts_2.jpg" width="75%">
 <p>
 <img src="/Document/Picture/pla-parts_support-remove_1.jpg" width="37.5%"><img src="/Document/Picture/pla-parts_support-remove_2.jpg" width="37.5%">
@@ -70,7 +70,7 @@
 </p>
 <img src="/Document/Picture/pla-parts_support-remove_5.jpg" width="75%">
 
-##### 0.22 TPUフィラメント印刷
+##### 0.22 TPU
 <p>
 <img src="/Document/Picture/tpu-parts_support-remove_1.jpg" width="37.5%"><img src="/Document/Picture/tpu-parts_support-remove_2.jpg" width="37.5%">
 </p>
@@ -82,23 +82,64 @@
 </p>
 </details>
 
+#### 0.3 基板発注 or 作成
+> [!TIP]
+> KORokoro.rOBOt projectの[BOOTH](https://korokoro-robot.booth.pm/items/6807081)にて，**メインボード**を購入された方は，"[1. 駆動ユニット](#10-準備)" へ進んでください．
+<details open>
+<summary>業者に発注される方</summary>
+
+> [**Board**](Board)の中にあるzipファイルをPCBサイトへアップロードしてください．
+</details>
+<details>
+<summary>ユニバーサル基板から作成される方（準備中）</summary>
+
+準備中...
+</details>
+
 ---
 ### 1. 駆動ユニット（[0](#01-購入)/1/[2](#20-準備)/[3](#30-準備)/[4](#40-準備)/[5](#50-準備)）
 #### 1.0 準備
-まず，下記の工具・部品を準備してください．
-- **工具**
-    - ニッパー
-    - カッターナイフ（or デザインナイフ）
-    - ピンセット
-    - プラスドライバー
-- **部品**
-    - タミヤ　ミニモーター低速ギヤボックス（4速）
-    - タミヤ　3mm六角シャフトセット
-    - メインタイヤ（3Dプリンタ製）
-    - ギヤボックスカバー（3Dプリンタ製）
+次の表に示す，工具・部品を準備してください．
+<table>
+  <thead>
+    <tr>
+      <th>項目</th>
+      <th>名称</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="4">工具</td>
+      <td>ニッパー</td>
+    </tr>
+    <tr>
+      <td>カッターナイフ or デザインナイフ</td>
+    </tr>
+    <tr>
+      <td>ピンセット</td>
+    </tr>
+    <tr>
+      <td>プラスドライバー</td>
+    </tr>
+    <tr>
+      <td rowspan="4">部品</td>
+      <td>タミヤ ミニモーター低速ギヤボックス（4速）</td>
+    </tr>
+    <tr>
+      <td>タミヤ 3mm六角シャフトセット</td>
+    </tr>
+    <tr>
+      <td>メインタイヤ（3Dプリンタ製）</td>
+    </tr>
+    <tr>
+      <td>ギヤボックスカバー（3Dプリンタ製）</td>
+    </tr>
+  </tbody>
+</table>
 
 #### 1.1 ギヤボックス
 ミニモーター低速ギヤボックス（4速）を，付属の組み立て説明書に従って，組み立てます．
+
 > [!NOTE]
 > ギヤ比は，"<b>149.9:1</b>" を使用します．\
 > 六角シャフトは，3mm六角シャフトセットに付属する "<b>38 [mm]</b>" を使用します．
@@ -122,36 +163,74 @@
 
 #### 2.0 準備
 準備中...
+
+<table>
+	<thead>
+		<tr>
+			<th>項目</th>
+			<th>名称</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td rowspan="2">工具</td>
+			<td>圧着工具</td>
+		</tr>
+		<tr>
+			<td>グルーガン（+ グルースティック）</td>
+		</tr>
+	</tbody>
+</table>
+
 #### 2.1 ピンヘッダー
 準備中...
+
 #### 2.2 JST-XH
 準備中...
+
 #### 2.3 JST-PH
 準備中...
+
 #### 2.4 PicoBlade
 準備中...
+
 </details>
 
-***
+---
 ### 3. 基板（[0](#01-購入)/[1](#10-準備)/[2](#20-準備)/3/[4](#40-準備)/[5](#50-準備)）
 #### 3.0 準備
-準備中...
-#### 3.1 発注 or 作成
-> [!TIP]
-> KORokoro.rOBOt projectの[BOOTH](https://korokoro-robot.booth.pm/items/6807081)にて，**メインボード**を購入された方は，"[3.2 半田付け](#12-半田付け)" へ進んでください．
-<details>
-<summary>業者に発注される方</summary>
+次の表・画像に示す，工具・部品を準備してください．
 
-- Boardの中にあるzipファイルをPCBサイトへアップロードしてください．
-</details>
-<details>
-<summary>ユニバーサル基板から作成される方（準備中）</summary>
+<table>
+  <thead>
+    <tr>
+      <th>項目</th>
+      <th>名称</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="5">工具</td>
+      <td>半田こて</td>
+    </tr>
+    <tr>
+      <td>半田</td>
+    </tr>
+    <tr>
+      <td>ニッパー</td>
+    </tr>
+    <tr>
+      <td>机を保護できるマット</td>
+    </tr>
+    <tr>
+      <td>基板や部品を固定できるモノ</td>
+    </tr>
+  </tbody>
+</table>
 
-準備中...
-</details>
+<img src="/Document/Picture/main-board_parts.jpg" width="75%">
 
 #### 3.2 半田付け
-<img src="/Document/Picture/main-board_parts.jpg" width="75%">
 準備中...
 
 ---
@@ -214,14 +293,11 @@
 #### 拡張性
 準備中...
 #### その他
-> [!WARNING]
-> 定期的に，本体カバーを取り外して**バッテリ**の様子を見てください．もし，バッテリが膨らんでいたり，異常な発熱が生じていたりしたら，直ちにメインボード（基板）から取り外してください．**火災**につながる恐れがあります．
+> [!CAUTION]
+> カプセルの仕様上，**完全防水ではありません**．
 
 > [!CAUTION]
-> カプセルの仕様上，**完全防水ではありません**．軽い雨や粉塵に対しての耐性はありますが，清掃は必要です．最悪の場合，故障する可能性もあるため，思いやりをもって共に過ごしましょう．
-
-> [!CAUTION]
-> 極端に**気温**が高かったり低かったりする環境では，バッテリや各種モジュールに負荷を与えるため，注意が必要です．
+> **リチウムイオン電池**を用いています．取り扱いにはご注意ください．
 
 <a name="license"></a>
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/KORokoro-rOBOt-project/KOROBO_2-1">〈第2.1世代〉ころボ</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://community.camp-fire.jp/projects/view/764851">KORokoro.rOBOt project</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution-ShareAlike 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
