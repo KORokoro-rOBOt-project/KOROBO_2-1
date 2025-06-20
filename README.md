@@ -14,8 +14,65 @@
 
 玩具や機械ではなく，生き物っていうわけでもないけれど，どこか自分たちと同じ存在感を与える新たな存在になってほしいと考えています．
 そして，周囲の人同士の関係を築いたり，誰かの不安や秘密を一緒に抱え込んでくれたり，孤独を埋めてくれたりする存在に... 
+
 ### 第2.1世代
 〈第2.1世代〉ころボは，〈第2世代〉のオープンソース版として開発中の子です．
+
+<details>
+<summary>第1世代，第2世代</summary>
+	
+<table>
+  <thead>
+    <tr>
+      <th align="center"><strong>第1世代 / 1st Gen</strong></th>
+      <th align="center"><strong>第2世代 / 2nd Gen</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td valign="top">
+        〈第1世代〉ころボは，高専の本科生で最後となる高専祭に向けて制作された球体ロボットです．<br><br>
+        <strong>直径8</strong> [<strong>cm</strong>]の小さなロボットは，特定の行動パターンを持たず，ランダムに転がります．
+        そして，球体という不安定な要素と合わさり，あなたに自由な解釈でロボットと触れ合える余地（
+        <a href="https://magazine.serviceology.org/2021/12/20/1433/" target="_blank"><strong>解釈の余地</strong></a>）を与えます．
+      </td>
+      <td valign="top">
+        〈第2世代〉ころボは，
+        <a href="https://hacku.yahoo.co.jp/kosen2021/" target="_blank">Hack U KOSEN 2021</a>
+        に出場した際に制作した球体ロボットです．
+        <strong>直径10</strong> [<strong>cm</strong>]の手にすっぽりおさまるロボットは，周囲の環境（
+        <a href="https://twitter.com/KORokororOBOt/status/1652417063770820609" target="_blank"><strong>音</strong></a>，
+        明るさ）や自身の状態（
+        <a href="https://twitter.com/KORokororOBOt/status/1652271276403347457" target="_blank"><strong>加速度，角速度</strong></a>）を取得します．<br><br>
+        それらの情報を反映させたことで，玩具っぽさが軽減され，あなたと同じ世界に住む存在なのだと感じられます．
+        また，球体という不安定な要素と合わさり，あなたに自由な解釈でロボットと触れ合える余地（
+        <a href="https://magazine.serviceology.org/2021/12/20/1433/" target="_blank"><strong>解釈の余地</strong></a>）を与えます．
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        &emsp;&emsp;<strong>The first generation</strong> is a spherical robot I created as a department student for the Kosen College Festival.<br><br>
+        &emsp;&emsp;The tiny robot, <strong>8 [cm]</strong> in diameter, has no specific action pattern and rolls randomly.
+        Combined with the unstable element of the sphere, it gives you room to interact with the robot in any way you like (
+        <a href="https://magazine.serviceology.org/2021/12/20/1433/" target="_blank"><strong>Room for Interpretation</strong></a>).
+      </td>
+      <td valign="top">
+        &emsp;&emsp;<strong>The second generation</strong> is a spherical robot created for 
+        <a href="https://hacku.yahoo.co.jp/kosen2021/" target="_blank">Hack U KOSEN 2021</a>.
+        The <strong>10 [cm]</strong> diameter robot fits snugly in your hand and gets information about its surroundings (
+        <a href="https://twitter.com/KORokororOBOt/status/1652417063770820609" target="_blank"><strong>Sound</strong></a>, Luminance) and its state (
+        <a href="https://twitter.com/KORokororOBOt/status/1652271276403347457" target="_blank"><strong>Acceleration, Angular Velocity</strong></a>).<br><br>
+        &emsp;&emsp;The robot reflects this information, making it feel less like a toy and more like a being that lives in the same world as you.
+        Combined with the unstable element of the sphere, it gives you room to interact with the robot in any way you like (
+        <a href="https://magazine.serviceology.org/2021/12/20/1433/" target="_blank"><strong>Room for Interpretation</strong></a>).
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<img src="/Document/Picture/korobo-1--2_pop.png" width="75%">
+
+</details>
 
 <img src="/Document/Picture/korobo-2-1_pop.png" width="75%">
 
