@@ -1,9 +1,8 @@
-# 〈第2.1世代〉ころボ / KOROBO (2-1 gen)
+# 〈第2.1世代〉ころボ / KOROBO (2.1 Gen)
 > [!IMPORTANT]
 > 組み立て説明を除き，他のデータは最低限完成しました！\
 > 学生個人の活動であるため，ご了承ください．
 
-<!-- ![〈第2.1世代〉ころボ / KOROBO (2-1 gen)](/Document/image_korobo-2-1.jpg) -->
 <img src="/Document/Picture/image_korobo-2-1.jpg" width="75%">
 
 ## 概要 / Overview
@@ -19,7 +18,7 @@
 〈第2.1世代〉ころボは，〈第2世代〉のオープンソース版として開発中の子です．
 
 <details>
-<summary>第1世代，第2世代</summary>
+<summary>第1世代，第2世代 / 1st Gen, 2nd Gen</summary>
 	
 <table>
   <thead>
