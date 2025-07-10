@@ -13,7 +13,9 @@ KoroboLib_2_1::~KoroboLib_2_1() {
 
 }
 
-void KoroboLib_2_1::begin(){
+void KoroboLib_2_1::begin(unsigned int motor_select){
+  motor_val = motor_select;
+
   Wire.begin();
   delay(10);
 
@@ -29,11 +31,41 @@ void KoroboLib_2_1::begin(){
 
   pinMode(USB_POWER_PIN, INPUT);
 
-  pinMode(MOTOR_IN4_PIN, OUTPUT);
-  pinMode(MOTOR_IN3_PIN, OUTPUT);
-  pinMode(MOTOR_IN1_PIN, OUTPUT);
-  pinMode(MOTOR_IN2_PIN, OUTPUT);
-  pinMode(MOTOR_EN_PIN, OUTPUT);
+  switch (motor_val) {
+  case OLD:
+    motor_in4_pin = MOTOR_IN4_OLD_PIN;
+    motor_in3_pin = MOTOR_IN3_OLD_PIN;
+    motor_in1_pin = MOTOR_IN1_OLD_PIN;
+    motor_in2_pin = MOTOR_IN2_OLD_PIN;
+    motor_en_pin = MOTOR_EN_OLD_PIN;
+    break;
+  case TC:
+    motor_in4_pin = MOTOR_IN4_T_PIN;
+    motor_in3_pin = MOTOR_IN3_T_PIN;
+    motor_in1_pin = MOTOR_IN1_T_PIN;
+    motor_in2_pin = MOTOR_IN2_T_PIN;
+    motor_en_pin = MOTOR_EN_T_PIN;
+    pinMode(MOTOR_MODE_T_PIN, OUTPUT);
+    digitalWrite(MOTOR_MODE_T_PIN, LOW);
+    break;
+  case DRV:
+    motor_in4_pin = MOTOR_IN4_D_PIN;
+    motor_in3_pin = MOTOR_IN3_D_PIN;
+    motor_in1_pin = MOTOR_IN1_D_PIN;
+    motor_in2_pin = MOTOR_IN2_D_PIN;
+    motor_en_pin = MOTOR_EN_D_PIN;
+    pinMode(MOTOR_MODE_D_PIN, OUTPUT);
+    digitalWrite(MOTOR_MODE_D_PIN, LOW);
+    break;
+  default:
+    break;
+  }
+
+  pinMode(motor_in4_pin, OUTPUT);
+  pinMode(motor_in3_pin, OUTPUT);
+  pinMode(motor_in1_pin, OUTPUT);
+  pinMode(motor_in2_pin, OUTPUT);
+  pinMode(motor_en_pin, OUTPUT);
 
   pinMode(VOICE_EN_PIN, OUTPUT);
   pinMode(VOICE_STATE_PIN, INPUT);
@@ -236,42 +268,42 @@ void KoroboLib_2_1::Eye(int dX_point_u, int dY_point_u, int dX_size_u, int dY_si
 void KoroboLib_2_1::_Motor(int motor_power_l, int motor_power_r){
   /*left motor*/
   if (motor_power_l > MOTOR_POWER_MIN) {
-    analogWrite(MOTOR_IN4_PIN, motor_power_l);
-    analogWrite(MOTOR_IN3_PIN, 0);
+    analogWrite(motor_in4_pin, motor_power_l);
+    analogWrite(motor_in3_pin, 0);
   }
   else if (abs(motor_power_l) <= MOTOR_POWER_MIN) {
-    analogWrite(MOTOR_IN4_PIN, 0);
-    analogWrite(MOTOR_IN3_PIN, 0);
+    analogWrite(motor_in4_pin, 0);
+    analogWrite(motor_in3_pin, 0);
   }
   else {
-    analogWrite(MOTOR_IN4_PIN, 0);
-    analogWrite(MOTOR_IN3_PIN, -motor_power_l);
+    analogWrite(motor_in4_pin, 0);
+    analogWrite(motor_in3_pin, -motor_power_l);
   }
   /*right motor*/
   if (motor_power_r > MOTOR_POWER_MIN) {
-    analogWrite(MOTOR_IN1_PIN, motor_power_r);
-    analogWrite(MOTOR_IN2_PIN, 0);
+    analogWrite(motor_in1_pin, motor_power_r);
+    analogWrite(motor_in2_pin, 0);
   }
   else if (abs(motor_power_r) <= MOTOR_POWER_MIN) {
-    analogWrite(MOTOR_IN1_PIN, 0);
-    analogWrite(MOTOR_IN2_PIN, 0);
+    analogWrite(motor_in1_pin, 0);
+    analogWrite(motor_in2_pin, 0);
   }
   else {
-    analogWrite(MOTOR_IN1_PIN, 0);
-    analogWrite(MOTOR_IN2_PIN, -motor_power_r);
+    analogWrite(motor_in1_pin, 0);
+    analogWrite(motor_in2_pin, -motor_power_r);
   }
 
   delay(10);
 }
 
 void KoroboLib_2_1::Motor(int motor_power_l, int motor_power_r) {
-  digitalWrite(MOTOR_EN_PIN, !digitalRead(USB_POWER_PIN)); //USB接続時は，モーター停止
+  digitalWrite(motor_en_pin, !digitalRead(USB_POWER_PIN)); //USB接続時は，モーター停止
   _Motor(motor_power_l, motor_power_r);
 }
 
 void KoroboLib_2_1::Motor(int motor_power_l, int motor_power_r, bool flug){
-  if (flug) digitalWrite(MOTOR_EN_PIN, !digitalRead(USB_POWER_PIN)); //USB接続時は，モーター停止
-  else digitalWrite(MOTOR_EN_PIN, HIGH);
+  if (flug) digitalWrite(motor_en_pin, !digitalRead(USB_POWER_PIN)); //USB接続時は，モーター停止
+  else digitalWrite(motor_en_pin, HIGH);
   _Motor(motor_power_l, motor_power_r);
 }
 
@@ -291,7 +323,7 @@ void KoroboLib_2_1::Move(){
 
   if (abs(korobo_acc.x()) + abs(korobo_acc.y()) > 3.5) Motor(motor_power_l, motor_power_r);
   else {
-    digitalWrite(MOTOR_EN_PIN, LOW);
+    digitalWrite(motor_en_pin, LOW);
     error_sum_x = 0;
     error_sum_y = 0;
   }
@@ -459,7 +491,7 @@ boolean KoroboLib_2_1::Sleep(unsigned int num){
   //*/
   if (EYE_HEIGHT + dY_size < 0) {
     sleep_flag = true;
-    digitalWrite(MOTOR_EN_PIN, LOW);
+    digitalWrite(motor_en_pin, LOW);
     digitalWrite(VOICE_EN_PIN, LOW);
   }
   else if (sleep_sum_ave_diff <= -sleep_sum_ave_diff_max / 2) {
