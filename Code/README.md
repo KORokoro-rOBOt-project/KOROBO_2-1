@@ -22,7 +22,7 @@
   void setup() {
     // put your setup code here, to run once:
     Serial.begin(9600);
-    korobo.begin();
+    korobo.begin(TC); // TC: TC78H653, DRV: DRV8833, OLD: main-board ver. 3.1
   }
   
   void loop() {
@@ -52,7 +52,7 @@
     void setup() {
       // put your setup code here, to run once:
       Serial.begin(9600);
-      korobo.begin();
+      korobo.begin(TC); // TC: TC78H653, DRV: DRV8833, OLD: main-board ver. 3.1
     }
     ```
 3. **ループ処理**
@@ -69,8 +69,32 @@
 
 ## KoroboLib_2_1
 〈第2.1世代〉ころボ を動作させるにあたって必要となるライブラリ
-- **`void begin()`** : 
+- **`void begin(unsigned int num)`** : 
 各モジュールのセットアップ処理関数（[**mind_2-1** / 2. 初回処理](#begin)を参照）．
+  > 引数に，搭載しているモータドライバの種類や，メインボードのバージョンを指定することで，互換性を確保している．
+  <table>
+    <thead>
+      <tr>
+        <th align="center">unsigned int num = </th>
+        <th align="center">対応ボード・モータドライバ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td align="center"><code>TC</code></td>
+        <td>メインボード Ver. 3.2，TC78H653 (= 1)</td>
+      </tr>
+      <tr>
+        <td align="center"><code>DRV</code></td>
+        <td>メインボード Ver. 3.2，DRV8833 (= 2)</td>
+      </tr>
+      <tr>
+        <td align="center"><code>OLD</code></td>
+        <td>メインボード Ver. 3.1，TC78H653 (= 0)</td>
+      </tr>
+    </tbody>
+  </table>
+
 - **`void Imu_getData()`** : 
 記述した時点の9軸センサ（加速度・角速度・磁気）の値を取得できる．
   > 1回のループ処理中に複数実行しても，初めに実行した際の値が出力される．
