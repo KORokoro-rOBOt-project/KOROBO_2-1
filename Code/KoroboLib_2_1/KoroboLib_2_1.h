@@ -4,11 +4,30 @@
 //motor
 #define MOTOR_POWER_MAX 255
 #define MOTOR_POWER_MIN 50
-#define MOTOR_IN4_PIN 21
-#define MOTOR_IN3_PIN 20
-#define MOTOR_IN1_PIN 19
-#define MOTOR_IN2_PIN 18
-#define MOTOR_EN_PIN 22
+////main-board ver. ~3.1
+#define OLD 0
+#define MOTOR_IN4_OLD_PIN 21
+#define MOTOR_IN3_OLD_PIN 20
+#define MOTOR_IN1_OLD_PIN 19
+#define MOTOR_IN2_OLD_PIN 18
+#define MOTOR_EN_OLD_PIN 22
+////main-board ver. 3.2~
+/////motor-driver: TC78H653
+#define TC 1
+#define MOTOR_IN4_T_PIN 19
+#define MOTOR_IN3_T_PIN 18
+#define MOTOR_IN1_T_PIN 17
+#define MOTOR_IN2_T_PIN 16
+#define MOTOR_EN_T_PIN 20
+#define MOTOR_MODE_T_PIN 21
+/////motor-driver: DRV8835
+#define DRV 2
+#define MOTOR_IN4_D_PIN 19
+#define MOTOR_IN3_D_PIN 18
+#define MOTOR_IN1_D_PIN 17
+#define MOTOR_IN2_D_PIN 16
+#define MOTOR_EN_D_PIN 21
+#define MOTOR_MODE_D_PIN 20
 //mic
 #define MIC_PIN 26
 //ambient light
@@ -57,7 +76,7 @@ class KoroboLib_2_1 {
     KoroboLib_2_1();
     ~KoroboLib_2_1();
 
-    void begin();
+    void begin(unsigned int motor_select);
     void Imu_getData();
     int AmbientLight_getData();
     int Mic_getData();
@@ -104,6 +123,8 @@ class KoroboLib_2_1 {
     int dX_point = 0, dY_point = 0, dX_size = 0, dY_size = 0;
     int voice_mic_temp = 0, voice_light_temp = 0, voice_d_sum_temp = 0;
     int sleep_sum_ave_diff_max = 0;
+    int motor_val = 0;
+    int motor_in4_pin, motor_in3_pin, motor_in1_pin, motor_in2_pin, motor_en_pin;
 
     float error_sum_x = 0, error_sum_y = 0;
 
