@@ -1,4 +1,4 @@
-# 〈第2.1世代〉ころボ / KOROBO (2.1 Gen)
+# 〈第2.1世代〉ころボ / KOROBO (2.1 Gen)  -UIAPduino Edition-
 > [!IMPORTANT]
 > 組み立て説明を除き，他のデータは最低限完成しました！\
 > 学生個人の活動であるため，ご了承ください．
@@ -14,8 +14,10 @@
 玩具や機械ではなく，生き物っていうわけでもないけれど，どこか自分たちと同じ存在感を与える新たな存在になってほしいと考えています．
 そして，周囲の人同士の関係を築いたり，誰かの不安や秘密を一緒に抱え込んでくれたり，孤独を埋めてくれたりする存在に... 
 
-### 第2.1世代
+### 第2.1世代 -UIAPduino Edition-
 〈第2.1世代〉ころボは，〈第2世代〉のオープンソース版として開発中の子です．
+
+**UIAPduino Edition**では，<a href="https://www.uiap.jp/" >Umeta & Ikki Automotive Parts（UIAP）</a>様が提供している，UIAPduinoをマイコンボードに採用した〈第2.1世代〉ころボ の派生版です．
 
 <details>
 <summary>第1世代，第2世代 / 1st Gen, 2nd Gen</summary>
@@ -80,10 +82,8 @@
     > マイコンボードとアクセス可能なスペースがあり，思い思いに進化させられます．
 [^1]: 既製品のギヤボックスキットは除く．
 
-- マイコンボードに，Raspberry Pi Foundationが提供する[**Raspberry Pi Pico（ラズベリーパイピコ）**](https://www.raspberrypi.com/products/raspberry-pi-pico/)を採用しています！
-    > 安価で入手性に優れ，様々な制作事例が存在します．\
-    > 多くの互換ボードが存在し，USB端子や用途に合わせて自由に選べます．\
-    > <a href="https://www.raspberrypi.com/products/raspberry-pi-pico-2/" >Raspberry Pi Pico 2</a>のように，世代が上がっても互換性があります．
+- マイコンボードに，UIAPduinoを採用しています！
+    > あ．
  
 ## フォルダ構成 / Directory Layout
 - [**Board**](Board): 基板発注に必要なガーバーデータ
