@@ -1,7 +1,7 @@
 # Document
-## [購入リスト / Parts List](Parts-List_KOROBO_2-1.pdf) (2025/5/15)
+## [調達リスト / Parts List](Parts-List_KOROBO_2-1.pdf) (2025/5/15)
 > [!NOTE]
-> 必要な部品の中には，購入時の**最低個数**が指定されている場合や，1つの商品あたりに**複数個の同じ部品**を含む場合があります．電子工作をされている方なら，一度ご自身が現在所持している部品を確認することで，必要以上の買い物を避けられるかもしれません．（例：ピンソケット，ピンヘッダ，抵抗，コンデンサなど）
+> 必要な部品の中には，調達時の**最低個数**が指定されている場合や，1つの商品あたりに**複数個の同じ部品**を含む場合があります．電子工作をされている方なら，一度ご自身が現在所持している部品を確認することで，必要以上の買い物を避けられるかもしれません．（例：ピンソケット，ピンヘッダ，抵抗，コンデンサなど）
 
 ### 3Dプリンタ部品 / Model
 <table>
@@ -11,9 +11,12 @@
     <th style="text-align:center;">単価</th>
     <th style="text-align:center;">個数</th>
     <th style="text-align:center;">小計<br>※候補1</th>
-    <th style="text-align:center;">購入先<br>(候補1)</th>
-    <th style="text-align:center;">購入先<br>(候補2)</th>
+    <th style="text-align:center;">調達先<br>(候補1)</th>
+    <th style="text-align:center;">調達先<br>(候補2)</th>
     <th style="text-align:center;">備考</th>
+  </tr>
+  <tr>
+    <td colspan="8" style="text-align:center;"><b>3D プリンタ　お持ちの方</b></td>
   </tr>
   <tr>
     <td>M1</td>
@@ -24,9 +27,7 @@
     <td><a href="https://www.amazon.co.jp/dp/B08QMXDTJL">Amazon</a></td>
     <td></td>
     <td rowspan="2">
-      約50 [g]ずつ使用<br>
-      ▼調達困難な方向けに，印刷物の販売も実施中<br>
-      <a href="https://korokoro-robot.booth.pm/items/6812764">https://korokoro-robot.booth.pm/items/6812764</a>
+      約50 [g]ずつ使用
     </td>
   </tr>
   <tr>
@@ -39,6 +40,19 @@
     <td></td>
     <!-- 備考セルは上の行と結合しているため省略 -->
   </tr>
+  <tr>
+    <td colspan="8" style="text-align:center;"><b>3D プリンタ　お持ちでない方</b></td>
+  </tr>
+  <tr>
+    <td>M1</td>
+    <td>組み立てサポート品<br>〈第2.1世代〉ころボ　3Dプリンタ製パーツ</td>
+    <td>&yen;2,350</td>
+    <td>1</td>
+    <td>&yen;2,350</td>
+    <td><a href="https://korokoro-robot.booth.pm/items/6812764">BOOTH</a></td>
+    <td></td>
+    <td>送料別</td>
+  </tr>
 </table>
 
 ### 駆動ユニット / Actuator
@@ -49,8 +63,8 @@
     <th style="text-align:center;">単価</th>
     <th style="text-align:center;">個数</th>
     <th style="text-align:center;">小計<br>※候補1</th>
-    <th style="text-align:center;">購入先<br>(候補1)</th>
-    <th style="text-align:center;">購入先<br>(候補2)</th>
+    <th style="text-align:center;">調達先<br>(候補1)</th>
+    <th style="text-align:center;">調達先<br>(候補2)</th>
     <th style="text-align:center;">備考</th>
   </tr>
   <tr>
@@ -83,8 +97,8 @@
     <th style="text-align:center;">単価</th>
     <th style="text-align:center;">個数</th>
     <th style="text-align:center;">小計<br>※候補1</th>
-    <th style="text-align:center;">購入先<br>(候補1)</th>
-    <th style="text-align:center;">購入先<br>(候補2)</th>
+    <th style="text-align:center;">調達先<br>(候補1)</th>
+    <th style="text-align:center;">調達先<br>(候補2)</th>
     <th style="text-align:center;">備考</th>
   </tr>
   <tr>
@@ -251,8 +265,8 @@
     <th style="text-align:center;">単価</th>
     <th style="text-align:center;">個数</th>
     <th style="text-align:center;">小計<br>※候補1</th>
-    <th style="text-align:center;">購入先<br>(候補1)</th>
-    <th style="text-align:center;">購入先<br>(候補2)</th>
+    <th style="text-align:center;">調達先<br>(候補1)</th>
+    <th style="text-align:center;">調達先<br>(候補2)</th>
     <th style="text-align:center;">備考</th>
   </tr>
   <tr>
@@ -297,7 +311,7 @@
     <td>&yen;10</td>
     <td><a href="https://akizukidenshi.com/catalog/g/g112802/">秋月電子</a></td>
     <td><a href="https://www.amazon.co.jp/.../dp/B09F8WV2G6/">Amazon</a></td>
-    <td rowspan="6">候補2のAmazonから購入したほうが，部品を紛失してもある程度予備を確保しつつ，専用ケースで保管できるため，扱いやすいかもです．</td>
+    <td rowspan="6">候補2のAmazonから調達したほうが，部品を紛失してもある程度予備を確保しつつ，専用ケースで保管できるため，扱いやすいかもです．</td>
   </tr>
   <tr>
     <td>20</td>
@@ -375,8 +389,8 @@
     <th style="text-align:center;">単価</th>
     <th style="text-align:center;">個数</th>
     <th style="text-align:center;">小計<br>※候補1</th>
-    <th style="text-align:center;">購入先<br>(候補1)</th>
-    <th style="text-align:center;">購入先<br>(候補2)</th>
+    <th style="text-align:center;">調達先<br>(候補1)</th>
+    <th style="text-align:center;">調達先<br>(候補2)</th>
     <th style="text-align:center;">備考</th>
   </tr>
   <tr>
@@ -441,7 +455,8 @@
   </tr>
 </table>
 
-<details open>
+### 一覧表示 / All
+<details>
 <summary>表示 / Preview</summary>
 <table>
   <tr>
@@ -450,8 +465,8 @@
     <th style="text-align:center;">単価</th>
     <th style="text-align:center;">個数</th>
     <th style="text-align:center;">小計<br>※候補1</th>
-    <th style="text-align:center;">購入先<br>(候補1)</th>
-    <th style="text-align:center;">購入先<br>(候補2)</th>
+    <th style="text-align:center;">調達先<br>(候補1)</th>
+    <th style="text-align:center;">調達先<br>(候補2)</th>
     <th style="text-align:center;">備考</th>
   </tr>
   <tr>
@@ -646,7 +661,7 @@
     <td>&yen;10</td>
     <td><a href="https://akizukidenshi.com/catalog/g/g112802/">秋月電子</a></td>
     <td><a href="https://www.amazon.co.jp/.../dp/B09F8WV2G6/">Amazon</a></td>
-    <td rowspan="6">候補2のAmazonから購入したほうが，部品を紛失してもある程度予備を確保しつつ，専用ケースで保管できるため，扱いやすいかもです．</td>
+    <td rowspan="6">候補2のAmazonから調達したほうが，部品を紛失してもある程度予備を確保しつつ，専用ケースで保管できるため，扱いやすいかもです．</td>
   </tr>
   <tr>
     <td>20</td>
@@ -699,7 +714,7 @@
     <td><u></u></td>
     <!-- no.24 と no.25 の備考を結合 -->
     <td rowspan="2">
-      No. 22, 23 のどちらかが在庫切れの場合，<br>
+      No. 24, 25 のどちらかが在庫切れの場合，<br>
       ▼リンク先の商品で代用可能です．<br>
       <a href="https://www.marutsu.co.jp/pc/i/2231331/">代替リンク</a>
     </td>
@@ -833,5 +848,4 @@
     <!-- 備考セルは上の行と結合しているため省略 -->
   </tr>
 </table>
-
 </details>
