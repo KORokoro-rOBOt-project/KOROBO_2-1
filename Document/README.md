@@ -16,10 +16,12 @@
     <th style="text-align:center;">備考</th>
   </tr>
   <tr>
-    <td colspan="8" style="text-align:center;"><b>3D プリンタ　お持ちの方</b></td>
+    <td colspan="8" align="center">
+      <ins>3D プリンタ　お持ちの方</ins>
+    </td>
   </tr>
   <tr>
-    <td>M1</td>
+    <td>M1_1</td>
     <td>PolyTerra PLA 1.75mm径 1000g<br>Sunrise Orange</td>
     <td>&yen;3,278</td>
     <td>1</td>
@@ -31,7 +33,7 @@
     </td>
   </tr>
   <tr>
-    <td>M2</td>
+    <td>M2_1</td>
     <td>eSUN Flexible TPU 白</td>
     <td>&yen;3,999</td>
     <td>1</td>
@@ -41,10 +43,12 @@
     <!-- 備考セルは上の行と結合しているため省略 -->
   </tr>
   <tr>
-    <td colspan="8" style="text-align:center;"><b>3D プリンタ　お持ちでない方</b></td>
+    <td colspan="8" align="center">
+      <ins>3D プリンタ　お持ちでない方</ins>
+    </td>
   </tr>
   <tr>
-    <td>M1</td>
+    <td>M1_2</td>
     <td>組み立てサポート品<br>〈第2.1世代〉ころボ　3Dプリンタ製パーツ</td>
     <td>&yen;2,350</td>
     <td>1</td>
@@ -102,8 +106,13 @@
     <th style="text-align:center;">備考</th>
   </tr>
   <tr>
-    <td>35</td>
-    <td>〈第2.1世代〉ころボ<br>メインボード</td>
+    <td colspan="8" align="center">
+      <ins>基板業者へ発注される方</ins>
+    </td>
+  </tr>
+  <tr>
+    <td>B1_1</td>
+    <td>〈第2.1世代〉ころボ<br>メインボード（基板）</td>
     <td>&yen;3,583</td>
     <td>1</td>
     <td>&yen;3,583</td>
@@ -111,12 +120,30 @@
     <td></td>
     <td>
       基板費用＋輸送費（DHL）から算出．最低5枚から．<br>
-      ▼調達困難な方向けに，印刷物の販売も実施中<br>
-      <a href="https://korokoro-robot.booth.pm/items/6807081">https://korokoro-robot.booth.pm/items/6807081</a>
     </td>
   </tr>
   <tr>
+    <td colspan="8" align="center">
+      <ins>基板完成品を調達される方</ins>
+    </td>
+  </tr>
+  <tr>
+    <td>B1_2</td>
+    <td>組み立てサポート品<br>〈第2.1世代〉ころボ<br>メインボード（基板）</td>
+    <td>&yen;1,000</td>
     <td>1</td>
+    <td>&yen;1,000</td>
+    <td><a href="https://korokoro-robot.booth.pm/items/6807081">BOOTH</a></td>
+    <td></td>
+    <td>送料別</td>
+  </tr>
+  <tr>
+    <td colspan="8" align="center">
+      <ins>共通</ins>
+    </td>
+  </tr>
+  <tr>
+    <td>B2</td>
     <td>Raspberry Pi Pico</td>
     <td>¥770</td>
     <td>1</td>
@@ -126,7 +153,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>3</td>
+    <td>B3</td>
     <td>BNO055使用 9軸センサー<br>フュージョンモジュールキット</td>
     <td>¥2,450</td>
     <td>1</td>
@@ -136,7 +163,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>4</td>
+    <td>B4</td>
     <td>SPV1840LR5H-B使用<br>シリコンマイクモジュールキット</td>
     <td>¥450</td>
     <td>1</td>
@@ -146,7 +173,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>5</td>
+    <td>B5</td>
     <td>TC78H653FTG<br>モータードライバーモジュール</td>
     <td>¥200</td>
     <td>1</td>
@@ -156,7 +183,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>6</td>
+    <td>B6</td>
     <td>音声合成LSI ATP3011F1-PU<br>(ゆっくりな女性の音声)</td>
     <td>¥1,050</td>
     <td>1</td>
@@ -166,7 +193,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>7</td>
+    <td>B7</td>
     <td>PAM8012使用2ワット<br>D級アンプモジュール</td>
     <td>¥300</td>
     <td>1</td>
@@ -176,7 +203,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>9</td>
+    <td>B8</td>
     <td>カーボン抵抗 1/2W150kΩ</td>
     <td>¥100</td>
     <td>1</td>
@@ -186,7 +213,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>10</td>
+    <td>B9</td>
     <td>積層セラミックコンデンサー<br>0.1μF50V X7R 2.54mm 10個</td>
     <td>¥100</td>
     <td>1</td>
@@ -196,7 +223,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>11</td>
+    <td>B10</td>
     <td>電解コンデンサー100μ<br>F25V105℃ ルビコンPX</td>
     <td>¥10</td>
     <td>1</td>
@@ -206,7 +233,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>12</td>
+    <td>B11</td>
     <td>分割ロングピンソケット 1×42 (42P)</td>
     <td>¥80</td>
     <td>3</td>
@@ -216,7 +243,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>13</td>
+    <td>B12</td>
     <td>ピンヘッダー 1×40 (40P)</td>
     <td>¥35</td>
     <td>3</td>
@@ -226,7 +253,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>14</td>
+    <td>B13</td>
     <td>ピンソケット 1×20 (20P)<br>リード長10mm</td>
     <td>¥60</td>
     <td>2</td>
@@ -236,7 +263,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>18</td>
+    <td>B14</td>
     <td>ICソケット (28P) スリム300milタイプ</td>
     <td>&yen;280</td>
     <td>1</td>
@@ -246,8 +273,8 @@
     <td></td>
   </tr>
   <tr>
-    <td>27</td>
-    <td>BATT CHARGER OPEN FRAME 5V 2A<br>【DFR1026】</td>
+    <td>B15</td>
+    <td>BATT CHARGER OPEN FRAME 5V 2A【DFR1026】</td>
     <td>&yen;662</td>
     <td>1</td>
     <td>&yen;662</td>
