@@ -15,10 +15,10 @@
     <th style="text-align:center;" rowspan="2">備考</th>
   </tr>
   <tr>
-    <th style="text-align:center;">候補1</th>
-    <th style="text-align:center;">候補1</th>
-    <th style="text-align:center;">候補1</th>
-    <th style="text-align:center;">候補2</th>
+    <th style="text-align:center;">a</th>
+    <th style="text-align:center;">a</th>
+    <th style="text-align:center;">a</th>
+    <th style="text-align:center;">b</th>
   </tr>
   <tr>
     <td colspan="8" align="center">
@@ -67,14 +67,19 @@
 ### 駆動ユニット / Actuator
 <table>
   <tr>
-    <th style="text-align:center;">No.</th>
-    <th style="text-align:center;">品名</th>
+    <th style="text-align:center;" rowspan="2">No.</th>
+    <th style="text-align:center;" rowspan="2">品名</th>
     <th style="text-align:center;">単価</th>
-    <th style="text-align:center;">個数</th>
-    <th style="text-align:center;">小計<br>(候補1)</th>
-    <th style="text-align:center;">調達先<br>(候補1)</th>
-    <th style="text-align:center;">調達先<br>(候補2)</th>
-    <th style="text-align:center;">備考</th>
+    <th style="text-align:center;" rowspan="2">個数</th>
+    <th style="text-align:center;">小計</th>
+    <th style="text-align:center;" colspan="2">調達先</th>
+    <th style="text-align:center;" rowspan="2">備考</th>
+  </tr>
+  <tr>
+    <th style="text-align:center;">a</th>
+    <th style="text-align:center;">a</th>
+    <th style="text-align:center;">a</th>
+    <th style="text-align:center;">b</th>
   </tr>
   <tr>
     <td>A1</td>
@@ -101,14 +106,19 @@
 ### メインボード / Board
 <table>
   <tr>
-    <th style="text-align:center;">No.</th>
-    <th style="text-align:center;">品名</th>
+    <th style="text-align:center;" rowspan="2">No.</th>
+    <th style="text-align:center;" rowspan="2">品名</th>
     <th style="text-align:center;">単価</th>
-    <th style="text-align:center;">個数</th>
-    <th style="text-align:center;">小計<br>(候補1)</th>
-    <th style="text-align:center;">調達先<br>(候補1)</th>
-    <th style="text-align:center;">調達先<br>(候補2)</th>
-    <th style="text-align:center;">備考</th>
+    <th style="text-align:center;" rowspan="2">個数</th>
+    <th style="text-align:center;">小計</th>
+    <th style="text-align:center;" colspan="2">調達先</th>
+    <th style="text-align:center;" rowspan="2">備考</th>
+  </tr>
+  <tr>
+    <th style="text-align:center;">a</th>
+    <th style="text-align:center;">a</th>
+    <th style="text-align:center;">a</th>
+    <th style="text-align:center;">b</th>
   </tr>
   <tr>
     <td colspan="8" align="center">
@@ -292,14 +302,19 @@
 ### 配線 / Wire
 <table>
   <tr>
-    <th style="text-align:center;">No.</th>
-    <th style="text-align:center;">品名</th>
+    <th style="text-align:center;" rowspan="2">No.</th>
+    <th style="text-align:center;" rowspan="2">品名</th>
     <th style="text-align:center;">単価</th>
-    <th style="text-align:center;">個数</th>
-    <th style="text-align:center;">小計<br>(候補1)</th>
-    <th style="text-align:center;">調達先<br>(候補1)</th>
-    <th style="text-align:center;">調達先<br>(候補2)</th>
-    <th style="text-align:center;">備考</th>
+    <th style="text-align:center;" rowspan="2">個数</th>
+    <th style="text-align:center;">小計</th>
+    <th style="text-align:center;" colspan="2">調達先</th>
+    <th style="text-align:center;" rowspan="2">備考</th>
+  </tr>
+  <tr>
+    <th style="text-align:center;">a</th>
+    <th style="text-align:center;">a</th>
+    <th style="text-align:center;">a</th>
+    <th style="text-align:center;">b</th>
   </tr>
   <tr>
     <td>W1</td>
@@ -416,14 +431,19 @@
 ### その他 / Other
 <table>
   <tr>
-    <th style="text-align:center;">No.</th>
-    <th style="text-align:center;">品名</th>
+    <th style="text-align:center;" rowspan="2">No.</th>
+    <th style="text-align:center;" rowspan="2">品名</th>
     <th style="text-align:center;">単価</th>
-    <th style="text-align:center;">個数</th>
-    <th style="text-align:center;">小計<br>(候補1)</th>
-    <th style="text-align:center;">調達先<br>(候補1)</th>
-    <th style="text-align:center;">調達先<br>(候補2)</th>
-    <th style="text-align:center;">備考</th>
+    <th style="text-align:center;" rowspan="2">個数</th>
+    <th style="text-align:center;">小計</th>
+    <th style="text-align:center;" colspan="2">調達先</th>
+    <th style="text-align:center;" rowspan="2">備考</th>
+  </tr>
+  <tr>
+    <th style="text-align:center;">a</th>
+    <th style="text-align:center;">a</th>
+    <th style="text-align:center;">a</th>
+    <th style="text-align:center;">b</th>
   </tr>
   <tr>
     <td>O1</td>
@@ -502,14 +522,19 @@
 <summary>表示 / Preview</summary>
 <table>
   <tr>
-    <th style="text-align:center;">No.</th>
-    <th style="text-align:center;">品名</th>
+    <th style="text-align:center;" rowspan="2">No.</th>
+    <th style="text-align:center;" rowspan="2">品名</th>
     <th style="text-align:center;">単価</th>
-    <th style="text-align:center;">個数</th>
-    <th style="text-align:center;">小計<br>(候補1)</th>
-    <th style="text-align:center;">調達先<br>(候補1)</th>
-    <th style="text-align:center;">調達先<br>(候補2)</th>
-    <th style="text-align:center;">備考</th>
+    <th style="text-align:center;" rowspan="2">個数</th>
+    <th style="text-align:center;">小計</th>
+    <th style="text-align:center;" colspan="2">調達先</th>
+    <th style="text-align:center;" rowspan="2">備考</th>
+  </tr>
+  <tr>
+    <th style="text-align:center;">a</th>
+    <th style="text-align:center;">a</th>
+    <th style="text-align:center;">a</th>
+    <th style="text-align:center;">b</th>
   </tr>
   <tr>
     <td>1</td>
