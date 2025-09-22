@@ -10,7 +10,7 @@
     <th style="text-align:center;">品名</th>
     <th style="text-align:center;">単価</th>
     <th style="text-align:center;">個数</th>
-    <th style="text-align:center;">小計<br>※候補1</th>
+    <th style="text-align:center;">小計<br>(候補1)</th>
     <th style="text-align:center;">調達先<br>(候補1)</th>
     <th style="text-align:center;">調達先<br>(候補2)</th>
     <th style="text-align:center;">備考</th>
@@ -66,7 +66,7 @@
     <th style="text-align:center;">品名</th>
     <th style="text-align:center;">単価</th>
     <th style="text-align:center;">個数</th>
-    <th style="text-align:center;">小計<br>※候補1</th>
+    <th style="text-align:center;">小計<br>(候補1)</th>
     <th style="text-align:center;">調達先<br>(候補1)</th>
     <th style="text-align:center;">調達先<br>(候補2)</th>
     <th style="text-align:center;">備考</th>
@@ -85,7 +85,7 @@
     <td>A2</td>
     <td>3mm六角シャフトセット<br>【ITEM70252】</td>
     <td>&yen;280</td>
-    <td>280</td>
+    <td>1</td>
     <td>&yen;280</td>
     <td><a href="https://www.amazon.co.jp/%E3%82%BF%E3%83%9F%E3%83%A4-%E6%A5%BD%E3%81%97%E3%81%84%E5%B7%A5%E4%BD%9C%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-No-252-3mm%E5%85%AD%E8%A7%92%E3%82%B7%E3%83%A3%E3%83%95%E3%83%88%E3%82%BB%E3%83%83%E3%83%88-70252/dp/B0BTS99X3S/ref=pd_sim_d_sccl_3_5/356-3568001-7199139?pd_rd_w=wJ5Yp&content-id=amzn1.sym.d686209d-8edb-4501-90de-4e255f5b32cf&pf_rd_p=d686209d-8edb-4501-90de-4e255f5b32cf&pf_rd_r=8CYN04G4VC2R6D3KAX71&pd_rd_wg=pZLPA&pd_rd_r=4b423c32-2349-4196-a37c-98c7c704a185&pd_rd_i=B0BTS99X3S&psc=1">Amazon</a></td>
     <td></td>
@@ -100,7 +100,7 @@
     <th style="text-align:center;">品名</th>
     <th style="text-align:center;">単価</th>
     <th style="text-align:center;">個数</th>
-    <th style="text-align:center;">小計<br>※候補1</th>
+    <th style="text-align:center;">小計<br>(候補1)</th>
     <th style="text-align:center;">調達先<br>(候補1)</th>
     <th style="text-align:center;">調達先<br>(候補2)</th>
     <th style="text-align:center;">備考</th>
@@ -291,13 +291,13 @@
     <th style="text-align:center;">品名</th>
     <th style="text-align:center;">単価</th>
     <th style="text-align:center;">個数</th>
-    <th style="text-align:center;">小計<br>※候補1</th>
+    <th style="text-align:center;">小計<br>(候補1)</th>
     <th style="text-align:center;">調達先<br>(候補1)</th>
     <th style="text-align:center;">調達先<br>(候補2)</th>
     <th style="text-align:center;">備考</th>
   </tr>
   <tr>
-    <td>15</td>
+    <td>W1</td>
     <td>コネクター用ハウジング 2P</td>
     <td>¥10</td>
     <td>1</td>
@@ -307,7 +307,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>16</td>
+    <td>W2</td>
     <td>コネクター用ハウジング 4P</td>
     <td>&yen;10</td>
     <td>1</td>
@@ -321,7 +321,7 @@
     </td>
   </tr>
   <tr>
-    <td>17</td>
+    <td>W3</td>
     <td>ケーブル用コネクター 10個</td>
     <td>&yen;50</td>
     <td>1</td>
@@ -331,7 +331,7 @@
     <!-- 備考セルは上の行と結合しているため省略 -->
   </tr>
   <tr>
-    <td>19</td>
+    <td>W4</td>
     <td>PHコネクター ベース付ポスト<br>トップ型 2P B2B-PH-K-S</td>
     <td>&yen;10</td>
     <td>1</td>
@@ -341,7 +341,7 @@
     <td rowspan="6">候補2のAmazonから調達したほうが，部品を紛失してもある程度予備を確保しつつ，専用ケースで保管できるため，扱いやすいかもです．</td>
   </tr>
   <tr>
-    <td>20</td>
+    <td>W5</td>
     <td>XHコネクター ベース付ポスト<br>トップ型 2P B2B-XH-A(LF)(SN)</td>
     <td>&yen;10</td>
     <td>3</td>
@@ -350,7 +350,7 @@
     <td rowspan="5"><a href="https://www.amazon.co.jp/">Amazon</a></td>
   </tr>
   <tr>
-    <td>21</td>
+    <td>W6</td>
     <td>XHコネクター ベース付ポスト<br>トップ型 4P B4B-XH-A(LF)(SN)</td>
     <td>&yen;10</td>
     <td>1</td>
@@ -358,7 +358,7 @@
     <td><a href="https://akizukidenshi.com/catalog/g/g112249/">秋月電子</a></td>
   </tr>
   <tr>
-    <td>22</td>
+    <td>W7</td>
     <td>XHコネクター ハウジング用コンタクト<br>SXH-001T-P0.6</td>
     <td>&yen;200</td>
     <td>1</td>
@@ -366,7 +366,7 @@
     <td><a href="https://akizukidenshi.com/catalog/g/g112265/">秋月電子</a></td>
   </tr>
   <tr>
-    <td>23</td>
+    <td>W8</td>
     <td>XHコネクター ハウジング 4P XHP-4</td>
     <td>&yen;5</td>
     <td>1</td>
@@ -374,7 +374,7 @@
     <td><a href="https://akizukidenshi.com/catalog/g/g112257/">秋月電子</a></td>
   </tr>
   <tr>
-    <td>24</td>
+    <td>W9</td>
     <td>XHコネクター ハウジング 2P XHP-2</td>
     <td>&yen;5</td>
     <td>3</td>
@@ -382,7 +382,7 @@
     <td><a href="https://akizukidenshi.com/catalog/g/g112255/">秋月電子</a></td>
   </tr>
   <tr>
-    <td>25</td>
+    <td>W10</td>
     <td>コネクタハウジング<br>(2極、ピッチ：1.25mm、1列)</td>
     <td>¥41</td>
     <td>10</td>
@@ -397,7 +397,7 @@
     </td>
   </tr>
   <tr>
-    <td>26</td>
+    <td>W11</td>
     <td>1.25mmピッチターミナル【500588000】</td>
     <td>¥9</td>
     <td>4</td>
@@ -415,13 +415,13 @@
     <th style="text-align:center;">品名</th>
     <th style="text-align:center;">単価</th>
     <th style="text-align:center;">個数</th>
-    <th style="text-align:center;">小計<br>※候補1</th>
+    <th style="text-align:center;">小計<br>(候補1)</th>
     <th style="text-align:center;">調達先<br>(候補1)</th>
     <th style="text-align:center;">調達先<br>(候補2)</th>
     <th style="text-align:center;">備考</th>
   </tr>
   <tr>
-    <td>2</td>
+    <td>O1</td>
     <td>0.96インチ 128×64ドット<br>有機ELディスプレイ(OLED) 白色</td>
     <td>¥580</td>
     <td>1</td>
@@ -431,7 +431,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>8</td>
+    <td>O2</td>
     <td>照度センサー<br>NJL7302L-F3</td>
     <td>¥45</td>
     <td>1</td>
@@ -441,17 +441,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>28</td>
-    <td>リチウムイオンポリマー電池<br>(3.7V、1200mAh)【DTP673450(PHR)】</td>
-    <td>&yen;2,363</td>
-    <td>1</td>
-    <td>&yen;2,363</td>
-    <td><a href="https://www.marutsu.co.jp/pc/i/1634091/">marutsu</a></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>31</td>
+    <td>O3</td>
     <td>ショートワイヤ付き<br>ミニ楕円形スピーカー（8Ω 1W）</td>
     <td>&yen;486</td>
     <td>1</td>
@@ -461,7 +451,17 @@
     <td></td>
   </tr>
   <tr>
-    <td>32</td>
+    <td>O4</td>
+    <td>リチウムイオンポリマー電池<br>(3.7V、1200mAh)【DTP673450(PHR)】</td>
+    <td>&yen;2,363</td>
+    <td>1</td>
+    <td>&yen;2,363</td>
+    <td><a href="https://www.marutsu.co.jp/pc/i/1634091/">marutsu</a></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>O5</td>
     <td>収縮チューブ SCG1.0-1B</td>
     <td>&yen;67</td>
     <td>1</td>
@@ -471,7 +471,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>33</td>
+    <td>O6</td>
     <td>UL1571耐熱架橋ビニル絶縁電線<br>UL1571 AWG30 2m &lt;6&gt;</td>
     <td>&yen;967</td>
     <td>1</td>
@@ -479,6 +479,16 @@
     <td><a href="https://www.monotaro.com/p/4486/8400/?t.q=awg30">モノタロウ</a></td>
     <td></td>
     <td></td>
+  </tr>
+  <tr>
+    <td>O7</td>
+    <td>100mm空カプセル　10個入り<br>（クリアタイプ）</td>
+    <td>&yen;1,155</td>
+    <td>1</td>
+    <td>&yen;1,155</td>
+    <td><a href="https://www.a-muzu.com/category/EMPTY_CAPSULE_008/C0531.html">あミューズ</a></td>
+    <td></td>
+    <td>1体あたり1個です．．．あと9体</td>
   </tr>
 </table>
 
@@ -491,7 +501,7 @@
     <th style="text-align:center;">品名</th>
     <th style="text-align:center;">単価</th>
     <th style="text-align:center;">個数</th>
-    <th style="text-align:center;">小計<br>※候補1</th>
+    <th style="text-align:center;">小計<br>(候補1)</th>
     <th style="text-align:center;">調達先<br>(候補1)</th>
     <th style="text-align:center;">調達先<br>(候補2)</th>
     <th style="text-align:center;">備考</th>
@@ -741,7 +751,7 @@
     <td><u></u></td>
     <!-- no.24 と no.25 の備考を結合 -->
     <td rowspan="2">
-      No. 24, 25 のどちらかが在庫切れの場合，<br>
+      No. 25, 26 のどちらかが在庫切れの場合，<br>
       ▼リンク先の商品で代用可能です．<br>
       <a href="https://www.marutsu.co.jp/pc/i/2231331/">代替リンク</a>
     </td>
@@ -790,7 +800,7 @@
     <td>30</td>
     <td>3mm六角シャフトセット<br>【ITEM70252】</td>
     <td>&yen;280</td>
-    <td>280</td>
+    <td>1</td>
     <td>&yen;280</td>
     <td><a href="https://www.amazon.co.jp/%E3%82%BF%E3%83%9F%E3%83%A4-%E6%A5%BD%E3%81%97%E3%81%84%E5%B7%A5%E4%BD%9C%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-No-252-3mm%E5%85%AD%E8%A7%92%E3%82%B7%E3%83%A3%E3%83%95%E3%83%88%E3%82%BB%E3%83%83%E3%83%88-70252/dp/B0BTS99X3S/ref=pd_sim_d_sccl_3_5/356-3568001-7199139?pd_rd_w=wJ5Yp&content-id=amzn1.sym.d686209d-8edb-4501-90de-4e255f5b32cf&pf_rd_p=d686209d-8edb-4501-90de-4e255f5b32cf&pf_rd_r=8CYN04G4VC2R6D3KAX71&pd_rd_wg=pZLPA&pd_rd_r=4b423c32-2349-4196-a37c-98c7c704a185&pd_rd_i=B0BTS99X3S&psc=1">Amazon</a></td>
     <td></td>
