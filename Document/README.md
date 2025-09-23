@@ -8,6 +8,8 @@
 > 一部の部品にて，**組み立てサポート品**を販売しています．<br>
 > 「3Dプリンタが家にない」，「基板発注の経験がない」といった方々でも，ころボ に触れ合っていただけます！
 
+> ※Amazonのリンクについては，Amazonアソシエイトの短縮リンクを使用しています． 
+
 ### 3Dプリンタ部品 / Model
 <table>
   <tr>
@@ -36,7 +38,7 @@
     <td>&yen;3,278</td>
     <td>1</td>
     <td>&yen;3,278</td>
-    <td><a href="https://www.amazon.co.jp/dp/B08QMXDTJL">Amazon</a></td>
+    <td><a href="https://amzn.to/4gVXI1b">Amazon</a></td>
     <td></td>
     <td rowspan="2">
       約50 [g]ずつ使用
@@ -48,7 +50,7 @@
     <td>&yen;3,999</td>
     <td>1</td>
     <td>&yen;3,999</td>
-    <td><a href="https://www.amazon.co.jp/eSUN-Flexible-3D...">Amazon</a></td>
+    <td><a href="https://amzn.to/46RzRvW">Amazon</a></td>
     <td></td>
     <!-- 備考セルは上の行と結合しているため省略 -->
   </tr>
@@ -93,7 +95,7 @@
     <td>2</td>
     <td>&yen;1,892</td>
     <td><a href="https://www.marutsu.co.jp/pc/i/159903/">marutsu</a></td>
-    <td><a href="https://www.amazon.co.jp/%E3%82%BF%E3%83%9F%E3%83%A4-%E6%A5%BD%E3%81%97%E3%81%84%E5%B7%A5%E4%BD%9C%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-No-189-%E3%83%9F%E3%83%8B%E3%83%A2%E3%83%BC%E3%82%BF%E3%83%BC%E4%BD%8E%E9%80%9F%E3%82%AE%E3%83%A4%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9-70189/dp/B002R0DQCU/ref=pd_vtp_h_pd_vtp_h_d_sccl_3/356-3568001-7199139?pd_rd_w=v85PE&content-id=amzn1.sym.aa2b64e9-bbda-48af-869b-bd011156b91d&pf_rd_p=aa2b64e9-bbda-48af-869b-bd011156b91d&pf_rd_r=Q1AR9PCE0WR974R1QER1&pd_rd_wg=Pq8TJ&pd_rd_r=5d47c3e7-2eb9-4dff-b083-cf0f43c0ef89&pd_rd_i=B002R0DQCU&psc=1">Amazon</a></td>
+    <td><a href="https://amzn.to/3Kh5m9R">Amazon</a></td>
     <td></td>
   </tr>
   <tr>
@@ -102,7 +104,7 @@
     <td>&yen;280</td>
     <td>1</td>
     <td>&yen;280</td>
-    <td><a href="https://www.amazon.co.jp/%E3%82%BF%E3%83%9F%E3%83%A4-%E6%A5%BD%E3%81%97%E3%81%84%E5%B7%A5%E4%BD%9C%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-No-252-3mm%E5%85%AD%E8%A7%92%E3%82%B7%E3%83%A3%E3%83%95%E3%83%88%E3%82%BB%E3%83%83%E3%83%88-70252/dp/B0BTS99X3S/ref=pd_sim_d_sccl_3_5/356-3568001-7199139?pd_rd_w=wJ5Yp&content-id=amzn1.sym.d686209d-8edb-4501-90de-4e255f5b32cf&pf_rd_p=d686209d-8edb-4501-90de-4e255f5b32cf&pf_rd_r=8CYN04G4VC2R6D3KAX71&pd_rd_wg=pZLPA&pd_rd_r=4b423c32-2349-4196-a37c-98c7c704a185&pd_rd_i=B0BTS99X3S&psc=1">Amazon</a></td>
+    <td><a href="https://amzn.to/3I9S5iY">Amazon</a></td>
     <td></td>
     <td>38 [mm] 2本を，ギヤボックス付属のシャフトの代わりに使用します．</td>
   </tr>
@@ -362,7 +364,7 @@
     <td>1</td>
     <td>&yen;10</td>
     <td><a href="https://akizukidenshi.com/catalog/g/g112802/">秋月電子</a></td>
-    <td><a href="https://www.amazon.co.jp/.../dp/B09F8WV2G6/">Amazon</a></td>
+    <td><a href="https://amzn.to/4nIFLoP">Amazon</a></td>
     <td rowspan="6">候補2のAmazonから調達したほうが，部品を紛失してもある程度予備を確保しつつ，専用ケースで保管できるため，扱いやすいかもです．</td>
   </tr>
   <tr>
@@ -372,7 +374,7 @@
     <td>3</td>
     <td>&yen;30</td>
     <td><a href="https://akizukidenshi.com/catalog/g/g112247/">秋月電子</a></td>
-    <td rowspan="5"><a href="https://www.amazon.co.jp/">Amazon</a></td>
+    <td rowspan="5"><a href="https://amzn.to/42ELjbL">Amazon</a></td>
   </tr>
   <tr>
     <td>W6</td>
@@ -416,7 +418,7 @@
     <td><u></u></td>
     <!-- no.24 と no.25 の備考を結合 -->
     <td rowspan="2">
-      No. 22, 23 のどちらかが在庫切れの場合，<br>
+      No. W10, W11 のどちらかが在庫切れの場合，<br>
       ▼リンク先の商品で代用可能です．<br>
       <a href="https://www.marutsu.co.jp/pc/i/2231331/">代替リンク</a>
     </td>
@@ -540,6 +542,11 @@
     <th style="text-align:center;">a</th>
     <th style="text-align:center;">a</th>
     <th style="text-align:center;">b</th>
+  </tr>
+  <tr>
+    <td colspan="8" align="center">
+      <ins>秋月電子</ins>
+    </td>
   </tr>
   <tr>
     <td>1</td>
@@ -732,7 +739,7 @@
     <td>1</td>
     <td>&yen;10</td>
     <td><a href="https://akizukidenshi.com/catalog/g/g112802/">秋月電子</a></td>
-    <td><a href="https://www.amazon.co.jp/.../dp/B09F8WV2G6/">Amazon</a></td>
+    <td><a href="https://amzn.to/4nIFLoP">Amazon</a></td>
     <td rowspan="6">候補2のAmazonから調達したほうが，部品を紛失してもある程度予備を確保しつつ，専用ケースで保管できるため，扱いやすいかもです．</td>
   </tr>
   <tr>
@@ -742,7 +749,7 @@
     <td>3</td>
     <td>&yen;30</td>
     <td><a href="https://akizukidenshi.com/catalog/g/g112247/">秋月電子</a></td>
-    <td rowspan="5"><a href="https://www.amazon.co.jp/">Amazon</a></td>
+    <td rowspan="5"><a href="https://amzn.to/42ELjbL">Amazon</a></td>
   </tr>
   <tr>
     <td>21</td>
@@ -775,6 +782,11 @@
     <td>3</td>
     <td>&yen;15</td>
     <td><a href="https://akizukidenshi.com/catalog/g/g112255/">秋月電子</a></td>
+  </tr>
+  <tr>
+    <td colspan="8" align="center">
+      <ins>marutsu</ins>
+    </td>
   </tr>
   <tr>
     <td>25</td>
@@ -828,8 +840,13 @@
     <td>2</td>
     <td>&yen;1,892</td>
     <td><a href="https://www.marutsu.co.jp/pc/i/159903/">marutsu</a></td>
-    <td><a href="https://www.amazon.co.jp/%E3%82%BF%E3%83%9F%E3%83%A4-%E6%A5%BD%E3%81%97%E3%81%84%E5%B7%A5%E4%BD%9C%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-No-189-%E3%83%9F%E3%83%8B%E3%83%A2%E3%83%BC%E3%82%BF%E3%83%BC%E4%BD%8E%E9%80%9F%E3%82%AE%E3%83%A4%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9-70189/dp/B002R0DQCU/ref=pd_vtp_h_pd_vtp_h_d_sccl_3/356-3568001-7199139?pd_rd_w=v85PE&content-id=amzn1.sym.aa2b64e9-bbda-48af-869b-bd011156b91d&pf_rd_p=aa2b64e9-bbda-48af-869b-bd011156b91d&pf_rd_r=Q1AR9PCE0WR974R1QER1&pd_rd_wg=Pq8TJ&pd_rd_r=5d47c3e7-2eb9-4dff-b083-cf0f43c0ef89&pd_rd_i=B002R0DQCU&psc=1">Amazon</a></td>
+    <td><a href="https://amzn.to/3Kh5m9R">Amazon</a></td>
     <td></td>
+  </tr>
+  <tr>
+    <td colspan="8" align="center">
+      <ins>Amazon</ins>
+    </td>
   </tr>
   <tr>
     <td>30</td>
@@ -837,12 +854,41 @@
     <td>&yen;280</td>
     <td>1</td>
     <td>&yen;280</td>
-    <td><a href="https://www.amazon.co.jp/%E3%82%BF%E3%83%9F%E3%83%A4-%E6%A5%BD%E3%81%97%E3%81%84%E5%B7%A5%E4%BD%9C%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-No-252-3mm%E5%85%AD%E8%A7%92%E3%82%B7%E3%83%A3%E3%83%95%E3%83%88%E3%82%BB%E3%83%83%E3%83%88-70252/dp/B0BTS99X3S/ref=pd_sim_d_sccl_3_5/356-3568001-7199139?pd_rd_w=wJ5Yp&content-id=amzn1.sym.d686209d-8edb-4501-90de-4e255f5b32cf&pf_rd_p=d686209d-8edb-4501-90de-4e255f5b32cf&pf_rd_r=8CYN04G4VC2R6D3KAX71&pd_rd_wg=pZLPA&pd_rd_r=4b423c32-2349-4196-a37c-98c7c704a185&pd_rd_i=B0BTS99X3S&psc=1">Amazon</a></td>
+    <td><a href="https://amzn.to/3I9S5iY">Amazon</a></td>
     <td></td>
     <td>38 [mm] 2本を，ギヤボックス付属のシャフトの代わりに使用します．</td>
   </tr>
   <tr>
     <td>31</td>
+    <td>PolyTerra PLA 1.75mm径 1000g<br>Sunrise Orange</td>
+    <td>&yen;3,278</td>
+    <td>1</td>
+    <td>&yen;3,278</td>
+    <td><a href="https://amzn.to/4gVXI1b">Amazon</a></td>
+    <td></td>
+    <td rowspan="2">
+      約50 [g]ずつ使用<br>
+      ▼調達困難な方向けに，印刷物の販売も実施中<br>
+      <a href="https://korokoro-robot.booth.pm/items/6812764">https://korokoro-robot.booth.pm/items/6812764</a>
+    </td>
+  </tr>
+  <tr>
+    <td>32</td>
+    <td>eSUN Flexible TPU 白</td>
+    <td>&yen;3,999</td>
+    <td>1</td>
+    <td>&yen;3,999</td>
+    <td><a href="https://amzn.to/46RzRvW">Amazon</a></td>
+    <td></td>
+    <!-- 備考セルは上の行と結合しているため省略 -->
+  </tr>
+  <tr>
+    <td colspan="8" align="center">
+      <ins>その他</ins>
+    </td>
+  </tr>
+  <tr>
+    <td>33</td>
     <td>ショートワイヤ付き<br>ミニ楕円形スピーカー（8Ω 1W）</td>
     <td>&yen;486</td>
     <td>1</td>
@@ -852,7 +898,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>32</td>
+    <td>34</td>
     <td>収縮チューブ SCG1.0-1B</td>
     <td>&yen;67</td>
     <td>1</td>
@@ -862,7 +908,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>33</td>
+    <td>35</td>
     <td>UL1571耐熱架橋ビニル絶縁電線<br>UL1571 AWG30 2m &lt;6&gt;</td>
     <td>&yen;967</td>
     <td>1</td>
@@ -872,7 +918,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>34</td>
+    <td>36</td>
     <td>100mm空カプセル　10個入り<br>（クリアタイプ）</td>
     <td>&yen;1,155</td>
     <td>1</td>
@@ -882,7 +928,7 @@
     <td>1体あたり1個です．．．あと9体</td>
   </tr>
   <tr>
-    <td>35</td>
+    <td>37</td>
     <td>〈第2.1世代〉ころボ<br>メインボード</td>
     <td>&yen;3,583</td>
     <td>1</td>
@@ -894,30 +940,6 @@
       ▼調達困難な方向けに，印刷物の販売も実施中<br>
       <a href="https://korokoro-robot.booth.pm/items/6807081">https://korokoro-robot.booth.pm/items/6807081</a>
     </td>
-  </tr>
-  <tr>
-    <td>36</td>
-    <td>PolyTerra PLA 1.75mm径 1000g<br>Sunrise Orange</td>
-    <td>&yen;3,278</td>
-    <td>1</td>
-    <td>&yen;3,278</td>
-    <td><a href="https://www.amazon.co.jp/dp/B08QMXDTJL">Amazon</a></td>
-    <td></td>
-    <td rowspan="2">
-      約50 [g]ずつ使用<br>
-      ▼調達困難な方向けに，印刷物の販売も実施中<br>
-      <a href="https://korokoro-robot.booth.pm/items/6812764">https://korokoro-robot.booth.pm/items/6812764</a>
-    </td>
-  </tr>
-  <tr>
-    <td>37</td>
-    <td>eSUN Flexible TPU 白</td>
-    <td>&yen;3,999</td>
-    <td>1</td>
-    <td>&yen;3,999</td>
-    <td><a href="https://www.amazon.co.jp/eSUN-Flexible-3D...">Amazon</a></td>
-    <td></td>
-    <!-- 備考セルは上の行と結合しているため省略 -->
   </tr>
 </table>
 </details>
