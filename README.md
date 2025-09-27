@@ -3,7 +3,7 @@
 > 組み立て説明を除き，他のデータは最低限完成しました！\
 > 学生個人の活動であるため，ご了承ください．
 
-<img src="/Document/Picture/image_korobo-2-1.jpg" width="75%">
+<p align="center"><img src="/Document/Picture/image_korobo-2-1.jpg" width="75%"></p>
 
 ## 概要 / Overview
 ### ころボ？
@@ -69,13 +69,13 @@
   </tbody>
 </table>
 
-<img src="/Document/Picture/korobo-1--2_pop.png" width="75%">
+<p align="center"><img src="/Document/Picture/korobo-1--2_pop.png" width="75%"></p>
 
 </details>
 
-<img src="/Document/Picture/korobo-2-1_pop.png" width="75%">
+<p align="center"><img src="/Document/Picture/korobo-2-1_pop.png" width="75%"></p>
 
-<img src="/Document/Movie/korobo_2-1_3d-movie_small.gif" width="75%">
+<p align="center"><img src="/Document/Movie/korobo_2-1_3d-movie_small.gif" width="75%"></p>
 
 - ころボ 開発当初から大切にしてきた**シンプルな構造**と，**はめ込みによる組み立て方式**[^1]はそのままに，**耐久性**や**拡張性**が向上しました！
     > 机から落ちても，間違えて蹴っ飛ばしても致命傷になることはありません．\
@@ -119,23 +119,23 @@
 
 ##### 0.20 準備
 ##### 0.21 PLA
-<img src="/Document/Picture/pla-parts_2.jpg" width="75%">
-<p>
+<p align="center"><img src="/Document/Picture/pla-parts_2.jpg" width="75%"></p>
+<p align="center">
 <img src="/Document/Picture/pla-parts_support-remove_1.jpg" width="37.5%"><img src="/Document/Picture/pla-parts_support-remove_2.jpg" width="37.5%">
 </p>
-<p>
+<p align="center">
 <img src="/Document/Picture/pla-parts_support-remove_3.jpg" width="37.5%"><img src="/Document/Picture/pla-parts_support-remove_4.jpg" width="37.5%">
 </p>
-<img src="/Document/Picture/pla-parts_support-remove_5.jpg" width="75%">
+<p align="center"><img src="/Document/Picture/pla-parts_support-remove_5.jpg" width="75%"></p>
 
 ##### 0.22 TPU
-<p>
+<p align="center">
 <img src="/Document/Picture/tpu-parts_support-remove_1.jpg" width="37.5%"><img src="/Document/Picture/tpu-parts_support-remove_2.jpg" width="37.5%">
 </p>
-<p>
+<p align="center">
 <img src="/Document/Picture/tpu-parts_support-remove_3.jpg" width="37.5%"><img src="/Document/Picture/tpu-parts_support-remove_4.jpg" width="37.5%">
 </p>
-<p>
+<p align="center">
 <img src="/Document/Picture/tpu-parts_support-remove_5.jpg" width="37.5%"><img src="/Document/Picture/tpu-parts_support-remove_6.jpg" width="37.5%">
 </p>
 </details>
@@ -215,7 +215,7 @@
 ### 2. 配線（[0](#01-調達)/[1](#10-準備)/2/[3](#30-準備)/[4](#40-準備)/[5](#50-準備)）
 > [!TIP]
 > KORokoro.rOBOt projectの[BOOTH](https://korokoro-robot.booth.pm/)にて，**配線類**を調達された方は，"[3. 基板](#30-準備)" へ進んでください．（※現在，準備中）
-<img src="/Document/Picture/wire_parts.JPG" width="75%">
+<p align="center"><img src="/Document/Picture/wire_parts.JPG" width="75%"></p>
 <details open>
 <summary>手順</summary>
 
@@ -286,7 +286,7 @@
   </tbody>
 </table>
 
-<img src="/Document/Picture/main-board_parts.jpg" width="75%">
+<p align="center"><img src="/Document/Picture/main-board_parts.jpg" width="75%"></p>
 
 #### 3.2 半田付け
 準備中...
@@ -319,16 +319,16 @@
 </details>
 
 #### 4.6 上部滑車
-<p>
+<p align="center">
 <img src="/Document/Picture/top-wheel_1.jpg" width="37.5%"><img src="/Document/Picture/top-wheel_2.jpg" width="37.5%">
 </p>
-<p>
+<p align="center">
 <img src="/Document/Picture/top-wheel_3.jpg" width="37.5%"><img src="/Document/Picture/top-wheel_4.jpg" width="37.5%">
 </p>
-<p>
+<p align="center">
 <img src="/Document/Picture/top-wheel_set_1.jpg" width="37.5%"><img src="/Document/Picture/top-wheel_set_2.jpg" width="37.5%">
 </p>
-<p>
+<p align="center">
 <img src="/Document/Picture/top-wheel_set_3.jpg" width="37.5%"><img src="/Document/Picture/top-wheel_set_4.jpg" width="37.5%">
 </p>
 
