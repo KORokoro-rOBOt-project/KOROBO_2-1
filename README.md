@@ -75,7 +75,7 @@
 
 <img src="/Document/Picture/korobo-2-1_pop.png" width="75%">
 
-<img src="/Document/Movie/korobo_2-1_3d-movie.gif" width="75%">
+<img src="/Document/Movie/korobo_2-1_3d-movie_small.gif" width="75%">
 
 - ころボ 開発当初から大切にしてきた**シンプルな構造**と，**はめ込みによる組み立て方式**[^1]はそのままに，**耐久性**や**拡張性**が向上しました！
     > 机から落ちても，間違えて蹴っ飛ばしても致命傷になることはありません．\
