@@ -108,13 +108,11 @@
 ### 0. 部品調達（0/[1](#10-準備)/[2](#20-準備)/[3](#30-準備)/[4](#40-準備)/[5](#50-準備)）
 #### 0.1 調達 
 [Document](Document)に記載されている各種材料を，添付されているURLの通販サイトや実店舗などにて，調達してください．
-> [!NOTE]
-> 電子工作経験者の場合，調達前に手持ちの部品を確認することで，不要な調達を避けられるかもしれません．（例：ピンソケット、ピンヘッダ、抵抗、コンデンサなど）
 
 #### 0.2 印刷
 > [!TIP]
 > KORokoro.rOBOt projectの[BOOTH](https://korokoro-robot.booth.pm/items/6812764)にて，**3Dプリンタ製部品**を調達された方は，"[0.3 基板発注 or 作成](#03-基板発注-or-作成)" へ進んでください．
-<details open>
+<details>
 <summary>手順</summary>
 
 ##### 0.20 準備
@@ -346,16 +344,14 @@
 #### 5.2 書き込み
 準備中...
 ## ころボとの生活 / Life with KOROBO
-#### ごはん
-準備中...
-#### 拡張性
-準備中...
+#### 充電
+ころボ の右側面にある，USB差込口に5V出力の**microUSB**を接続する．
+
 #### その他
 > [!CAUTION]
-> カプセルの仕様上，**完全防水ではありません**．
-
-> [!CAUTION]
-> **リチウムイオン電池**を用いています．取り扱いにはご注意ください．
+> - **リチウムイオン電池**を用いています．取り扱いにはご注意ください．
+> - カプセルの仕様上，**完全防水ではありません**．
+> - ころボ に関する問題は，自己責任でよろしくお願いいたします．
 
 <a name="license"></a>
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/KORokoro-rOBOt-project/KOROBO_2-1">〈第2.1世代〉ころボ</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://community.camp-fire.jp/projects/view/764851">KORokoro.rOBOt project</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution-ShareAlike 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
