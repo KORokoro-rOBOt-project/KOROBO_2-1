@@ -317,19 +317,7 @@
 </details>
 
 #### 4.6 上部滑車
-<p>
-<img src="/Document/Picture/top-wheel_1.jpg" width="37.5%"><img src="/Document/Picture/top-wheel_2.jpg" width="37.5%">
-</p>
-<p>
-<img src="/Document/Picture/top-wheel_3.jpg" width="37.5%"><img src="/Document/Picture/top-wheel_4.jpg" width="37.5%">
-</p>
-<p>
-<img src="/Document/Picture/top-wheel_set_1.jpg" width="37.5%"><img src="/Document/Picture/top-wheel_set_2.jpg" width="37.5%">
-</p>
-<p>
-<img src="/Document/Picture/top-wheel_set_3.jpg" width="37.5%"><img src="/Document/Picture/top-wheel_set_4.jpg" width="37.5%">
-</p>
-
+準備中...
 #### 4.7 カバー
 準備中...
 #### 4.8 カプセル
