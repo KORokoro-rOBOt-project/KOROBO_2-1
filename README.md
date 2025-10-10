@@ -3,19 +3,21 @@
 > 組み立て説明を除き，他のデータは最低限完成しました！\
 > 学生個人の活動であるため，ご了承ください．
 
-<img src="/Document/Picture/image_korobo-2-1.jpg" width="75%">
+<img src="Document/Picture/image_korobo-2-1.jpg" width="75%">
 
 ## 概要 / Overview
 ### ころボ？
 “ころボ” は，カプセルに覆われた手のひらサイズのロボットです．
 ただ，表情は四角い2つの瞳，動きはカプセル内で前後左右するも丸いカプセルに振り回され，言葉らしい言葉も話しません．
+
 一見するとポンコツな子ですが，自身や周囲の状況に応じた繊細な反応，設計者の思惑を介さない不完全だからこそ引き出される解釈に，不思議と魅了されます．
 
-玩具や機械ではなく，生き物っていうわけでもないけれど，どこか自分たちと同じ存在感を与える新たな存在になってほしいと考えています．
-そして，周囲の人同士の関係を築いたり，誰かの不安や秘密を一緒に抱え込んでくれたり，孤独を埋めてくれたりする存在に... 
+そして，ロボットであることをさらけ出してはいるけれど，どこか私たちと同じ気配を感じる新たな存在になってほしいと考えています．
+
 
 ### 第2.1世代
 〈第2.1世代〉ころボは，〈第2世代〉のオープンソース版として開発中の子です．
+> 私のロボットに対する哲学や目指すべきコンセプトを，より明解にするためのプラットフォームとして考えています．その一方で，多くの方々にも ころボ で多種多様なアプローチをしていただけたらと思っている次第です．
 
 <details>
 <summary>第1世代，第2世代 / 1st Gen, 2nd Gen</summary>
@@ -69,13 +71,13 @@
   </tbody>
 </table>
 
-<img src="/Document/Picture/korobo-1--2_pop.png" width="75%">
+<img src="Document/Picture/korobo-1--2_pop.png" width="75%">
 
 </details>
 
-<img src="/Document/Picture/korobo-2-1_pop.png" width="75%">
+<img src="Document/Picture/korobo-2-1_pop.png" width="75%">
 
-<img src="/Document/Movie/korobo_2-1_3d-movie_small.gif" width="75%">
+<img src="Document/Movie/korobo_2-1_3d-movie_small.gif" width="75%">
 
 - ころボ 開発当初から大切にしてきた**シンプルな構造**と，**はめ込みによる組み立て方式**[^1]はそのままに，**耐久性**や**拡張性**が向上しました！
     > 机から落ちても，間違えて蹴っ飛ばしても致命傷になることはありません．\
@@ -108,13 +110,11 @@
 ### 0. 部品調達（0/[1](#10-準備)/[2](#20-準備)/[3](#30-準備)/[4](#40-準備)/[5](#50-準備)）
 #### 0.1 調達 
 [Document](Document)に記載されている各種材料を，添付されているURLの通販サイトや実店舗などにて，調達してください．
-> [!NOTE]
-> 電子工作経験者の場合，調達前に手持ちの部品を確認することで，不要な調達を避けられるかもしれません．（例：ピンソケット、ピンヘッダ、抵抗、コンデンサなど）
 
 #### 0.2 印刷
 > [!TIP]
 > KORokoro.rOBOt projectの[BOOTH](https://korokoro-robot.booth.pm/items/6812764)にて，**3Dプリンタ製部品**を調達された方は，"[0.3 基板発注 or 作成](#03-基板発注-or-作成)" へ進んでください．
-<details open>
+<details>
 <summary>手順</summary>
 
 ##### 0.20 準備
@@ -215,12 +215,13 @@
 ### 2. 配線（[0](#01-調達)/[1](#10-準備)/2/[3](#30-準備)/[4](#40-準備)/[5](#50-準備)）
 > [!TIP]
 > KORokoro.rOBOt projectの[BOOTH](https://korokoro-robot.booth.pm/)にて，**配線類**を調達された方は，"[3. 基板](#30-準備)" へ進んでください．（※現在，準備中）
-<img src="/Document/Picture/wire_parts.JPG" width="75%">
+
+<img src="Document/Picture/wire_parts.JPG" width="75%">
 <details open>
 <summary>手順</summary>
 
 #### 2.0 準備
-準備中...
+次の表に示す，工具・部品を準備してください．
 
 <table>
 	<thead>
@@ -231,11 +232,30 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td rowspan="2">工具</td>
+			<td rowspan="3">工具</td>
 			<td>圧着工具</td>
 		</tr>
 		<tr>
 			<td>グルーガン（+ グルースティック）</td>
+		</tr>
+		<tr>
+			<td>ニッパー</td>
+		</tr>
+		<tr>
+			<td rowspan="5">部品</td>
+			<td>配線（赤, 黒, 他2色）</td>
+		</tr>
+		<tr>
+			<td>ピンソケット（2P * 1, 4P * 1）</td>
+		</tr>
+		<tr>
+			<td>JST-XH（2P * 3, 4P * 1）</td>
+		</tr>
+		<tr>
+			<td>JST-PH（2P * 1）</td>
+		</tr>
+		<tr>
+			<td>PicoBlade（2P * 1）</td>
 		</tr>
 	</tbody>
 </table>
@@ -286,55 +306,47 @@
   </tbody>
 </table>
 
-<img src="/Document/Picture/main-board_parts.jpg" width="75%">
+<img src="Document/Picture/main-board_parts.jpg" width="75%">
 
 #### 3.2 半田付け
-準備中...
+> [!IMPORTANT]
+> モジュール付属のピンヘッダーは，長さが異なるため，別途調達したピンヘッダーを推奨
+1. **メインボード**
+	> 作業過程ノーカット版 >> [クリック or タップ](https://youtu.be/Ys6NwztTmmA)
+
+	準備中...
+1. **モジュール**\
+	準備中...
 
 ---
 ### 4. はめ込み（[0](#01-調達)/[1](#10-準備)/[2](#20-準備)/[3](#30-準備)/4/[5](#50-準備)）
 #### 4.0 準備
 準備中...
-#### 4.1 基板 << 配線
+#### 4.1 モジュール（順序あり）
+1. **基板 << 配線**\
 準備中...
-#### 4.2 メインフレーム << 基板（＋配線）
+1. **メインフレーム << 基板（＋配線）**\
 準備中...
-#### 4.3 メインフレーム << バッテリ
+1. **メインフレーム << バッテリ**\
 準備中...
-#### 4.4 メインフレーム << 駆動ユニット
+1. **メインフレーム << 駆動ユニット**\
 準備中...
-#### 4.5 メインフレーム << その他モジュール
-<details open>
-<summary>一覧（順不同）</summary>
+#### 4.2 モジュール（順不同）
+- **メインフレーム << OLED**
+	1. 準備中...
+	2. 準備中...
+- **メインフレーム << 照度センサ**
+	1. 準備中...
+	2. 準備中...
+- **メインフレーム << スピーカ**
+	1. 準備中...
+	2. 準備中...
 
-- **OLED**
-    1. 準備中...
-    2. 準備中...
-- **照度センサ**
-    1. 準備中...
-    2. 準備中...
-- **スピーカ**
-    1. 準備中...
-    2. 準備中...
-</details>
-
-#### 4.6 上部滑車
-<p>
-<img src="/Document/Picture/top-wheel_1.jpg" width="37.5%"><img src="/Document/Picture/top-wheel_2.jpg" width="37.5%">
-</p>
-<p>
-<img src="/Document/Picture/top-wheel_3.jpg" width="37.5%"><img src="/Document/Picture/top-wheel_4.jpg" width="37.5%">
-</p>
-<p>
-<img src="/Document/Picture/top-wheel_set_1.jpg" width="37.5%"><img src="/Document/Picture/top-wheel_set_2.jpg" width="37.5%">
-</p>
-<p>
-<img src="/Document/Picture/top-wheel_set_3.jpg" width="37.5%"><img src="/Document/Picture/top-wheel_set_4.jpg" width="37.5%">
-</p>
-
-#### 4.7 カバー
+#### 4.3 上部滑車
 準備中...
-#### 4.8 カプセル
+#### 4.4 カバー
+準備中...
+#### 4.5 カプセル
 準備中...
 
 ---
@@ -346,16 +358,14 @@
 #### 5.2 書き込み
 準備中...
 ## ころボとの生活 / Life with KOROBO
-#### ごはん
-準備中...
-#### 拡張性
-準備中...
+#### 充電
+ころボ の右側面にある，USB差込口に5V出力の**microUSB**を接続する．
+
 #### その他
 > [!CAUTION]
-> カプセルの仕様上，**完全防水ではありません**．
-
-> [!CAUTION]
-> **リチウムイオン電池**を用いています．取り扱いにはご注意ください．
+> - **リチウムイオン電池**を用いています．取り扱いにはご注意ください．
+> - カプセルの仕様上，**完全防水ではありません**．
+> - ころボ に関する問題は，自己責任でよろしくお願いいたします．
 
 <a name="license"></a>
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/KORokoro-rOBOt-project/KOROBO_2-1">〈第2.1世代〉ころボ</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://community.camp-fire.jp/projects/view/764851">KORokoro.rOBOt project</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution-ShareAlike 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>

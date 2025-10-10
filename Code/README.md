@@ -348,7 +348,7 @@ x, y軸の加速度を利用し，姿勢を水平な状態へ維持するよう�
     ```
     </details>
     
-- **`boolean Sleep(unsigned int num)`** :
+- **（調整中）`boolean Sleep(unsigned int num)`** :
 スリープ機能関数．
 スリープへ移行する条件の情報を選択できる．
   <table>
