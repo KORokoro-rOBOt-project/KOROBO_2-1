@@ -7,9 +7,9 @@
 |------------|------|:------:|:----:|
 | [**cover_b_2-1.stl**](STL(OLD)/cover_b_2-1.stl)<br>[**cover_b_2-1.step**](STEP/cover_b_2-1.step) | 本体カバーの下部 | 1 | PLA |
 | [**cover_stopper.stl**](STL(OLD)/cover_stopper.stl)<br>[**cover_stopper.step**](STEP/cover_stopper.step) | 本体カバーの上部と下部を繋げるアタッチメント | 4 | TPU |
-| [**cover_t_2-1.stl**](STL(OLD)/cover_t_2-1.stl)<br>[**cover_t_2-1.step**](STEP/cover_t_2-1.step.step) | 本体カバーの上部[^1] | 1 | PLA |
+| [**cover_t_2-1.stl**](STL(OLD)/cover_t_2-1.stl)<br>[**cover_t_2-1.step**](STEP/cover_t_2-1.step.step) | 本体カバーの上部 | 1 | PLA |
 | [**main_frame_2-1.stl**](STL(OLD)/main_frame_2-1.stl)<br>[**main_frame_2-1.step**](STEP/main_frame_2-1.step) | メインフレーム | 1 | TPU |
-| [**motor_frame_2-1.stl**](STL(OLD)/motor_frame_2-1.stl)<br>[**motor_frame_2-1.step**](STEP/motor_frame_2-1.step) | ギアボックスを包むカバー | 2 | TPU |
+| [**motor_frame_2-1.stl**](STL(OLD)/motor_frame_2-1.stl)<br>[**motor_frame_2-1.step**](STEP/motor_frame_2-1.step) | ギアボックスを包むカバー[^1] | 2 | TPU |
 | [**wheel_b_2-1.stl**](STL(OLD)/wheel_b_2-1.stl)<br>[**wheel_b_2-1.step**](STEP/wheel_b_2-1.step) | メインタイヤ | 2 | TPU |
 | [**wheel_t.stl**](STL(OLD)/wheel_t.stl)<br>[**wheel_t.step**](STEP/wheel_t.step) | 上部滑車 | 4 | TPU |
 | [**wheel_t_shaft.stl**](STL(OLD)/wheel_t_shaft.stl)<br>[**wheel_t_shaft.step**](STEP/wheel_t_shaft.step) | 上部滑車の軸 | 4 | PLA |
