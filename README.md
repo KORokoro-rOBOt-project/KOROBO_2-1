@@ -263,17 +263,19 @@
 	</tbody>
 </table>
 
-#### 2.1 ピンヘッダー
-準備中...
+#### 2.1 駆動ユニット（JST-XH）
+> モーター（2P）← 配線（黒，赤）→ JST-XH（2P）
 
-#### 2.2 JST-XH
-準備中...
+#### 2.2 照度センサ（JST-XH, ピンソケット）
+> JST-XH（2P）← 配線（黒，他色*1）→ ピンソケット（2P）
 
-#### 2.3 JST-PH
-準備中...
+#### 2.3 ディスプレイ（JST-XH, ピンソケット）
+> JST-XH（4P）← 配線（黒，赤，他色*2）→ ピンソケット（4P）
 
-#### 2.4 PicoBlade
-準備中...
+<img src="Document/Movie/wire-making_no1.gif" width="100%">
+
+#### 2.4 スピーカー（PicoBlade）
+> D級アンプ（2P）← 配線（黒，他色*1）→ PicoBlade（2P）
 
 </details>
 
