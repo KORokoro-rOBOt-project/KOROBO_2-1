@@ -69,6 +69,17 @@
 
 ## KoroboLib_2_1
 〈第2.1世代〉ころボ を動作させるにあたって必要となるライブラリ
+
+> [!IMPORTANT]
+> <b>KoroboLib_2_1</b>は，複数の既存ライブラリに依存しています．
+> 事前に，それらのライブラリをインストールしてください[^1][^2][^3][^4]．
+> また，各ライブラリには**異なるライセンス**が付与されています．
+> これらのライブラリを独自に改変，または ころボ のライブラリへ組み込むといった場合は，十分にご確認ください．
+[^1]: https://github.com/adafruit/Adafruit-GFX-Library
+[^2]: https://github.com/adafruit/Adafruit_SSD1306
+[^3]: https://github.com/adafruit/Adafruit_Sensor
+[^4]: https://github.com/adafruit/Adafruit_BNO055
+
 - **`void begin(unsigned int num)`** : 
 各モジュールのセットアップ処理関数（[**mind_2-1** / 2. 初回処理](#begin)を参照）．
   > 引数に，搭載しているモータドライバの種類や，メインボードのバージョンを指定することで，互換性を確保している．
@@ -392,13 +403,3 @@ x, y軸の加速度を利用し，姿勢を水平な状態へ維持するよう�
     }
     ```
     </details>
-
-> [!IMPORTANT]
-> <b>KoroboLib_2_1</b>は，複数の既存ライブラリに依存しています．
-> 事前に，それらのライブラリをインストールしてください[^1][^2][^3][^4]．
-> また，各ライブラリには**異なるライセンス**が付与されています．
-> これらのライブラリを独自に改変，または ころボ のライブラリへ組み込むといった場合は，十分にご確認ください．
-[^1]: https://github.com/adafruit/Adafruit-GFX-Library
-[^2]: https://github.com/adafruit/Adafruit_SSD1306
-[^3]: https://github.com/adafruit/Adafruit_Sensor
-[^4]: https://github.com/adafruit/Adafruit_BNO055
