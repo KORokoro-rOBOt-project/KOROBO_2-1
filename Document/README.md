@@ -8,7 +8,7 @@
 > 一部の部品にて，**組み立てサポート品**を販売しています．<br>
 > 「3Dプリンタが家にない」，「基板発注の経験がない」といった方々でも，ころボ に触れ合っていただけます！\
 > [▼ 紹介動画（クリック or タップ）](https://www.youtube.com/watch?v=OCpZHEYD810)\
-> <img src="Picture/support-parts.jpg" width="75%">
+> <img src="Picture/support-parts.jpg" width="100%">
 
 
 > Amazonの商品URLについては，Amazonアソシエイトの短縮リンクを使用しています．<br>
