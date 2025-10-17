@@ -356,7 +356,7 @@
 
 |  |  |
 |:--:|:--:|
-| <img src="Document/Movie/korobo_2-1_making_no1.gif" width="100%"> | <img src="Document/Movie/korobo_2-1_making_no2.gif" width="100%"> |
+| <img src="Document/Movie/korobo_2-1_making_no1.gif" width="750"> | <img src="Document/Movie/korobo_2-1_making_no2.gif" width="750"> |
 
 1. 基板 << 配線
 1. メインフレーム << 基板（＋配線）
