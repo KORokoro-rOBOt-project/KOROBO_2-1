@@ -338,8 +338,14 @@
   </thead>
   <tbody>
     <tr>
-      <td>工具</td>
+      <td rowspan="3">工具</td>
       <td>やる気に満ちた手</td>
+    </tr>
+    <tr>
+      <td>ビニールテープ<td>
+    </tr>
+    <tr>
+      <td>ハサミ（テープを切断できるもの）</td>
     </tr>
     <tr>
       <td>部品</td>
@@ -349,14 +355,13 @@
 </table>
 
 #### 4.1 モジュール（順序あり）
+> [!IMPORTANT]
+> バッテリには，基板に近い部分をビニールテープなどで数回覆うことが推奨されます．
+
 <div align="center">
   <img src="Document/Movie/korobo_2-1_making_no1.gif" width="49%">
   <img src="Document/Movie/korobo_2-1_making_no2.gif" width="49%">
 </div>
-
-|  |  |
-|:--:|:--:|
-| <img src="Document/Movie/korobo_2-1_making_no1.gif" width="750"> | <img src="Document/Movie/korobo_2-1_making_no2.gif" width="750"> |
 
 1. 基板 << 配線
 1. メインフレーム << 基板（＋配線）
@@ -364,11 +369,12 @@
 1. メインフレーム << 駆動ユニット
 
 #### 4.2 モジュール（順不同）
+> [!NOTE]
+> OLEDモジュールと接続するピンソケット（4P）は，接続向きに注意してください．GNDピンが黒色の線に接続！
+
 <img src="Document/Movie/korobo_2-1_making_no3.gif" width="100%">
 
-- メインフレーム << OLED
-- メインフレーム << 照度センサ
-- メインフレーム << スピーカ
+- メインフレーム << OLED，照度センサ，スピーカ
 
 #### 4.3 カバー＆カプセル
 <div align="center">
