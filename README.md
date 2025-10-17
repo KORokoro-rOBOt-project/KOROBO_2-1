@@ -326,8 +326,6 @@
 ---
 ### 4. はめ込み（[0](#01-調達)/[1](#10-準備)/[2](#20-準備)/[3](#30-準備)/4/[5](#50-準備)）
 
-<img src="Document/Movie/korobo_2-1_3d-movie_small.gif" width="100%">
-
 #### 4.0 準備
 次の表に示す，工具・部品を準備してください．
 
@@ -351,8 +349,10 @@
 </table>
 
 #### 4.1 モジュール（順序あり）
-<img src="Document/Movie/korobo_2-1_making_no1.gif" width="100%">
-<img src="Document/Movie/korobo_2-1_making_no2.gif" width="100%">
+<div align="center">
+  <img src="Document/Movie/korobo_2-1_making_no1.gif" width="49%">
+  <img src="Document/Movie/korobo_2-1_making_no2.gif" width="49%">
+</div>
 
 1. 基板 << 配線
 1. メインフレーム << 基板（＋配線）
@@ -366,11 +366,11 @@
 - メインフレーム << 照度センサ
 - メインフレーム << スピーカ
 
-#### 4.3 上部滑車
-<img src="Document/Movie/korobo_2-1_making_no4.gif" width="100%">
-
-#### 4.4 カバー＆カプセル
-<img src="Document/Movie/korobo_2-1_making_no5.gif" width="100%">
+#### 4.3 カバー＆カプセル
+<div align="center">
+  <img src="Document/Movie/korobo_2-1_making_no4.gif" width="49%">
+  <img src="Document/Movie/korobo_2-1_making_no5.gif" width="49%">
+</div>
 
 ---
 ### 5. ソースコード（[0](#01-調達)/[1](#10-準備)/[2](#20-準備)/[3](#30-準備)/[4](#40-準備)/5）
