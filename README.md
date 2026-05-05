@@ -1,7 +1,6 @@
 # 〈第2.1世代〉ころボ / KOROBO (2.1 Gen)
 > [!IMPORTANT]
 > 組み立て説明を除き，他のデータは最低限完成しました！\
-> 学生個人の活動であるため，ご了承ください．
 
 <img src="Document/Picture/image_korobo-2-1.jpg" width="100%">
 
