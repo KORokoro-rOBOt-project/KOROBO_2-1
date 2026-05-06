@@ -1,6 +1,6 @@
 # 〈第2.1世代〉ころボ / KOROBO (2.1 Gen)
 > [!IMPORTANT]
-> 組み立て説明を除き、他のデータは最低限完成しました！\
+> 組み立て説明を除き、他のデータは最低限完成しました！
 
 <img src="Document/Picture/image_korobo-2-1.jpg" width="100%">
 
@@ -162,34 +162,43 @@
     <tr>
       <th>項目</th>
       <th>名称</th>
+      <th>個数</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td rowspan="4">工具</td>
       <td>ニッパー</td>
+      <td>1</td>
     </tr>
     <tr>
       <td>カッターナイフ or デザインナイフ</td>
+      <td>1</td>
     </tr>
     <tr>
       <td>ピンセット</td>
+      <td>1</td>
     </tr>
     <tr>
       <td>プラスドライバー</td>
+      <td>1</td>
     </tr>
     <tr>
       <td rowspan="4">部品</td>
-      <td>タミヤ ミニモーター低速ギヤボックス（4速）× 2個</td>
+      <td>タミヤ ミニモーター低速ギヤボックス（4速）</td>
+      <td>2</td>
     </tr>
     <tr>
       <td>タミヤ 3mm六角シャフトセット</td>
+      <td>1</td>
     </tr>
     <tr>
-      <td>メインタイヤ（3Dプリンタ製）× 2個</td>
+      <td>メインタイヤ（3Dプリンタ製）</td>
+      <td>2</td>
     </tr>
     <tr>
-      <td>ギヤボックスカバー（3Dプリンタ製）× 2個</td>
+      <td>ギヤボックスカバー（3Dプリンタ製）</td>
+      <td>2</td>
     </tr>
   </tbody>
 </table>
