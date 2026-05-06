@@ -327,7 +327,8 @@
 > [!IMPORTANT]
 > モジュール付属のピンヘッダーは、長さが異なるため、別途調達したピンヘッダーを推奨
 1. **メインボード**
-	> 作業過程ノーカット版 >> [クリック or タップ](https://youtu.be/Ys6NwztTmmA)
+    > 作業過程ノーカット版 >> [クリック or タップ](https://youtu.be/Ys6NwztTmmA) \
+    > 半田付け順：Resister/Capaciter → IC-Socket → XH/PH-Connecter → Pin-Socket
 
 	準備中...
 1. **モジュール**\
